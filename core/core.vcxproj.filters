@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="network">
+      <UniqueIdentifier>{c55f3d2e-0b2f-4a76-9c8f-f38a4f4a72b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\actor">
+      <UniqueIdentifier>{3742c34c-f8a4-4c6a-9aef-dc5e2fbdb505}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\service">
+      <UniqueIdentifier>{f8c7baa1-1019-42cc-9f72-c79b5f9ecbfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="threading">
+      <UniqueIdentifier>{e9f6f75e-d84d-40b9-aa5d-1e2697d5169f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory">
+      <UniqueIdentifier>{d18e9715-eb6e-4163-8d9c-0512e84c68c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log">
+      <UniqueIdentifier>{569361d6-ae86-4899-a53a-ff05a3768b9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="job">
+      <UniqueIdentifier>{27f82fe7-02e8-4842-b0ce-03ef3a43ab67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{0285eaff-ec66-488f-9fbd-aff2ce8b7a46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{afe5968f-2876-4ccf-8dbc-b3cc4dd46452}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai">
+      <UniqueIdentifier>{43d81d3f-89e5-47ee-9b1d-63e70db6dfb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\Astar">
+      <UniqueIdentifier>{aa9ccb76-61b4-46d3-bc57-7cdbf4924412}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="string">
+      <UniqueIdentifier>{ef1393ae-f1f6-42e8-bc70-e25c654330c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="database">
+      <UniqueIdentifier>{0cbf978e-e5c7-4c5a-aa77-3614609c3217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="filesystem">
+      <UniqueIdentifier>{9843c0f2-6ac5-4c25-aced-d58cac0cbe16}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="memory_manager.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>network\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Connector.h">
+      <Filter>network\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Session.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="Receiver.h">
+      <Filter>network\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Sender.h">
+      <Filter>network\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Disconnector.h">
+      <Filter>network\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Acceptor.h">
+      <Filter>network\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="string_helper.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="packet_listener.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="Prereceiver.h">
+      <Filter>network\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="logger.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="logging.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log_publisher.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log_manager.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="CrashHandler.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior.h">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior_executor.h">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="hsm.h">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="job_timer.h">
+      <Filter>job</Filter>
+    </ClInclude>
+    <ClInclude Include="Astar.h">
+      <Filter>ai\Astar</Filter>
+    </ClInclude>
+    <ClInclude Include="AstarNodeMaster.h">
+      <Filter>ai\Astar</Filter>
+    </ClInclude>
+    <ClInclude Include="object_pool.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="server_service.h">
+      <Filter>network\service</Filter>
+    </ClInclude>
+    <ClInclude Include="basic_service.h">
+      <Filter>network\service</Filter>
+    </ClInclude>
+    <ClInclude Include="client_service.h">
+      <Filter>network\service</Filter>
+    </ClInclude>
+    <ClInclude Include="dispatcher.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="io_object.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="memory.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="packet_header.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="send_buffer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="session_pool.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="thread.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_usage.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="packet_callback.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="macro.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="async_completion_token.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="buffer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="database\connection.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="io_socket.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="listener.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="fsm.h">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="recv_buffer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="file_helper.h">
+      <Filter>filesystem</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="memory_manager.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Connector.cpp">
+      <Filter>network\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Session.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="Receiver.cpp">
+      <Filter>network\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Acceptor.cpp">
+      <Filter>network\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Sender.cpp">
+      <Filter>network\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Prereceiver.cpp">
+      <Filter>network\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="log_publisher.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="logger.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="CrashHandler.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior_executor.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="hsm.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="job_timer.cpp">
+      <Filter>job</Filter>
+    </ClCompile>
+    <ClCompile Include="Disconnector.cpp">
+      <Filter>network\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Astar.cpp">
+      <Filter>ai\Astar</Filter>
+    </ClCompile>
+    <ClCompile Include="AstarNodeMaster.cpp">
+      <Filter>ai\Astar</Filter>
+    </ClCompile>
+    <ClCompile Include="server_service.cpp">
+      <Filter>network\service</Filter>
+    </ClCompile>
+    <ClCompile Include="send_buffer.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="thread.cpp">
+      <Filter>threading</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_usage.cpp">
+      <Filter>threading</Filter>
+    </ClCompile>
+    <ClCompile Include="async_completion_token.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="actor.cpp">
+      <Filter>network\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="database\connection.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="sst.ixx" />
+    <ClCompile Include="win_sock.ixx">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network.ixx">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="proactor.ixx">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="ipv4_address.ixx">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_pool.ixx">
+      <Filter>threading</Filter>
+    </ClCompile>
+    <ClCompile Include="threading.ixx">
+      <Filter>threading</Filter>
+    </ClCompile>
+    <ClCompile Include="sender.ixx">
+      <Filter>network\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="recv_buffer.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="log_manager.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="file_helper.cpp">
+      <Filter>filesystem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+</Project>
