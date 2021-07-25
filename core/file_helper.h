@@ -9,7 +9,6 @@ namespace sst::filesystem
 	{
 	public:
 		static byte* read_file(const wchar_t* filename, int64& read_size);
-		static HANDLE open_utf16_file(const wchar_t* filename);
 	};
 
 	class file_closer

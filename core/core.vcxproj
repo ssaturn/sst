@@ -78,9 +78,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="acceptor.h" />
     <ClInclude Include="actor.h" />
     <ClInclude Include="Astar.h" />
@@ -113,6 +110,7 @@
     <ClInclude Include="memory_manager.h" />
     <ClInclude Include="object_pool.h" />
     <ClInclude Include="packet_callback.h" />
+    <ClInclude Include="packet_factory.h" />
     <ClInclude Include="packet_header.h" />
     <ClInclude Include="packet_listener.h" />
     <ClInclude Include="prereceiver.h" />

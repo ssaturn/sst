@@ -43,12 +43,12 @@
     <Filter Include="filesystem">
       <UniqueIdentifier>{9843c0f2-6ac5-4c25-aced-d58cac0cbe16}</UniqueIdentifier>
     </Filter>
-    <Filter Include="network\NewFilter1">
+    <Filter Include="network\packet">
       <UniqueIdentifier>{b40701da-c70a-4796-9483-8a9efec20a77}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
+    <Filter Include="utility">
+      <UniqueIdentifier>{48f32c60-c41f-4945-a3e7-0add38cf4c53}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="memory_manager.h">
@@ -78,14 +78,9 @@
     <ClInclude Include="string_helper.h">
       <Filter>string</Filter>
     </ClInclude>
-    <ClInclude Include="packet_listener.h">
-      <Filter>network</Filter>
-    </ClInclude>
     <ClInclude Include="Singleton.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
     <ClInclude Include="common.h">
       <Filter>common</Filter>
     </ClInclude>
@@ -146,9 +141,6 @@
     <ClInclude Include="memory.h">
       <Filter>memory</Filter>
     </ClInclude>
-    <ClInclude Include="packet_header.h">
-      <Filter>network</Filter>
-    </ClInclude>
     <ClInclude Include="send_buffer.h">
       <Filter>network</Filter>
     </ClInclude>
@@ -160,9 +152,6 @@
     </ClInclude>
     <ClInclude Include="thread_usage.h">
       <Filter>threading</Filter>
-    </ClInclude>
-    <ClInclude Include="packet_callback.h">
-      <Filter>network</Filter>
     </ClInclude>
     <ClInclude Include="macro.h">
       <Filter>common</Filter>
@@ -191,6 +180,24 @@
     <ClInclude Include="file_helper.h">
       <Filter>filesystem</Filter>
     </ClInclude>
+    <ClInclude Include="packet_listener.h">
+      <Filter>network\packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet_header.h">
+      <Filter>network\packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet_callback.h">
+      <Filter>network\packet</Filter>
+    </ClInclude>
+    <ClInclude Include="packet_factory.h">
+      <Filter>network\packet</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory_manager.cpp">
@@ -211,7 +218,6 @@
     <ClCompile Include="Sender.cpp">
       <Filter>network\actor</Filter>
     </ClCompile>
-    <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Prereceiver.cpp">
       <Filter>network\actor</Filter>
     </ClCompile>
@@ -266,7 +272,6 @@
     <ClCompile Include="database\connection.cpp">
       <Filter>database</Filter>
     </ClCompile>
-    <ClCompile Include="sst.ixx" />
     <ClCompile Include="win_sock.ixx">
       <Filter>network</Filter>
     </ClCompile>
@@ -296,6 +301,12 @@
     </ClCompile>
     <ClCompile Include="file_helper.cpp">
       <Filter>filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="sst.ixx">
+      <Filter>utility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

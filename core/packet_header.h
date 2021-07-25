@@ -1,8 +1,5 @@
 #pragma once
 
-#include <Windows.h>
-#include <assert.h>
-
 
 namespace sst
 {
@@ -10,14 +7,14 @@ namespace sst
 	class packet_header
 	{
 	public:
-		explicit packet_header(const unsigned short type = 0, const unsigned short size = 0)
+		explicit packet_header(const uint16 type = 0, const uint16 size = 0)
 			: size(size)
 			, type(type)
 		{
 		}
 
-		unsigned short	size{ 0 };
-		unsigned short	type{ 0 };
+		uint16 size{ 0 };
+		uint16 type{ 0 };
 	};
 	#pragma pack(pop)	
 }

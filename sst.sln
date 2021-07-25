@@ -11,6 +11,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "client", "client\client.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "engine", "engine\engine.vcxproj", "{A45EC634-83B2-4478-B365-CE7643FF01CD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "module", "module", "{DB306CF5-D469-427E-9894-4F52324A7BA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{C4D32060-E39E-4E08-A7B3-18BA2CA694A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -36,6 +40,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6AC9EA0D-3CEC-4702-801F-2CEEEEEEA486} = {DB306CF5-D469-427E-9894-4F52324A7BA2}
+		{E5C22EDA-97EB-45D5-9738-389C175F73B9} = {C4D32060-E39E-4E08-A7B3-18BA2CA694A0}
+		{B87E75F5-9388-46EB-B36B-8AA84706C4FF} = {C4D32060-E39E-4E08-A7B3-18BA2CA694A0}
+		{A45EC634-83B2-4478-B365-CE7643FF01CD} = {DB306CF5-D469-427E-9894-4F52324A7BA2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F930395-D6EB-468A-B9F8-41A7C03725BE}
