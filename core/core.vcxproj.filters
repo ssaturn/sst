@@ -43,6 +43,9 @@
     <Filter Include="filesystem">
       <UniqueIdentifier>{9843c0f2-6ac5-4c25-aced-d58cac0cbe16}</UniqueIdentifier>
     </Filter>
+    <Filter Include="network\NewFilter1">
+      <UniqueIdentifier>{b40701da-c70a-4796-9483-8a9efec20a77}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
