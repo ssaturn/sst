@@ -58,7 +58,7 @@ namespace sst::threading
 		: id_(thread_id)
 	{
 		handle_ = reinterpret_cast<HANDLE>(::_beginthreadex(nullptr, 0, &thread_proc, this, CREATE_SUSPENDED, &os_id_));
-		::sprintf_s(name_, _countof(name_), "%s(%d)", (name. != nullptr) ? name : "Thread", static_cast<int32>(id_));
+		::sprintf_s(name_, _countof(name_), "%s(%d)", name.data() != nullptr ? name.data() : "Thread", id_);
 	}
 
 	thread::~thread()

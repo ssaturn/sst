@@ -15,9 +15,6 @@ import sst.threading;
 
 int main()
 {
-	std::hexfloat a("11");
-	
-	
 	sst::win_sock::start_up();
 	
 	sst::network::proactor proactor;
