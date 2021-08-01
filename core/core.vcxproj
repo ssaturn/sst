@@ -129,6 +129,7 @@
     <ClInclude Include="job_timer.h" />
     <ClCompile Include="recv_buffer.cpp" />
     <ClCompile Include="sender.ixx" />
+    <ClInclude Include="serializer.h" />
     <ClCompile Include="threading.ixx" />
     <ClCompile Include="thread_pool.ixx">
       <FileType>Document</FileType>

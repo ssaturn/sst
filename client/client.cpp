@@ -15,6 +15,12 @@ import sst.threading;
 
 int main()
 {
+	float a = 1.f;
+	float b = 1 / 10;
+	
+	
+	
+	
 	sst::win_sock::start_up();
 	
 	sst::network::proactor proactor;

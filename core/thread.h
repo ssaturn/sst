@@ -9,7 +9,7 @@ namespace sst::threading
 	class [[nodiscard]] thread
 	{
 	public:
-		explicit thread(const char* name, thread_id_t thread_id);
+		explicit thread(std::string_view name, thread_id_t thread_id);
 		virtual ~thread();
 
 		[[nodiscard]] HANDLE get_handle() const { return handle_; }

@@ -120,12 +120,13 @@ namespace sst
 			time.wYear, time.wMonth, time.wDay,
 			time.wHour, time.wMinute, time.wSecond);
 
-		HANDLE logFile = filesystem::file_helper::open_utf16_file(fileName);
+		/*HANDLE logFile = filesystem::file_helper::open_utf16_file(fileName);
 		if (logFile == INVALID_HANDLE_VALUE)
 			return NULL;
 
 		log_file_publisher* logFilePublisher = new log_file_publisher(logFile);
-		return logFilePublisher;
+		return logFilePublisher;*/
+		return nullptr;
 	}
 
 	bool log_manager::setup()

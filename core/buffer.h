@@ -3,7 +3,7 @@
 #include "common.h"
 
 
-namespace sst::network
+namespace sst::memory::buffer
 {
 	class buffer
 	{

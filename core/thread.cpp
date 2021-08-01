@@ -54,8 +54,7 @@ namespace sst::threading
 		return 0;
 	}
 
-
-	thread::thread(const char* name, const size_t thread_id)
+	thread::thread(const std::string_view name, const thread_id_t thread_id)
 		: id_(thread_id)
 	{
 		handle_ = reinterpret_cast<HANDLE>(::_beginthreadex(nullptr, 0, &thread_proc, this, CREATE_SUSPENDED, &os_id_));

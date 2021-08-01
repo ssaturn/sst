@@ -19,10 +19,10 @@ namespace sst::network
 
 	void send_buffer::push(const byte* data, const size_t length)
 	{
-		push(std::make_shared<buffer>(data, static_cast<ULONG>(length)));
+		push(std::make_shared<memory::buffer::buffer>(data, static_cast<ULONG>(length)));
 	}
 
-	auto send_buffer::push(const std::shared_ptr<buffer> buffer) -> void
+	auto send_buffer::push(const std::shared_ptr<memory::buffer::buffer> buffer) -> void
 	{
 		queue_.push(buffer);
 	}
@@ -36,7 +36,7 @@ namespace sst::network
 		size_t written_count = 0;
 		for(const auto& buffer : buffers)
 		{
-			if (offset + buffer->size > buf_size_)
+			if (buffer->size + offset > buf_size_)
 			{
 				break;
 			}
@@ -55,12 +55,12 @@ namespace sst::network
 		}
 	}
 
-	auto send_buffer::TryPopAll() -> std::vector<std::shared_ptr<buffer>>
+	auto send_buffer::TryPopAll() -> std::vector<std::shared_ptr<memory::buffer::buffer>>
 	{
 		std::vector buffers(reserved_.begin(), reserved_.end());
 		reserved_.clear();
 		
-		std::shared_ptr<buffer> node{ nullptr };
+		std::shared_ptr<memory::buffer::buffer> node{ nullptr };
 		while (queue_.try_pop(node))
 		{
 			buffers.push_back(node);
