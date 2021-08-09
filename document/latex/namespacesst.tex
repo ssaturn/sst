@@ -1,0 +1,266 @@
+\hypertarget{namespacesst}{}\doxysection{sst Namespace Reference}
+\label{namespacesst}\index{sst@{sst}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1ai}{ai}}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1database}{database}}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1engine}{engine}}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1filesystem}{filesystem}}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1math}{math}}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1memory}{memory}}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1network}{network}}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1serialization}{serialization}}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1string}{string}}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1threading}{threading}}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1win__sock}{win\+\_\+sock}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsst_1_1behavior__owner}{behavior\+\_\+owner}}
+\item 
+class \mbox{\hyperlink{classsst_1_1behavior}{behavior}}
+\item 
+class \mbox{\hyperlink{classsst_1_1behavior__executor}{behavior\+\_\+executor}}
+\item 
+class \mbox{\hyperlink{classsst_1_1fsm}{fsm}}
+\item 
+class \mbox{\hyperlink{classsst_1_1hsm__owner}{hsm\+\_\+owner}}
+\item 
+class \mbox{\hyperlink{classsst_1_1hsm}{hsm}}
+\item 
+class \mbox{\hyperlink{classsst_1_1ipv4__address}{ipv4\+\_\+address}}
+\item 
+class \mbox{\hyperlink{classsst_1_1job__timer}{job\+\_\+timer}}
+\item 
+class \mbox{\hyperlink{classsst_1_1job__timer__queue}{job\+\_\+timer\+\_\+queue}}
+\item 
+class \mbox{\hyperlink{classsst_1_1log__manager}{log\+\_\+manager}}
+\item 
+class \mbox{\hyperlink{classsst_1_1log__publisher}{log\+\_\+publisher}}
+\item 
+class \mbox{\hyperlink{classsst_1_1log__console__publisher}{log\+\_\+console\+\_\+publisher}}
+\item 
+class \mbox{\hyperlink{classsst_1_1log__file__publisher}{log\+\_\+file\+\_\+publisher}}
+\item 
+class \mbox{\hyperlink{classsst_1_1log__initializer}{log\+\_\+initializer}}
+\item 
+class \mbox{\hyperlink{classsst_1_1line__logger}{line\+\_\+logger}}
+\item 
+class \mbox{\hyperlink{classsst_1_1async__log}{async\+\_\+log}}
+\item 
+struct \mbox{\hyperlink{structsst_1_1memory__header}{memory\+\_\+header}}
+\item 
+class \mbox{\hyperlink{classsst_1_1memory__block}{memory\+\_\+block}}
+\item 
+class \mbox{\hyperlink{classsst_1_1callback}{callback}}
+\item 
+class \mbox{\hyperlink{classsst_1_1listener__callback}{listener\+\_\+callback}}
+\item 
+class \mbox{\hyperlink{classsst_1_1global__func__callback}{global\+\_\+func\+\_\+callback}}
+\item 
+class \mbox{\hyperlink{classsst_1_1packet__header}{packet\+\_\+header}}
+\item 
+class \mbox{\hyperlink{classsst_1_1packet__listener}{packet\+\_\+listener}}
+\item 
+class \mbox{\hyperlink{classsst_1_1abstract}{abstract}}
+\item 
+class \mbox{\hyperlink{classsst_1_1serializer}{serializer}}
+\item 
+class \mbox{\hyperlink{classsst_1_1oserializer}{oserializer}}
+\item 
+class \mbox{\hyperlink{classsst_1_1iserializer}{iserializer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacesst_ad2ebcca84dd5d19038ba8cc95c74b598}{BER}} = \mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{behavior\+\_\+end\+\_\+reason}}
+\item 
+typedef bool($\ast$ \mbox{\hyperlink{namespacesst_aa73c70fde15f65b53c741b00c6737674}{packet\+\_\+handler\+\_\+function}}) (const void $\ast$, const \mbox{\hyperlink{classsst_1_1packet__header}{packet\+\_\+header}} $\ast$header, const char $\ast$, const \mbox{\hyperlink{common_8h_af6e23a20bd7abf3ca3c82295c2b323e5}{uint16}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacesst_aa0a9e8ff73dde29a9e01961173c9063b}{behavior\+\_\+type}} \{ \mbox{\hyperlink{namespacesst_aa0a9e8ff73dde29a9e01961173c9063baa839e4160f4fa8c1bd639c70acabcce3}{BT\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{namespacesst_aa0a9e8ff73dde29a9e01961173c9063ba7417389df7fdb2004f65ff1bfcb5d059}{BT\+\_\+\+BAGIC}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{behavior\+\_\+end\+\_\+reason}} \{ \mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9abe94d6dd0d9a2d92e6bb3b7fc3e7f40a}{BER\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9a5b6f109bf0a8e3f01ac4d0145d537885}{BER\+\_\+\+NORMAL}}
+, \mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9ae0b1a1bbee10c014f5a5b5b4ca2f2684}{BER\+\_\+\+INTERNAL\+\_\+\+ERROR}}
+, \mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9a76a2cc49a436813f2a05a1c879f7efc0}{BER\+\_\+\+MAX}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}{log\+\_\+level\+\_\+t}} \+: uint16 \{ \newline
+\mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0caa181a603769c1f98ad927e7367c7aa51}{all}}
+, \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0caad42f6697b035b7580e4fef93be20b4d}{debug}}
+, \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0cacaf9b6b99962bf5c2264824231d7a40c}{info}}
+, \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0ca7b83d3f08fa392b79e3f553b585971cd}{warning}}
+, \newline
+\mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0cacb5e100e5a9a3e7f6d1fd97512215282}{error}}
+, \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0cadf6402fd9ecc60f5a2159fdf45711cd4}{fatal}}
+, \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0ca2ffe4e77325d9a7152f7086ea7aa5114}{max}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacesst_acda9754ac870ff4e15104278e430a303}{Set\+Console\+Color}} (\mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}{sst\+::log\+\_\+level\+\_\+t}} log\+\_\+level)
+\item 
+void \mbox{\hyperlink{namespacesst_aa83fafa73f0129c305728f1a6e970833}{Reset\+Console\+Color}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+HANDLE \mbox{\hyperlink{namespacesst_a3e71b68935475a3a4f310b8e9417d12d}{std\+\_\+out\+\_\+handle}} = INVALID\+\_\+\+HANDLE\+\_\+\+VALUE
+\item 
+const WORD \mbox{\hyperlink{namespacesst_a9e489751d75b3148625c606e9f3ffa67}{color\+\_\+table}} \mbox{[}static\+\_\+cast$<$ \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} $>$(\mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0ca2ffe4e77325d9a7152f7086ea7aa5114}{sst\+::log\+\_\+level\+\_\+t\+::max}})\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacesst_ad2ebcca84dd5d19038ba8cc95c74b598}\label{namespacesst_ad2ebcca84dd5d19038ba8cc95c74b598}} 
+\index{sst@{sst}!BER@{BER}}
+\index{BER@{BER}!sst@{sst}}
+\doxysubsubsection{\texorpdfstring{BER}{BER}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{sst\+::\+BER}} = typedef \mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{behavior\+\_\+end\+\_\+reason}}}
+
+\mbox{\Hypertarget{namespacesst_aa73c70fde15f65b53c741b00c6737674}\label{namespacesst_aa73c70fde15f65b53c741b00c6737674}} 
+\index{sst@{sst}!packet\_handler\_function@{packet\_handler\_function}}
+\index{packet\_handler\_function@{packet\_handler\_function}!sst@{sst}}
+\doxysubsubsection{\texorpdfstring{packet\_handler\_function}{packet\_handler\_function}}
+{\footnotesize\ttfamily typedef bool( $\ast$ sst\+::packet\+\_\+handler\+\_\+function) (const void $\ast$, const \mbox{\hyperlink{classsst_1_1packet__header}{packet\+\_\+header}} $\ast$header, const char $\ast$, const \mbox{\hyperlink{common_8h_af6e23a20bd7abf3ca3c82295c2b323e5}{uint16}})}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacesst_af4c96af423edcc09565ae9485589bbf9}\label{namespacesst_af4c96af423edcc09565ae9485589bbf9}} 
+\index{sst@{sst}!behavior\_end\_reason@{behavior\_end\_reason}}
+\index{behavior\_end\_reason@{behavior\_end\_reason}!sst@{sst}}
+\doxysubsubsection{\texorpdfstring{behavior\_end\_reason}{behavior\_end\_reason}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{sst\+::behavior\+\_\+end\+\_\+reason}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BER\_NONE@{BER\_NONE}!sst@{sst}}\index{sst@{sst}!BER\_NONE@{BER\_NONE}}}\mbox{\Hypertarget{namespacesst_af4c96af423edcc09565ae9485589bbf9abe94d6dd0d9a2d92e6bb3b7fc3e7f40a}\label{namespacesst_af4c96af423edcc09565ae9485589bbf9abe94d6dd0d9a2d92e6bb3b7fc3e7f40a}} 
+BER\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BER\_NORMAL@{BER\_NORMAL}!sst@{sst}}\index{sst@{sst}!BER\_NORMAL@{BER\_NORMAL}}}\mbox{\Hypertarget{namespacesst_af4c96af423edcc09565ae9485589bbf9a5b6f109bf0a8e3f01ac4d0145d537885}\label{namespacesst_af4c96af423edcc09565ae9485589bbf9a5b6f109bf0a8e3f01ac4d0145d537885}} 
+BER\+\_\+\+NORMAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BER\_INTERNAL\_ERROR@{BER\_INTERNAL\_ERROR}!sst@{sst}}\index{sst@{sst}!BER\_INTERNAL\_ERROR@{BER\_INTERNAL\_ERROR}}}\mbox{\Hypertarget{namespacesst_af4c96af423edcc09565ae9485589bbf9ae0b1a1bbee10c014f5a5b5b4ca2f2684}\label{namespacesst_af4c96af423edcc09565ae9485589bbf9ae0b1a1bbee10c014f5a5b5b4ca2f2684}} 
+BER\+\_\+\+INTERNAL\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BER\_MAX@{BER\_MAX}!sst@{sst}}\index{sst@{sst}!BER\_MAX@{BER\_MAX}}}\mbox{\Hypertarget{namespacesst_af4c96af423edcc09565ae9485589bbf9a76a2cc49a436813f2a05a1c879f7efc0}\label{namespacesst_af4c96af423edcc09565ae9485589bbf9a76a2cc49a436813f2a05a1c879f7efc0}} 
+BER\+\_\+\+MAX&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacesst_aa0a9e8ff73dde29a9e01961173c9063b}\label{namespacesst_aa0a9e8ff73dde29a9e01961173c9063b}} 
+\index{sst@{sst}!behavior\_type@{behavior\_type}}
+\index{behavior\_type@{behavior\_type}!sst@{sst}}
+\doxysubsubsection{\texorpdfstring{behavior\_type}{behavior\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacesst_aa0a9e8ff73dde29a9e01961173c9063b}{sst\+::behavior\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_NONE@{BT\_NONE}!sst@{sst}}\index{sst@{sst}!BT\_NONE@{BT\_NONE}}}\mbox{\Hypertarget{namespacesst_aa0a9e8ff73dde29a9e01961173c9063baa839e4160f4fa8c1bd639c70acabcce3}\label{namespacesst_aa0a9e8ff73dde29a9e01961173c9063baa839e4160f4fa8c1bd639c70acabcce3}} 
+BT\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BT\_BAGIC@{BT\_BAGIC}!sst@{sst}}\index{sst@{sst}!BT\_BAGIC@{BT\_BAGIC}}}\mbox{\Hypertarget{namespacesst_aa0a9e8ff73dde29a9e01961173c9063ba7417389df7fdb2004f65ff1bfcb5d059}\label{namespacesst_aa0a9e8ff73dde29a9e01961173c9063ba7417389df7fdb2004f65ff1bfcb5d059}} 
+BT\+\_\+\+BAGIC&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}\label{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}} 
+\index{sst@{sst}!log\_level\_t@{log\_level\_t}}
+\index{log\_level\_t@{log\_level\_t}!sst@{sst}}
+\doxysubsubsection{\texorpdfstring{log\_level\_t}{log\_level\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}{sst\+::log\+\_\+level\+\_\+t}} \+: \mbox{\hyperlink{common_8h_af6e23a20bd7abf3ca3c82295c2b323e5}{uint16}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{all@{all}!sst@{sst}}\index{sst@{sst}!all@{all}}}\mbox{\Hypertarget{namespacesst_a09ca25491fe3cc41514a98a9340eac0caa181a603769c1f98ad927e7367c7aa51}\label{namespacesst_a09ca25491fe3cc41514a98a9340eac0caa181a603769c1f98ad927e7367c7aa51}} 
+all&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{debug@{debug}!sst@{sst}}\index{sst@{sst}!debug@{debug}}}\mbox{\Hypertarget{namespacesst_a09ca25491fe3cc41514a98a9340eac0caad42f6697b035b7580e4fef93be20b4d}\label{namespacesst_a09ca25491fe3cc41514a98a9340eac0caad42f6697b035b7580e4fef93be20b4d}} 
+debug&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{info@{info}!sst@{sst}}\index{sst@{sst}!info@{info}}}\mbox{\Hypertarget{namespacesst_a09ca25491fe3cc41514a98a9340eac0cacaf9b6b99962bf5c2264824231d7a40c}\label{namespacesst_a09ca25491fe3cc41514a98a9340eac0cacaf9b6b99962bf5c2264824231d7a40c}} 
+info&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{warning@{warning}!sst@{sst}}\index{sst@{sst}!warning@{warning}}}\mbox{\Hypertarget{namespacesst_a09ca25491fe3cc41514a98a9340eac0ca7b83d3f08fa392b79e3f553b585971cd}\label{namespacesst_a09ca25491fe3cc41514a98a9340eac0ca7b83d3f08fa392b79e3f553b585971cd}} 
+warning&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{error@{error}!sst@{sst}}\index{sst@{sst}!error@{error}}}\mbox{\Hypertarget{namespacesst_a09ca25491fe3cc41514a98a9340eac0cacb5e100e5a9a3e7f6d1fd97512215282}\label{namespacesst_a09ca25491fe3cc41514a98a9340eac0cacb5e100e5a9a3e7f6d1fd97512215282}} 
+error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fatal@{fatal}!sst@{sst}}\index{sst@{sst}!fatal@{fatal}}}\mbox{\Hypertarget{namespacesst_a09ca25491fe3cc41514a98a9340eac0cadf6402fd9ecc60f5a2159fdf45711cd4}\label{namespacesst_a09ca25491fe3cc41514a98a9340eac0cadf6402fd9ecc60f5a2159fdf45711cd4}} 
+fatal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{max@{max}!sst@{sst}}\index{sst@{sst}!max@{max}}}\mbox{\Hypertarget{namespacesst_a09ca25491fe3cc41514a98a9340eac0ca2ffe4e77325d9a7152f7086ea7aa5114}\label{namespacesst_a09ca25491fe3cc41514a98a9340eac0ca2ffe4e77325d9a7152f7086ea7aa5114}} 
+max&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesst_aa83fafa73f0129c305728f1a6e970833}\label{namespacesst_aa83fafa73f0129c305728f1a6e970833}} 
+\index{sst@{sst}!ResetConsoleColor@{ResetConsoleColor}}
+\index{ResetConsoleColor@{ResetConsoleColor}!sst@{sst}}
+\doxysubsubsection{\texorpdfstring{ResetConsoleColor()}{ResetConsoleColor()}}
+{\footnotesize\ttfamily void sst\+::\+Reset\+Console\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacesst_acda9754ac870ff4e15104278e430a303}\label{namespacesst_acda9754ac870ff4e15104278e430a303}} 
+\index{sst@{sst}!SetConsoleColor@{SetConsoleColor}}
+\index{SetConsoleColor@{SetConsoleColor}!sst@{sst}}
+\doxysubsubsection{\texorpdfstring{SetConsoleColor()}{SetConsoleColor()}}
+{\footnotesize\ttfamily void sst\+::\+Set\+Console\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}{sst\+::log\+\_\+level\+\_\+t}}}]{log\+\_\+level }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesst_a9e489751d75b3148625c606e9f3ffa67}\label{namespacesst_a9e489751d75b3148625c606e9f3ffa67}} 
+\index{sst@{sst}!color\_table@{color\_table}}
+\index{color\_table@{color\_table}!sst@{sst}}
+\doxysubsubsection{\texorpdfstring{color\_table}{color\_table}}
+{\footnotesize\ttfamily const WORD sst\+::color\+\_\+table\mbox{[}static\+\_\+cast$<$ \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} $>$(\mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0ca2ffe4e77325d9a7152f7086ea7aa5114}{sst\+::log\+\_\+level\+\_\+t\+::max}})\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        FOREGROUND\_RED | FOREGROUND\_GREEN | FOREGROUND\_BLUE | FOREGROUND\_INTENSITY, }
+\DoxyCodeLine{        FOREGROUND\_RED | FOREGROUND\_GREEN | FOREGROUND\_BLUE | FOREGROUND\_INTENSITY, }
+\DoxyCodeLine{        FOREGROUND\_RED | FOREGROUND\_GREEN | FOREGROUND\_BLUE | FOREGROUND\_INTENSITY, }
+\DoxyCodeLine{        FOREGROUND\_RED | FOREGROUND\_GREEN | FOREGROUND\_INTENSITY,                   }
+\DoxyCodeLine{        FOREGROUND\_RED | FOREGROUND\_INTENSITY,                                      }
+\DoxyCodeLine{        FOREGROUND\_RED | FOREGROUND\_INTENSITY,                                      }
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesst_a3e71b68935475a3a4f310b8e9417d12d}\label{namespacesst_a3e71b68935475a3a4f310b8e9417d12d}} 
+\index{sst@{sst}!std\_out\_handle@{std\_out\_handle}}
+\index{std\_out\_handle@{std\_out\_handle}!sst@{sst}}
+\doxysubsubsection{\texorpdfstring{std\_out\_handle}{std\_out\_handle}}
+{\footnotesize\ttfamily HANDLE sst\+::std\+\_\+out\+\_\+handle = INVALID\+\_\+\+HANDLE\+\_\+\+VALUE}
+

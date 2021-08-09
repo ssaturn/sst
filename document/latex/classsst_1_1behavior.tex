@@ -1,0 +1,172 @@
+\hypertarget{classsst_1_1behavior}{}\doxysection{sst\+::behavior Class Reference}
+\label{classsst_1_1behavior}\index{sst::behavior@{sst::behavior}}
+
+
+{\ttfamily \#include $<$behavior.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classsst_1_1behavior_a86c7640d8c3eacd2582de23d442c6bba}{behavior\+\_\+queue}} = std\+::deque$<$ \mbox{\hyperlink{classsst_1_1behavior}{behavior}} $\ast$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1behavior_ade4fb35924be5e6e2f07db8d1043e57f}{behavior}} ()=delete
+\item 
+\mbox{\hyperlink{classsst_1_1behavior_a6547a994a07d58f9d8926bc6979118ab}{behavior}} (\mbox{\hyperlink{classsst_1_1behavior__owner}{behavior\+\_\+owner}} $\ast$owner, \mbox{\hyperlink{namespacesst_aa0a9e8ff73dde29a9e01961173c9063b}{behavior\+\_\+type}} \mbox{\hyperlink{classsst_1_1behavior_ad8d61a28592cd6925ab0580ad28d4272}{type}})
+\item 
+virtual \mbox{\hyperlink{classsst_1_1behavior_a36af6c626d181910aea0b8af6d96ec67}{$\sim$behavior}} ()
+\item 
+void \mbox{\hyperlink{classsst_1_1behavior_a9920d86cfda4e2937b5b972ca0823782}{On\+Begin}} ()
+\item 
+void \mbox{\hyperlink{classsst_1_1behavior_a05689f3b70356c4d341fc4283ff8ed61}{On\+Process}} ()
+\item 
+void \mbox{\hyperlink{classsst_1_1behavior_a1446eda2b3fcb7d016256997edceacbf}{On\+End}} (\mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{behavior\+\_\+end\+\_\+reason}} reason)
+\item 
+void \mbox{\hyperlink{classsst_1_1behavior_a6081f18c315e74b841040da6468da857}{add\+\_\+pending}} (\mbox{\hyperlink{classsst_1_1behavior}{behavior}} $\ast$\mbox{\hyperlink{classsst_1_1behavior}{behavior}})
+\item 
+bool \mbox{\hyperlink{classsst_1_1behavior_a30acbb9507e3fd97ec6f366166bff606}{done}} () const
+\item 
+\mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{behavior\+\_\+end\+\_\+reason}} \mbox{\hyperlink{classsst_1_1behavior_af852e4c66b609326be991b1513d14693}{end\+\_\+reason}} () const
+\item 
+\mbox{\hyperlink{namespacesst_aa0a9e8ff73dde29a9e01961173c9063b}{behavior\+\_\+type}} \mbox{\hyperlink{classsst_1_1behavior_ad8d61a28592cd6925ab0580ad28d4272}{type}} () const
+\item 
+const \mbox{\hyperlink{classsst_1_1behavior_a86c7640d8c3eacd2582de23d442c6bba}{behavior\+\_\+queue}} \& \mbox{\hyperlink{classsst_1_1behavior_acbff40bf2d7e1e0d0fb46709bd93b22f}{get\+\_\+pending}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1behavior_aa734b55105bf257429e5decfa6497a08}{on\+Begin}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1behavior_ade9d096aa68297b221e8de77d13743e0}{on\+Process}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1behavior_a6fef480955074238245cfc08aeeb2259}{on\+End}} (\mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{behavior\+\_\+end\+\_\+reason}} reason)=0
+\item 
+void \mbox{\hyperlink{classsst_1_1behavior_af2894841d05eb4afbeddf25449107167}{Set\+End}} (\mbox{\hyperlink{common_8h_ab0e5976e1a4967e9b13e68b5f271bb44}{int64}} after, \mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{behavior\+\_\+end\+\_\+reason}} reason)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsst_1_1behavior_a40a0361ea8920979531dec96d780b190}{Behavior\+Executor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classsst_1_1behavior_a86c7640d8c3eacd2582de23d442c6bba}\label{classsst_1_1behavior_a86c7640d8c3eacd2582de23d442c6bba}} 
+\index{sst::behavior@{sst::behavior}!behavior\_queue@{behavior\_queue}}
+\index{behavior\_queue@{behavior\_queue}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{behavior\_queue}{behavior\_queue}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classsst_1_1behavior_a86c7640d8c3eacd2582de23d442c6bba}{sst\+::behavior\+::behavior\+\_\+queue}} =  std\+::deque$<$\mbox{\hyperlink{classsst_1_1behavior}{behavior}}$\ast$$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1behavior_ade4fb35924be5e6e2f07db8d1043e57f}\label{classsst_1_1behavior_ade4fb35924be5e6e2f07db8d1043e57f}} 
+\index{sst::behavior@{sst::behavior}!behavior@{behavior}}
+\index{behavior@{behavior}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{behavior()}{behavior()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sst\+::behavior\+::behavior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classsst_1_1behavior_a6547a994a07d58f9d8926bc6979118ab}\label{classsst_1_1behavior_a6547a994a07d58f9d8926bc6979118ab}} 
+\index{sst::behavior@{sst::behavior}!behavior@{behavior}}
+\index{behavior@{behavior}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{behavior()}{behavior()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sst\+::behavior\+::behavior (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsst_1_1behavior__owner}{behavior\+\_\+owner}} $\ast$}]{owner,  }\item[{\mbox{\hyperlink{namespacesst_aa0a9e8ff73dde29a9e01961173c9063b}{behavior\+\_\+type}}}]{type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1behavior_a36af6c626d181910aea0b8af6d96ec67}\label{classsst_1_1behavior_a36af6c626d181910aea0b8af6d96ec67}} 
+\index{sst::behavior@{sst::behavior}!````~behavior@{$\sim$behavior}}
+\index{````~behavior@{$\sim$behavior}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{$\sim$behavior()}{~behavior()}}
+{\footnotesize\ttfamily sst\+::behavior\+::$\sim$behavior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1behavior_a6081f18c315e74b841040da6468da857}\label{classsst_1_1behavior_a6081f18c315e74b841040da6468da857}} 
+\index{sst::behavior@{sst::behavior}!add\_pending@{add\_pending}}
+\index{add\_pending@{add\_pending}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{add\_pending()}{add\_pending()}}
+{\footnotesize\ttfamily void sst\+::behavior\+::add\+\_\+pending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsst_1_1behavior}{behavior}} $\ast$}]{behavior }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1behavior_a30acbb9507e3fd97ec6f366166bff606}\label{classsst_1_1behavior_a30acbb9507e3fd97ec6f366166bff606}} 
+\index{sst::behavior@{sst::behavior}!done@{done}}
+\index{done@{done}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily bool sst\+::behavior\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsst_1_1behavior_af852e4c66b609326be991b1513d14693}\label{classsst_1_1behavior_af852e4c66b609326be991b1513d14693}} 
+\index{sst::behavior@{sst::behavior}!end\_reason@{end\_reason}}
+\index{end\_reason@{end\_reason}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{end\_reason()}{end\_reason()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{behavior\+\_\+end\+\_\+reason}} sst\+::behavior\+::end\+\_\+reason (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1behavior_acbff40bf2d7e1e0d0fb46709bd93b22f}\label{classsst_1_1behavior_acbff40bf2d7e1e0d0fb46709bd93b22f}} 
+\index{sst::behavior@{sst::behavior}!get\_pending@{get\_pending}}
+\index{get\_pending@{get\_pending}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{get\_pending()}{get\_pending()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classsst_1_1behavior_a86c7640d8c3eacd2582de23d442c6bba}{behavior\+\_\+queue}}\& sst\+::behavior\+::get\+\_\+pending (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1behavior_a9920d86cfda4e2937b5b972ca0823782}\label{classsst_1_1behavior_a9920d86cfda4e2937b5b972ca0823782}} 
+\index{sst::behavior@{sst::behavior}!OnBegin@{OnBegin}}
+\index{OnBegin@{OnBegin}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{OnBegin()}{OnBegin()}}
+{\footnotesize\ttfamily void sst\+::behavior\+::\+On\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1behavior_aa734b55105bf257429e5decfa6497a08}\label{classsst_1_1behavior_aa734b55105bf257429e5decfa6497a08}} 
+\index{sst::behavior@{sst::behavior}!onBegin@{onBegin}}
+\index{onBegin@{onBegin}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{onBegin()}{onBegin()}}
+{\footnotesize\ttfamily virtual void sst\+::behavior\+::on\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classsst_1_1behavior_a1446eda2b3fcb7d016256997edceacbf}\label{classsst_1_1behavior_a1446eda2b3fcb7d016256997edceacbf}} 
+\index{sst::behavior@{sst::behavior}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{OnEnd()}{OnEnd()}}
+{\footnotesize\ttfamily void sst\+::behavior\+::\+On\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{behavior\+\_\+end\+\_\+reason}}}]{reason }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1behavior_a6fef480955074238245cfc08aeeb2259}\label{classsst_1_1behavior_a6fef480955074238245cfc08aeeb2259}} 
+\index{sst::behavior@{sst::behavior}!onEnd@{onEnd}}
+\index{onEnd@{onEnd}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{onEnd()}{onEnd()}}
+{\footnotesize\ttfamily virtual void sst\+::behavior\+::on\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{behavior\+\_\+end\+\_\+reason}}}]{reason }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classsst_1_1behavior_a05689f3b70356c4d341fc4283ff8ed61}\label{classsst_1_1behavior_a05689f3b70356c4d341fc4283ff8ed61}} 
+\index{sst::behavior@{sst::behavior}!OnProcess@{OnProcess}}
+\index{OnProcess@{OnProcess}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{OnProcess()}{OnProcess()}}
+{\footnotesize\ttfamily void sst\+::behavior\+::\+On\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1behavior_ade9d096aa68297b221e8de77d13743e0}\label{classsst_1_1behavior_ade9d096aa68297b221e8de77d13743e0}} 
+\index{sst::behavior@{sst::behavior}!onProcess@{onProcess}}
+\index{onProcess@{onProcess}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{onProcess()}{onProcess()}}
+{\footnotesize\ttfamily virtual void sst\+::behavior\+::on\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classsst_1_1behavior_af2894841d05eb4afbeddf25449107167}\label{classsst_1_1behavior_af2894841d05eb4afbeddf25449107167}} 
+\index{sst::behavior@{sst::behavior}!SetEnd@{SetEnd}}
+\index{SetEnd@{SetEnd}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{SetEnd()}{SetEnd()}}
+{\footnotesize\ttfamily void sst\+::behavior\+::\+Set\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_ab0e5976e1a4967e9b13e68b5f271bb44}{int64}}}]{after,  }\item[{\mbox{\hyperlink{namespacesst_af4c96af423edcc09565ae9485589bbf9}{behavior\+\_\+end\+\_\+reason}}}]{reason }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsst_1_1behavior_ad8d61a28592cd6925ab0580ad28d4272}\label{classsst_1_1behavior_ad8d61a28592cd6925ab0580ad28d4272}} 
+\index{sst::behavior@{sst::behavior}!type@{type}}
+\index{type@{type}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesst_aa0a9e8ff73dde29a9e01961173c9063b}{behavior\+\_\+type}} sst\+::behavior\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsst_1_1behavior_a40a0361ea8920979531dec96d780b190}\label{classsst_1_1behavior_a40a0361ea8920979531dec96d780b190}} 
+\index{sst::behavior@{sst::behavior}!BehaviorExecutor@{BehaviorExecutor}}
+\index{BehaviorExecutor@{BehaviorExecutor}!sst::behavior@{sst::behavior}}
+\doxysubsubsection{\texorpdfstring{BehaviorExecutor}{BehaviorExecutor}}
+{\footnotesize\ttfamily friend class Behavior\+Executor\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{behavior_8h}{behavior.\+h}}\item 
+core/\mbox{\hyperlink{behavior_8cpp}{behavior.\+cpp}}\end{DoxyCompactItemize}

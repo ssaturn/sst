@@ -6,76 +6,76 @@
 #include <functional>
 #include <atomic>
 
-namespace sst::ai
+namespace sst::ai::path_finder
 {
-	class AstarMap;
-	class AstarNodeMaster;
-	class Astar
+	class astar_map;
+	class astar_node_master;
+	class astar
 	{
 	public:
-		struct Node
+		struct node
 		{
-			struct Location
+			struct location
 			{
 				uint32 x = 0;
 				uint32 y = 0;
 
-				void Reset()
+				void reset()
 				{
 					x = 0;
 					y = 0;
 				}
 			};
 
-			float cost = 0;
-			float total = 0;
-			bool onOpen = false;
-			bool onClosed = false;
-			Location loc;
-			Node* parent = nullptr;
+			float cost{ 0 };
+			float total{0};
+			bool on_open{ false };
+			bool on_closed{ false };
+			location loc{};
+			node* parent{ nullptr };
 
-			void Reset()
+			void reset()
 			{
 				cost = 0;
 				total = 0;
-				onOpen = false;
-				onClosed = false;
-				loc.Reset();
+				on_open = false;
+				on_closed = false;
+				loc.reset();
 				parent = nullptr;
 			}
 		};
 
-		struct Greater
+		struct greater
 		{
-			bool operator()(const Node* lhs, const Node* rhs) const
+			bool operator()(const node* lhs, const node* rhs) const
 			{
 				return (lhs->total > rhs->total);
 			}
 		};
 
-		Astar(const AstarMap* map);
-		~Astar();
+		astar(const astar_map* map);
+		~astar();
 
-		bool Search(const Node::Location& start, const Node::Location& goal);
+		bool search(const node::location& start, const node::location& goal);
 
 	private:
-		using OpenList = std::priority_queue<Node*, std::vector<Node*>, Greater>;
-		using ClosedList = std::list<Node>;
+		using open_list = std::priority_queue<node*, std::vector<node*>, greater>;
+		using closed_list = std::list<node>;
 
-		AstarNodeMaster* m_master = nullptr;
-		const AstarMap* m_map = nullptr;
-		ClosedList m_closed;
-		OpenList m_open;
+		astar_node_master* master_ = nullptr;
+		const astar_map* map_ = nullptr;
+		closed_list closed_;
+		open_list open_;
 
 	};
 
-	class AstarMap
+	class astar_map
 	{
+		uint32 row_{ 0 };
+		uint32 col_{ 0 };
+	
 	public:
-		uint32 m_row;
-		uint32 m_col;
-
-		uint32 MaxRow() const { return m_row; };
-		uint32 MaxCol() const { return m_col; };
+		uint32 max_row() const { return row_; }
+		uint32 max_col() const { return col_; }
 	};
 };

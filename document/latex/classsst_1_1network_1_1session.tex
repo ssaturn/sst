@@ -1,0 +1,118 @@
+\hypertarget{classsst_1_1network_1_1session}{}\doxysection{sst\+::network\+::session Class Reference}
+\label{classsst_1_1network_1_1session}\index{sst::network::session@{sst::network::session}}
+
+
+{\ttfamily \#include $<$session.\+h$>$}
+
+Inheritance diagram for sst\+::network\+::session\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classsst_1_1network_1_1session}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1session_a13e158350f7a3373baf4dcb211b14a5d}{session}} ()
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1session_ada7d517db0fa3c7f4b71142d0bc673b5}{$\sim$session}} () override=default
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1session_ae135783766e14dea4316a5d9351f8b02}{initialize}} ()
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1session_ab3b160f8e5792ea28f10dbc81c67b0a8}{set\+\_\+peer\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em when complete accept, call this method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1session_a691d2c55d18f4fa18831b4dda1c63958}{set\+\_\+connect}} (const bool connect)
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1network_1_1session_a2ad5c2f96fc3ab5760febaba4b1ef63b}{on\+\_\+connected}} ()=0
+\item 
+virtual \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} \mbox{\hyperlink{classsst_1_1network_1_1session_acb6380acca777dd4ef1c8eaaf606788b}{on\+\_\+receive\+\_\+data}} (const \mbox{\hyperlink{common_8h_a7528222f65ad403ee1a88ff2b56f9fb7}{byte}} $\ast$buf, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} length)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classsst_1_1network_1_1session_ac50db864ce9c0198d32381491f07b5ea}{is\+\_\+connected\+\_\+}} \{ false \}
+\item 
+\mbox{\hyperlink{classsst_1_1ipv4__address}{ipv4\+\_\+address}} \mbox{\hyperlink{classsst_1_1network_1_1session_a39f64b8acba34d0c0dcb75df134eec63}{peer\+\_\+addr\+\_\+}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1session_a13e158350f7a3373baf4dcb211b14a5d}\label{classsst_1_1network_1_1session_a13e158350f7a3373baf4dcb211b14a5d}} 
+\index{sst::network::session@{sst::network::session}!session@{session}}
+\index{session@{session}!sst::network::session@{sst::network::session}}
+\doxysubsubsection{\texorpdfstring{session()}{session()}}
+{\footnotesize\ttfamily sst\+::network\+::session\+::session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1session_ada7d517db0fa3c7f4b71142d0bc673b5}\label{classsst_1_1network_1_1session_ada7d517db0fa3c7f4b71142d0bc673b5}} 
+\index{sst::network::session@{sst::network::session}!````~session@{$\sim$session}}
+\index{````~session@{$\sim$session}!sst::network::session@{sst::network::session}}
+\doxysubsubsection{\texorpdfstring{$\sim$session()}{~session()}}
+{\footnotesize\ttfamily sst\+::network\+::session\+::$\sim$session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1session_ae135783766e14dea4316a5d9351f8b02}\label{classsst_1_1network_1_1session_ae135783766e14dea4316a5d9351f8b02}} 
+\index{sst::network::session@{sst::network::session}!initialize@{initialize}}
+\index{initialize@{initialize}!sst::network::session@{sst::network::session}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void sst\+::network\+::session\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1session_a2ad5c2f96fc3ab5760febaba4b1ef63b}\label{classsst_1_1network_1_1session_a2ad5c2f96fc3ab5760febaba4b1ef63b}} 
+\index{sst::network::session@{sst::network::session}!on\_connected@{on\_connected}}
+\index{on\_connected@{on\_connected}!sst::network::session@{sst::network::session}}
+\doxysubsubsection{\texorpdfstring{on\_connected()}{on\_connected()}}
+{\footnotesize\ttfamily virtual void sst\+::network\+::session\+::on\+\_\+connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classuser__session_a19af56ec4f64613420504b2f32642179}{user\+\_\+session}}, and \mbox{\hyperlink{classclient__session_ad6e8166ec2e609606fcbaa60d7eb3bf1}{client\+\_\+session}}.
+
+\mbox{\Hypertarget{classsst_1_1network_1_1session_acb6380acca777dd4ef1c8eaaf606788b}\label{classsst_1_1network_1_1session_acb6380acca777dd4ef1c8eaaf606788b}} 
+\index{sst::network::session@{sst::network::session}!on\_receive\_data@{on\_receive\_data}}
+\index{on\_receive\_data@{on\_receive\_data}!sst::network::session@{sst::network::session}}
+\doxysubsubsection{\texorpdfstring{on\_receive\_data()}{on\_receive\_data()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} sst\+::network\+::session\+::on\+\_\+receive\+\_\+data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{common_8h_a7528222f65ad403ee1a88ff2b56f9fb7}{byte}} $\ast$}]{buf,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classuser__session_a5f53a2d9ecdb871ec7411c53fe8331f2}{user\+\_\+session}}, and \mbox{\hyperlink{classclient__session_ad9cbb4cfd20c6742e4ed64d9612bb005}{client\+\_\+session}}.
+
+\mbox{\Hypertarget{classsst_1_1network_1_1session_a691d2c55d18f4fa18831b4dda1c63958}\label{classsst_1_1network_1_1session_a691d2c55d18f4fa18831b4dda1c63958}} 
+\index{sst::network::session@{sst::network::session}!set\_connect@{set\_connect}}
+\index{set\_connect@{set\_connect}!sst::network::session@{sst::network::session}}
+\doxysubsubsection{\texorpdfstring{set\_connect()}{set\_connect()}}
+{\footnotesize\ttfamily void sst\+::network\+::session\+::set\+\_\+connect (\begin{DoxyParamCaption}\item[{const bool}]{connect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1session_ab3b160f8e5792ea28f10dbc81c67b0a8}\label{classsst_1_1network_1_1session_ab3b160f8e5792ea28f10dbc81c67b0a8}} 
+\index{sst::network::session@{sst::network::session}!set\_peer\_name@{set\_peer\_name}}
+\index{set\_peer\_name@{set\_peer\_name}!sst::network::session@{sst::network::session}}
+\doxysubsubsection{\texorpdfstring{set\_peer\_name()}{set\_peer\_name()}}
+{\footnotesize\ttfamily void sst\+::network\+::session\+::set\+\_\+peer\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+when complete accept, call this method 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1session_ac50db864ce9c0198d32381491f07b5ea}\label{classsst_1_1network_1_1session_ac50db864ce9c0198d32381491f07b5ea}} 
+\index{sst::network::session@{sst::network::session}!is\_connected\_@{is\_connected\_}}
+\index{is\_connected\_@{is\_connected\_}!sst::network::session@{sst::network::session}}
+\doxysubsubsection{\texorpdfstring{is\_connected\_}{is\_connected\_}}
+{\footnotesize\ttfamily bool sst\+::network\+::session\+::is\+\_\+connected\+\_\+ \{ false \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1session_a39f64b8acba34d0c0dcb75df134eec63}\label{classsst_1_1network_1_1session_a39f64b8acba34d0c0dcb75df134eec63}} 
+\index{sst::network::session@{sst::network::session}!peer\_addr\_@{peer\_addr\_}}
+\index{peer\_addr\_@{peer\_addr\_}!sst::network::session@{sst::network::session}}
+\doxysubsubsection{\texorpdfstring{peer\_addr\_}{peer\_addr\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1ipv4__address}{ipv4\+\_\+address}} sst\+::network\+::session\+::peer\+\_\+addr\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{session_8h}{session.\+h}}\item 
+core/\mbox{\hyperlink{session_8cpp}{session.\+cpp}}\end{DoxyCompactItemize}

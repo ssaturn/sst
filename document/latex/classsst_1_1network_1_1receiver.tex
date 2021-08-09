@@ -1,0 +1,90 @@
+\hypertarget{classsst_1_1network_1_1receiver}{}\doxysection{sst\+::network\+::receiver Class Reference}
+\label{classsst_1_1network_1_1receiver}\index{sst::network::receiver@{sst::network::receiver}}
+
+
+{\ttfamily \#include $<$receiver.\+h$>$}
+
+Inheritance diagram for sst\+::network\+::receiver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsst_1_1network_1_1receiver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1receiver_ae8df32f8652c9c2e5ad7b20359ece06e}{receiver}} (\mbox{\hyperlink{classsst_1_1network_1_1actor__owner}{actor\+\_\+owner}} $\ast$owner)
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1receiver_a2a60c76eb0970d5eb2284f2656fe0066}{$\sim$receiver}} () override=default
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1receiver_ae037070930b81bdaaeff9419701df368}{receive}} ()
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1receiver_aa6129a1fa8cd6448ecfd24a9db1df97b}{complete}} (\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$token, DWORD bytes\+\_\+transferred) override
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1receiver_a5c20eb93d0296d261fdf1428c4f3b01e}{error}} (\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$token, DWORD error) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1c}{type}} \mbox{\hyperlink{classsst_1_1network_1_1receiver_a0a9c35b04da1dc947ec880a676df1e6c}{type\+\_\+value}} = \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1caa2ae6cc9a7acfff494422585a43459c2}{type\+::receiver}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1receiver_ae8df32f8652c9c2e5ad7b20359ece06e}\label{classsst_1_1network_1_1receiver_ae8df32f8652c9c2e5ad7b20359ece06e}} 
+\index{sst::network::receiver@{sst::network::receiver}!receiver@{receiver}}
+\index{receiver@{receiver}!sst::network::receiver@{sst::network::receiver}}
+\doxysubsubsection{\texorpdfstring{receiver()}{receiver()}}
+{\footnotesize\ttfamily sst\+::network\+::receiver\+::receiver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsst_1_1network_1_1actor__owner}{actor\+\_\+owner}} $\ast$}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1receiver_a2a60c76eb0970d5eb2284f2656fe0066}\label{classsst_1_1network_1_1receiver_a2a60c76eb0970d5eb2284f2656fe0066}} 
+\index{sst::network::receiver@{sst::network::receiver}!````~receiver@{$\sim$receiver}}
+\index{````~receiver@{$\sim$receiver}!sst::network::receiver@{sst::network::receiver}}
+\doxysubsubsection{\texorpdfstring{$\sim$receiver()}{~receiver()}}
+{\footnotesize\ttfamily sst\+::network\+::receiver\+::$\sim$receiver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1receiver_aa6129a1fa8cd6448ecfd24a9db1df97b}\label{classsst_1_1network_1_1receiver_aa6129a1fa8cd6448ecfd24a9db1df97b}} 
+\index{sst::network::receiver@{sst::network::receiver}!complete@{complete}}
+\index{complete@{complete}!sst::network::receiver@{sst::network::receiver}}
+\doxysubsubsection{\texorpdfstring{complete()}{complete()}}
+{\footnotesize\ttfamily void sst\+::network\+::receiver\+::complete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$}]{token,  }\item[{DWORD}]{bytes\+\_\+transferred }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsst_1_1network_1_1actor_ab90d967216ffd43a446124bd6b9fad03}{sst\+::network\+::actor}}.
+
+\mbox{\Hypertarget{classsst_1_1network_1_1receiver_a5c20eb93d0296d261fdf1428c4f3b01e}\label{classsst_1_1network_1_1receiver_a5c20eb93d0296d261fdf1428c4f3b01e}} 
+\index{sst::network::receiver@{sst::network::receiver}!error@{error}}
+\index{error@{error}!sst::network::receiver@{sst::network::receiver}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void sst\+::network\+::receiver\+::error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$}]{token,  }\item[{DWORD}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsst_1_1network_1_1actor_a5af36d5aa713563f313aed8bc908adda}{sst\+::network\+::actor}}.
+
+\mbox{\Hypertarget{classsst_1_1network_1_1receiver_ae037070930b81bdaaeff9419701df368}\label{classsst_1_1network_1_1receiver_ae037070930b81bdaaeff9419701df368}} 
+\index{sst::network::receiver@{sst::network::receiver}!receive@{receive}}
+\index{receive@{receive}!sst::network::receiver@{sst::network::receiver}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily void sst\+::network\+::receiver\+::receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1receiver_a0a9c35b04da1dc947ec880a676df1e6c}\label{classsst_1_1network_1_1receiver_a0a9c35b04da1dc947ec880a676df1e6c}} 
+\index{sst::network::receiver@{sst::network::receiver}!type\_value@{type\_value}}
+\index{type\_value@{type\_value}!sst::network::receiver@{sst::network::receiver}}
+\doxysubsubsection{\texorpdfstring{type\_value}{type\_value}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1c}{type}} sst\+::network\+::receiver\+::type\+\_\+value = \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1caa2ae6cc9a7acfff494422585a43459c2}{type\+::receiver}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{receiver_8h}{receiver.\+h}}\item 
+core/\mbox{\hyperlink{receiver_8cpp}{receiver.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{namespacesst_1_1database}{}\doxysection{sst\+::database Namespace Reference}
+\label{namespacesst_1_1database}\index{sst::database@{sst::database}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesst_1_1database_1_1odbc}{odbc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsst_1_1database_1_1database__error}{database\+\_\+error}}
+\item 
+class \mbox{\hyperlink{classsst_1_1database_1_1type__incompatible__error}{type\+\_\+incompatible\+\_\+error}}
+\item 
+class \mbox{\hyperlink{classsst_1_1database_1_1null__access__error}{null\+\_\+access\+\_\+error}}
+\begin{DoxyCompactList}\small\item\em Accessed null data. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsst_1_1database_1_1index__range__error}{index\+\_\+range\+\_\+error}}
+\begin{DoxyCompactList}\small\item\em Index out of range. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsst_1_1database_1_1programming__error}{programming\+\_\+error}}
+\begin{DoxyCompactList}\small\item\em Programming logic error. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsst_1_1database_1_1db__param__base}{db\+\_\+param\+\_\+base}}
+\item 
+class \mbox{\hyperlink{classsst_1_1database_1_1db__param}{db\+\_\+param}}
+\item 
+class \mbox{\hyperlink{classsst_1_1database_1_1db__param__table}{db\+\_\+param\+\_\+table}}
+\item 
+class \mbox{\hyperlink{classsst_1_1database_1_1db__param__array}{db\+\_\+param\+\_\+array}}
+\item 
+class \mbox{\hyperlink{classsst_1_1database_1_1db__param__vector}{db\+\_\+param\+\_\+vector}}
+\item 
+class \mbox{\hyperlink{classsst_1_1database_1_1db__query}{db\+\_\+query}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacesst_1_1database_a68dfcb23ed7de00a04922b35ad6d34ce}{success}} (const RETCODE rc)
+\item 
+{\footnotesize template$<$typename Data\+Ty $>$ }\\constexpr SQLSMALLINT \mbox{\hyperlink{namespacesst_1_1database_a62cf83ae019c4bca298bc01fa99953b8}{to\+\_\+c\+\_\+type}} ()
+\item 
+{\footnotesize template$<$typename Data\+Ty $>$ }\\constexpr SQLSMALLINT \mbox{\hyperlink{namespacesst_1_1database_a1322acd08d74cf17c05fcdc54a16df6b}{to\+\_\+sql\+\_\+type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{common_8h_aae6ad039f09c0676db11bd114136a3fa}{int32}} \mbox{\hyperlink{namespacesst_1_1database_a0662fcb8ff5533c83300853fb68509cd}{max\+\_\+varchar\+\_\+str\+\_\+len}} = 8000
+\item 
+constexpr \mbox{\hyperlink{common_8h_aae6ad039f09c0676db11bd114136a3fa}{int32}} \mbox{\hyperlink{namespacesst_1_1database_aa84766dca5fea89661ec7a8cb02fe965}{max\+\_\+nvarchar\+\_\+str\+\_\+len}} = 4000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesst_1_1database_a68dfcb23ed7de00a04922b35ad6d34ce}\label{namespacesst_1_1database_a68dfcb23ed7de00a04922b35ad6d34ce}} 
+\index{sst::database@{sst::database}!success@{success}}
+\index{success@{success}!sst::database@{sst::database}}
+\doxysubsubsection{\texorpdfstring{success()}{success()}}
+{\footnotesize\ttfamily bool sst\+::database\+::success (\begin{DoxyParamCaption}\item[{const RETCODE}]{rc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacesst_1_1database_a62cf83ae019c4bca298bc01fa99953b8}\label{namespacesst_1_1database_a62cf83ae019c4bca298bc01fa99953b8}} 
+\index{sst::database@{sst::database}!to\_c\_type@{to\_c\_type}}
+\index{to\_c\_type@{to\_c\_type}!sst::database@{sst::database}}
+\doxysubsubsection{\texorpdfstring{to\_c\_type()}{to\_c\_type()}}
+{\footnotesize\ttfamily template$<$typename Data\+Ty $>$ \\
+constexpr SQLSMALLINT sst\+::database\+::to\+\_\+c\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacesst_1_1database_a1322acd08d74cf17c05fcdc54a16df6b}\label{namespacesst_1_1database_a1322acd08d74cf17c05fcdc54a16df6b}} 
+\index{sst::database@{sst::database}!to\_sql\_type@{to\_sql\_type}}
+\index{to\_sql\_type@{to\_sql\_type}!sst::database@{sst::database}}
+\doxysubsubsection{\texorpdfstring{to\_sql\_type()}{to\_sql\_type()}}
+{\footnotesize\ttfamily template$<$typename Data\+Ty $>$ \\
+constexpr SQLSMALLINT sst\+::database\+::to\+\_\+sql\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesst_1_1database_aa84766dca5fea89661ec7a8cb02fe965}\label{namespacesst_1_1database_aa84766dca5fea89661ec7a8cb02fe965}} 
+\index{sst::database@{sst::database}!max\_nvarchar\_str\_len@{max\_nvarchar\_str\_len}}
+\index{max\_nvarchar\_str\_len@{max\_nvarchar\_str\_len}!sst::database@{sst::database}}
+\doxysubsubsection{\texorpdfstring{max\_nvarchar\_str\_len}{max\_nvarchar\_str\_len}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{common_8h_aae6ad039f09c0676db11bd114136a3fa}{int32}} sst\+::database\+::max\+\_\+nvarchar\+\_\+str\+\_\+len = 4000\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacesst_1_1database_a0662fcb8ff5533c83300853fb68509cd}\label{namespacesst_1_1database_a0662fcb8ff5533c83300853fb68509cd}} 
+\index{sst::database@{sst::database}!max\_varchar\_str\_len@{max\_varchar\_str\_len}}
+\index{max\_varchar\_str\_len@{max\_varchar\_str\_len}!sst::database@{sst::database}}
+\doxysubsubsection{\texorpdfstring{max\_varchar\_str\_len}{max\_varchar\_str\_len}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{common_8h_aae6ad039f09c0676db11bd114136a3fa}{int32}} sst\+::database\+::max\+\_\+varchar\+\_\+str\+\_\+len = 8000\hspace{0.3cm}{\ttfamily [constexpr]}}
+

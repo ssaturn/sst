@@ -1,0 +1,64 @@
+\hypertarget{_crash_handler_8h}{}\doxysection{core/\+Crash\+Handler.h File Reference}
+\label{_crash_handler_8h}\index{core/CrashHandler.h@{core/CrashHandler.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcrash__handler_1_1_post_job_for_dump}{crash\+\_\+handler\+::\+Post\+Job\+For\+Dump}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecrash__handler}{crash\+\_\+handler}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_crash_handler_8h_a547cb4312bd19d3660779fb546fe7e48}{ASSERT\+\_\+\+CRASH}}(expr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_crash_handler_8h_aedc116792fa9d35c6e0bd7d84a452b1a}{\+\_\+\+\_\+declspec}} (thread) extern void $\ast$LDebug\+Hint\+This\+Ptr\+Of\+This\+Thread
+\item 
+void \mbox{\hyperlink{namespacecrash__handler_ad5c5f0d7371766691883cf13940efcf7}{crash\+\_\+handler\+::\+Install}} ()
+\item 
+void \mbox{\hyperlink{namespacecrash__handler_a4a50d0b2a805e161e2c1b13905867914}{crash\+\_\+handler\+::\+Install\+For\+Thread}} ()
+\item 
+void \mbox{\hyperlink{namespacecrash__handler_adf671eb72d3ecf266cf547ca082a8924}{crash\+\_\+handler\+::\+Set\+Post\+Job\+For\+Dump}} (Post\+Job\+For\+Dump $\ast$post\+Job)
+\item 
+void \mbox{\hyperlink{namespacecrash__handler_a491e476892f797bed3dbeced1f37af0f}{crash\+\_\+handler\+::\+Add\+Exclude\+Suspend\+Thread}} (DWORD thread\+Id)
+\item 
+void \mbox{\hyperlink{namespacecrash__handler_af868cc31ddf7267993a06b20a48dd87e}{crash\+\_\+handler\+::\+Crash}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_crash_handler_8h_a547cb4312bd19d3660779fb546fe7e48}\label{_crash_handler_8h_a547cb4312bd19d3660779fb546fe7e48}} 
+\index{CrashHandler.h@{CrashHandler.h}!ASSERT\_CRASH@{ASSERT\_CRASH}}
+\index{ASSERT\_CRASH@{ASSERT\_CRASH}!CrashHandler.h@{CrashHandler.h}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_CRASH}{ASSERT\_CRASH}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+CRASH(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        if ( !(expr) ) \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
+\DoxyCodeLine{            \_\_if\_exists (\textcolor{keyword}{this}) \(\backslash\)}
+\DoxyCodeLine{            \{ \(\backslash\)}
+\DoxyCodeLine{                LDebugHintThisPtrOfThisThread = (\textcolor{keywordtype}{void}*) \textcolor{keyword}{this}; \(\backslash\)}
+\DoxyCodeLine{            \} \mbox{\hyperlink{namespacecrash__handler_af868cc31ddf7267993a06b20a48dd87e}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{namespacecrash__handler_af868cc31ddf7267993a06b20a48dd87e}{            CrashHandler::Crash}}(); \(\backslash\)}
+\DoxyCodeLine{        \} \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_crash_handler_8h_aedc116792fa9d35c6e0bd7d84a452b1a}\label{_crash_handler_8h_aedc116792fa9d35c6e0bd7d84a452b1a}} 
+\index{CrashHandler.h@{CrashHandler.h}!\_\_declspec@{\_\_declspec}}
+\index{\_\_declspec@{\_\_declspec}!CrashHandler.h@{CrashHandler.h}}
+\doxysubsubsection{\texorpdfstring{\_\_declspec()}{\_\_declspec()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+declspec (\begin{DoxyParamCaption}\item[{thread}]{ }\end{DoxyParamCaption})}
+

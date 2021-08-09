@@ -1,0 +1,89 @@
+\hypertarget{classsst_1_1network_1_1session__pool}{}\doxysection{sst\+::network\+::session\+\_\+pool$<$ Session\+Ty, Max\+Count $>$ Class Template Reference}
+\label{classsst_1_1network_1_1session__pool}\index{sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}}
+
+
+{\ttfamily \#include $<$session\+\_\+pool.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1session__pool_a1621f1cacac89f853e4e12eca46a4dc5}{session\+\_\+pool}} ()
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1session__pool_ae4d3fbbdd18a53f3e1f4740636db47e8}{$\sim$session\+\_\+pool}} ()
+\item 
+bool \mbox{\hyperlink{classsst_1_1network_1_1session__pool_a2c5ed18248859634a0e49592e06b0255}{create}} ()
+\item 
+auto \mbox{\hyperlink{classsst_1_1network_1_1session__pool_abb0de221aae16aa7aa236809b44003e8}{acquire}} () -\/$>$ Session\+Ty $\ast$
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1session__pool_ae0ba1f776a67b5353d25110dc7cb783f}{release}} (\mbox{\hyperlink{classsst_1_1network_1_1session}{session}} $\ast$\mbox{\hyperlink{classsst_1_1network_1_1session}{session}})
+\item 
+bool \mbox{\hyperlink{classsst_1_1network_1_1session__pool_a7ce04f1e28ba1c33ceeafa4b2664d86b}{empty}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+concurrency\+::concurrent\+\_\+queue$<$ Session\+Ty $\ast$ $>$ \mbox{\hyperlink{classsst_1_1network_1_1session__pool_a8e47d3e0840b020ccda4316982da3ffd}{queue\+\_\+}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1session__pool_a1621f1cacac89f853e4e12eca46a4dc5}\label{classsst_1_1network_1_1session__pool_a1621f1cacac89f853e4e12eca46a4dc5}} 
+\index{sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}!session\_pool@{session\_pool}}
+\index{session\_pool@{session\_pool}!sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}}
+\doxysubsubsection{\texorpdfstring{session\_pool()}{session\_pool()}}
+{\footnotesize\ttfamily template$<$typename Session\+Ty , std\+::size\+\_\+t Max\+Count$>$ \\
+\mbox{\hyperlink{classsst_1_1network_1_1session__pool}{sst\+::network\+::session\+\_\+pool}}$<$ Session\+Ty, Max\+Count $>$\+::\mbox{\hyperlink{classsst_1_1network_1_1session__pool}{session\+\_\+pool}}}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1session__pool_ae4d3fbbdd18a53f3e1f4740636db47e8}\label{classsst_1_1network_1_1session__pool_ae4d3fbbdd18a53f3e1f4740636db47e8}} 
+\index{sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}!````~session\_pool@{$\sim$session\_pool}}
+\index{````~session\_pool@{$\sim$session\_pool}!sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$session\_pool()}{~session\_pool()}}
+{\footnotesize\ttfamily template$<$typename Session\+Ty , std\+::size\+\_\+t Max\+Count$>$ \\
+\mbox{\hyperlink{classsst_1_1network_1_1session__pool}{sst\+::network\+::session\+\_\+pool}}$<$ Session\+Ty, Max\+Count $>$\+::$\sim$\mbox{\hyperlink{classsst_1_1network_1_1session__pool}{session\+\_\+pool}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1session__pool_abb0de221aae16aa7aa236809b44003e8}\label{classsst_1_1network_1_1session__pool_abb0de221aae16aa7aa236809b44003e8}} 
+\index{sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}!acquire@{acquire}}
+\index{acquire@{acquire}!sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily template$<$typename Session\+Ty , std\+::size\+\_\+t Max\+Count$>$ \\
+Session\+Ty $\ast$ \mbox{\hyperlink{classsst_1_1network_1_1session__pool}{sst\+::network\+::session\+\_\+pool}}$<$ Session\+Ty, Max\+Count $>$\+::acquire}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1session__pool_a2c5ed18248859634a0e49592e06b0255}\label{classsst_1_1network_1_1session__pool_a2c5ed18248859634a0e49592e06b0255}} 
+\index{sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}!create@{create}}
+\index{create@{create}!sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily template$<$typename Session\+Ty , std\+::size\+\_\+t Max\+Count$>$ \\
+bool \mbox{\hyperlink{classsst_1_1network_1_1session__pool}{sst\+::network\+::session\+\_\+pool}}$<$ Session\+Ty, Max\+Count $>$\+::create}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1session__pool_a7ce04f1e28ba1c33ceeafa4b2664d86b}\label{classsst_1_1network_1_1session__pool_a7ce04f1e28ba1c33ceeafa4b2664d86b}} 
+\index{sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}!empty@{empty}}
+\index{empty@{empty}!sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename Session\+Ty , std\+::size\+\_\+t Max\+Count$>$ \\
+bool \mbox{\hyperlink{classsst_1_1network_1_1session__pool}{sst\+::network\+::session\+\_\+pool}}$<$ Session\+Ty, Max\+Count $>$\+::empty}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1session__pool_ae0ba1f776a67b5353d25110dc7cb783f}\label{classsst_1_1network_1_1session__pool_ae0ba1f776a67b5353d25110dc7cb783f}} 
+\index{sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}!release@{release}}
+\index{release@{release}!sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily template$<$typename Session\+Ty , std\+::size\+\_\+t Max\+Count$>$ \\
+void \mbox{\hyperlink{classsst_1_1network_1_1session__pool}{sst\+::network\+::session\+\_\+pool}}$<$ Session\+Ty, Max\+Count $>$\+::release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsst_1_1network_1_1session}{session}} $\ast$}]{session }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1session__pool_a8e47d3e0840b020ccda4316982da3ffd}\label{classsst_1_1network_1_1session__pool_a8e47d3e0840b020ccda4316982da3ffd}} 
+\index{sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}!queue\_@{queue\_}}
+\index{queue\_@{queue\_}!sst::network::session\_pool$<$ SessionTy, MaxCount $>$@{sst::network::session\_pool$<$ SessionTy, MaxCount $>$}}
+\doxysubsubsection{\texorpdfstring{queue\_}{queue\_}}
+{\footnotesize\ttfamily template$<$typename Session\+Ty , std\+::size\+\_\+t Max\+Count$>$ \\
+concurrency\+::concurrent\+\_\+queue$<$Session\+Ty$\ast$$>$ \mbox{\hyperlink{classsst_1_1network_1_1session__pool}{sst\+::network\+::session\+\_\+pool}}$<$ Session\+Ty, Max\+Count $>$\+::queue\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{session__pool_8h}{session\+\_\+pool.\+h}}\end{DoxyCompactItemize}

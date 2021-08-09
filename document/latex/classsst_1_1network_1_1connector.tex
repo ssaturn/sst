@@ -1,0 +1,90 @@
+\hypertarget{classsst_1_1network_1_1connector}{}\doxysection{sst\+::network\+::connector Class Reference}
+\label{classsst_1_1network_1_1connector}\index{sst::network::connector@{sst::network::connector}}
+
+
+{\ttfamily \#include $<$connector.\+h$>$}
+
+Inheritance diagram for sst\+::network\+::connector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsst_1_1network_1_1connector}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1connector_a2222cc2b3f43078216b3baac461b3eb9}{connector}} (\mbox{\hyperlink{classsst_1_1network_1_1actor__owner}{actor\+\_\+owner}} $\ast$owner)
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1connector_acfa53a23b4b651246617bcc4b3dbd507}{$\sim$connector}} () override=default
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1connector_ae0bf5ce4959fb0d538915ae58310e74d}{connect}} (const \mbox{\hyperlink{classsst_1_1ipv4__address}{ipv4\+\_\+address}} \&addr)
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1connector_ab8699577b1af359f27e8c5e0d9cd576f}{complete}} (\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$token, DWORD bytes\+\_\+transferred) override
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1connector_a605cfd2bdb9ae65d7c5063739b79e716}{error}} (\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$token, DWORD error) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1c}{type}} \mbox{\hyperlink{classsst_1_1network_1_1connector_ab7a8bf316fa73bfd794deefd0cb43dfb}{type\+\_\+value}} = \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1ca266e0d3d29830abfe7d4ed98b47966f7}{type\+::connector}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1connector_a2222cc2b3f43078216b3baac461b3eb9}\label{classsst_1_1network_1_1connector_a2222cc2b3f43078216b3baac461b3eb9}} 
+\index{sst::network::connector@{sst::network::connector}!connector@{connector}}
+\index{connector@{connector}!sst::network::connector@{sst::network::connector}}
+\doxysubsubsection{\texorpdfstring{connector()}{connector()}}
+{\footnotesize\ttfamily sst\+::network\+::connector\+::connector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsst_1_1network_1_1actor__owner}{actor\+\_\+owner}} $\ast$}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1connector_acfa53a23b4b651246617bcc4b3dbd507}\label{classsst_1_1network_1_1connector_acfa53a23b4b651246617bcc4b3dbd507}} 
+\index{sst::network::connector@{sst::network::connector}!````~connector@{$\sim$connector}}
+\index{````~connector@{$\sim$connector}!sst::network::connector@{sst::network::connector}}
+\doxysubsubsection{\texorpdfstring{$\sim$connector()}{~connector()}}
+{\footnotesize\ttfamily sst\+::network\+::connector\+::$\sim$connector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1connector_ab8699577b1af359f27e8c5e0d9cd576f}\label{classsst_1_1network_1_1connector_ab8699577b1af359f27e8c5e0d9cd576f}} 
+\index{sst::network::connector@{sst::network::connector}!complete@{complete}}
+\index{complete@{complete}!sst::network::connector@{sst::network::connector}}
+\doxysubsubsection{\texorpdfstring{complete()}{complete()}}
+{\footnotesize\ttfamily void sst\+::network\+::connector\+::complete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$}]{token,  }\item[{DWORD}]{bytes\+\_\+transferred }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsst_1_1network_1_1actor_ab90d967216ffd43a446124bd6b9fad03}{sst\+::network\+::actor}}.
+
+\mbox{\Hypertarget{classsst_1_1network_1_1connector_ae0bf5ce4959fb0d538915ae58310e74d}\label{classsst_1_1network_1_1connector_ae0bf5ce4959fb0d538915ae58310e74d}} 
+\index{sst::network::connector@{sst::network::connector}!connect@{connect}}
+\index{connect@{connect}!sst::network::connector@{sst::network::connector}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void sst\+::network\+::connector\+::connect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsst_1_1ipv4__address}{ipv4\+\_\+address}} \&}]{addr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1connector_a605cfd2bdb9ae65d7c5063739b79e716}\label{classsst_1_1network_1_1connector_a605cfd2bdb9ae65d7c5063739b79e716}} 
+\index{sst::network::connector@{sst::network::connector}!error@{error}}
+\index{error@{error}!sst::network::connector@{sst::network::connector}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void sst\+::network\+::connector\+::error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$}]{token,  }\item[{DWORD}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsst_1_1network_1_1actor_a5af36d5aa713563f313aed8bc908adda}{sst\+::network\+::actor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1connector_ab7a8bf316fa73bfd794deefd0cb43dfb}\label{classsst_1_1network_1_1connector_ab7a8bf316fa73bfd794deefd0cb43dfb}} 
+\index{sst::network::connector@{sst::network::connector}!type\_value@{type\_value}}
+\index{type\_value@{type\_value}!sst::network::connector@{sst::network::connector}}
+\doxysubsubsection{\texorpdfstring{type\_value}{type\_value}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1c}{type}} sst\+::network\+::connector\+::type\+\_\+value = \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1ca266e0d3d29830abfe7d4ed98b47966f7}{type\+::connector}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{connector_8h}{connector.\+h}}\item 
+core/\mbox{\hyperlink{connector_8cpp}{connector.\+cpp}}\end{DoxyCompactItemize}

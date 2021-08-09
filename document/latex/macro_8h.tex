@@ -1,0 +1,50 @@
+\hypertarget{macro_8h}{}\doxysection{core/macro.h File Reference}
+\label{macro_8h}\index{core/macro.h@{core/macro.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{macro_8h_a1e789cbfaad8dbdbaeaaef36974eccb4}{DISALLOW\+\_\+\+SPECIAL\+\_\+\+MEMBER\+\_\+\+FUNCTIONS}}(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{macro_8h_a3f98986811d9c5ff90be5736750bfc95}{SST\+\_\+\+STRINGIZE\+\_\+I}}(text)~\#text
+\item 
+\#define \mbox{\hyperlink{macro_8h_a2ef4595d0019e6c5fb4180127165ac39}{SST\+\_\+\+STRINGIZE}}(text)~\mbox{\hyperlink{macro_8h_a3f98986811d9c5ff90be5736750bfc95}{SST\+\_\+\+STRINGIZE\+\_\+I}}(text)
+\item 
+\#define \mbox{\hyperlink{macro_8h_a8bdfd518ff6ce30555a4d37a8517a716}{SST\+\_\+\+CODECVT\+\_\+\+TYPE}}~std\+::codecvt\+\_\+utf8\+\_\+utf16
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{macro_8h_a1e789cbfaad8dbdbaeaaef36974eccb4}\label{macro_8h_a1e789cbfaad8dbdbaeaaef36974eccb4}} 
+\index{macro.h@{macro.h}!DISALLOW\_SPECIAL\_MEMBER\_FUNCTIONS@{DISALLOW\_SPECIAL\_MEMBER\_FUNCTIONS}}
+\index{DISALLOW\_SPECIAL\_MEMBER\_FUNCTIONS@{DISALLOW\_SPECIAL\_MEMBER\_FUNCTIONS}!macro.h@{macro.h}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_SPECIAL\_MEMBER\_FUNCTIONS}{DISALLOW\_SPECIAL\_MEMBER\_FUNCTIONS}}
+{\footnotesize\ttfamily \#define DISALLOW\+\_\+\+SPECIAL\+\_\+\+MEMBER\+\_\+\+FUNCTIONS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+name\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keyword}{public}: \(\backslash\)}
+\DoxyCodeLine{        \_\_name\_\_(\textcolor{keyword}{const} \_\_name\_\_\&) = \textcolor{keyword}{delete}; \(\backslash\)}
+\DoxyCodeLine{        \_\_name\_\_\& operator=(\textcolor{keyword}{const} \_\_name\_\_\&) = \textcolor{keyword}{delete}; \(\backslash\)}
+\DoxyCodeLine{        \_\_name\_\_(\_\_name\_\_\&\&) = \textcolor{keyword}{delete}; \(\backslash\)}
+\DoxyCodeLine{        \_\_name\_\_\& operator=(\_\_name\_\_\&\&) = \textcolor{keyword}{delete}; \(\backslash\)}
+\DoxyCodeLine{    private:}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{macro_8h_a8bdfd518ff6ce30555a4d37a8517a716}\label{macro_8h_a8bdfd518ff6ce30555a4d37a8517a716}} 
+\index{macro.h@{macro.h}!SST\_CODECVT\_TYPE@{SST\_CODECVT\_TYPE}}
+\index{SST\_CODECVT\_TYPE@{SST\_CODECVT\_TYPE}!macro.h@{macro.h}}
+\doxysubsubsection{\texorpdfstring{SST\_CODECVT\_TYPE}{SST\_CODECVT\_TYPE}}
+{\footnotesize\ttfamily \#define SST\+\_\+\+CODECVT\+\_\+\+TYPE~std\+::codecvt\+\_\+utf8\+\_\+utf16}
+
+\mbox{\Hypertarget{macro_8h_a2ef4595d0019e6c5fb4180127165ac39}\label{macro_8h_a2ef4595d0019e6c5fb4180127165ac39}} 
+\index{macro.h@{macro.h}!SST\_STRINGIZE@{SST\_STRINGIZE}}
+\index{SST\_STRINGIZE@{SST\_STRINGIZE}!macro.h@{macro.h}}
+\doxysubsubsection{\texorpdfstring{SST\_STRINGIZE}{SST\_STRINGIZE}}
+{\footnotesize\ttfamily \#define SST\+\_\+\+STRINGIZE(\begin{DoxyParamCaption}\item[{}]{text }\end{DoxyParamCaption})~\mbox{\hyperlink{macro_8h_a3f98986811d9c5ff90be5736750bfc95}{SST\+\_\+\+STRINGIZE\+\_\+I}}(text)}
+
+\mbox{\Hypertarget{macro_8h_a3f98986811d9c5ff90be5736750bfc95}\label{macro_8h_a3f98986811d9c5ff90be5736750bfc95}} 
+\index{macro.h@{macro.h}!SST\_STRINGIZE\_I@{SST\_STRINGIZE\_I}}
+\index{SST\_STRINGIZE\_I@{SST\_STRINGIZE\_I}!macro.h@{macro.h}}
+\doxysubsubsection{\texorpdfstring{SST\_STRINGIZE\_I}{SST\_STRINGIZE\_I}}
+{\footnotesize\ttfamily \#define SST\+\_\+\+STRINGIZE\+\_\+I(\begin{DoxyParamCaption}\item[{}]{text }\end{DoxyParamCaption})~\#text}
+

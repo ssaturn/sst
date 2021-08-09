@@ -1,0 +1,65 @@
+\hypertarget{classsst_1_1network_1_1dispatcher}{}\doxysection{sst\+::network\+::dispatcher$<$ Callback, Max\+Size $>$ Class Template Reference}
+\label{classsst_1_1network_1_1dispatcher}\index{sst::network::dispatcher$<$ Callback, MaxSize $>$@{sst::network::dispatcher$<$ Callback, MaxSize $>$}}
+
+
+{\ttfamily \#include $<$dispatcher.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1dispatcher_a6fcd47a9025df874feff61ce90f87aa7}{dispatcher}} ()
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1dispatcher_a1a8b7b5f529f30367d475c5a35a7fd24}{$\sim$dispatcher}} ()
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1dispatcher_a98e6cac6b487815021d3cb316d60b7c0}{register\+\_\+callback}} (\mbox{\hyperlink{common_8h_af6e23a20bd7abf3ca3c82295c2b323e5}{uint16}} type, Callback $\ast$\mbox{\hyperlink{classsst_1_1callback}{callback}})
+\item 
+Callback $\ast$ \mbox{\hyperlink{classsst_1_1network_1_1dispatcher_a6667b40d6622bc061a825d930b1ac2a9}{dispatch}} (\mbox{\hyperlink{common_8h_af6e23a20bd7abf3ca3c82295c2b323e5}{uint16}} type)
+\item 
+bool \mbox{\hyperlink{classsst_1_1network_1_1dispatcher_adf25d3d07fa3d68246ca13705640093e}{process}} (class \mbox{\hyperlink{classsst_1_1network_1_1session}{session}} $\ast$\mbox{\hyperlink{classsst_1_1network_1_1session}{session}}, const char $\ast$p\+Tr, const \mbox{\hyperlink{common_8h_af6e23a20bd7abf3ca3c82295c2b323e5}{uint16}} p\+Tr\+Sz)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1dispatcher_a6fcd47a9025df874feff61ce90f87aa7}\label{classsst_1_1network_1_1dispatcher_a6fcd47a9025df874feff61ce90f87aa7}} 
+\index{sst::network::dispatcher$<$ Callback, MaxSize $>$@{sst::network::dispatcher$<$ Callback, MaxSize $>$}!dispatcher@{dispatcher}}
+\index{dispatcher@{dispatcher}!sst::network::dispatcher$<$ Callback, MaxSize $>$@{sst::network::dispatcher$<$ Callback, MaxSize $>$}}
+\doxysubsubsection{\texorpdfstring{dispatcher()}{dispatcher()}}
+{\footnotesize\ttfamily template$<$class Callback , int Max\+Size$>$ \\
+\mbox{\hyperlink{classsst_1_1network_1_1dispatcher}{sst\+::network\+::dispatcher}}$<$ Callback, Max\+Size $>$\+::\mbox{\hyperlink{classsst_1_1network_1_1dispatcher}{dispatcher}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1dispatcher_a1a8b7b5f529f30367d475c5a35a7fd24}\label{classsst_1_1network_1_1dispatcher_a1a8b7b5f529f30367d475c5a35a7fd24}} 
+\index{sst::network::dispatcher$<$ Callback, MaxSize $>$@{sst::network::dispatcher$<$ Callback, MaxSize $>$}!````~dispatcher@{$\sim$dispatcher}}
+\index{````~dispatcher@{$\sim$dispatcher}!sst::network::dispatcher$<$ Callback, MaxSize $>$@{sst::network::dispatcher$<$ Callback, MaxSize $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$dispatcher()}{~dispatcher()}}
+{\footnotesize\ttfamily template$<$class Callback , int Max\+Size$>$ \\
+\mbox{\hyperlink{classsst_1_1network_1_1dispatcher}{sst\+::network\+::dispatcher}}$<$ Callback, Max\+Size $>$\+::$\sim$\mbox{\hyperlink{classsst_1_1network_1_1dispatcher}{dispatcher}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1dispatcher_a6667b40d6622bc061a825d930b1ac2a9}\label{classsst_1_1network_1_1dispatcher_a6667b40d6622bc061a825d930b1ac2a9}} 
+\index{sst::network::dispatcher$<$ Callback, MaxSize $>$@{sst::network::dispatcher$<$ Callback, MaxSize $>$}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!sst::network::dispatcher$<$ Callback, MaxSize $>$@{sst::network::dispatcher$<$ Callback, MaxSize $>$}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily template$<$class Callback , int Max\+Size$>$ \\
+Callback$\ast$ \mbox{\hyperlink{classsst_1_1network_1_1dispatcher}{sst\+::network\+::dispatcher}}$<$ Callback, Max\+Size $>$\+::dispatch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_af6e23a20bd7abf3ca3c82295c2b323e5}{uint16}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1dispatcher_adf25d3d07fa3d68246ca13705640093e}\label{classsst_1_1network_1_1dispatcher_adf25d3d07fa3d68246ca13705640093e}} 
+\index{sst::network::dispatcher$<$ Callback, MaxSize $>$@{sst::network::dispatcher$<$ Callback, MaxSize $>$}!process@{process}}
+\index{process@{process}!sst::network::dispatcher$<$ Callback, MaxSize $>$@{sst::network::dispatcher$<$ Callback, MaxSize $>$}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily template$<$class Callback , int Max\+Size$>$ \\
+bool \mbox{\hyperlink{classsst_1_1network_1_1dispatcher}{sst\+::network\+::dispatcher}}$<$ Callback, Max\+Size $>$\+::process (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{classsst_1_1network_1_1session}{session}} $\ast$}]{session,  }\item[{const char $\ast$}]{p\+Tr,  }\item[{const \mbox{\hyperlink{common_8h_af6e23a20bd7abf3ca3c82295c2b323e5}{uint16}}}]{p\+Tr\+Sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1dispatcher_a98e6cac6b487815021d3cb316d60b7c0}\label{classsst_1_1network_1_1dispatcher_a98e6cac6b487815021d3cb316d60b7c0}} 
+\index{sst::network::dispatcher$<$ Callback, MaxSize $>$@{sst::network::dispatcher$<$ Callback, MaxSize $>$}!register\_callback@{register\_callback}}
+\index{register\_callback@{register\_callback}!sst::network::dispatcher$<$ Callback, MaxSize $>$@{sst::network::dispatcher$<$ Callback, MaxSize $>$}}
+\doxysubsubsection{\texorpdfstring{register\_callback()}{register\_callback()}}
+{\footnotesize\ttfamily template$<$class Callback , int Max\+Size$>$ \\
+void \mbox{\hyperlink{classsst_1_1network_1_1dispatcher}{sst\+::network\+::dispatcher}}$<$ Callback, Max\+Size $>$\+::register\+\_\+callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_af6e23a20bd7abf3ca3c82295c2b323e5}{uint16}}}]{type,  }\item[{Callback $\ast$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{dispatcher_8h}{dispatcher.\+h}}\end{DoxyCompactItemize}

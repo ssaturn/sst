@@ -1,0 +1,114 @@
+\hypertarget{classsst_1_1threading_1_1thread}{}\doxysection{sst\+::threading\+::thread Class Reference}
+\label{classsst_1_1threading_1_1thread}\index{sst::threading::thread@{sst::threading::thread}}
+
+
+{\ttfamily \#include $<$thread.\+h$>$}
+
+Inheritance diagram for sst\+::threading\+::thread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.407035cm]{classsst_1_1threading_1_1thread}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1threading_1_1thread_a74d6a23a40b7b8d01a3db2d70140f2ec}{thread}} (std\+::string\+\_\+view name, \mbox{\hyperlink{namespacesst_1_1threading_aefd5607ec65cc1077c67b5bb6c1fd040}{thread\+\_\+id\+\_\+t}} thread\+\_\+id)
+\item 
+virtual \mbox{\hyperlink{classsst_1_1threading_1_1thread_a0c9e0199cffecbe18a2643f970ae37e9}{$\sim$thread}} ()
+\item 
+HANDLE \mbox{\hyperlink{classsst_1_1threading_1_1thread_a7c52fd1361d6aafc452a31c1c0f73090}{get\+\_\+handle}} () const
+\item 
+\mbox{\hyperlink{common_8h_abd01e8e67e3d94cab04ecaaf4f85ac1b}{uint32}} \mbox{\hyperlink{classsst_1_1threading_1_1thread_a57d03f5e207b98aed350b4d04c435f56}{get\+\_\+os\+\_\+id}} () const
+\item 
+\mbox{\hyperlink{namespacesst_1_1threading_aefd5607ec65cc1077c67b5bb6c1fd040}{thread\+\_\+id\+\_\+t}} \mbox{\hyperlink{classsst_1_1threading_1_1thread_af455a14558121b31ece0067ffcc49ad6}{get\+\_\+id}} () const
+\item 
+void \mbox{\hyperlink{classsst_1_1threading_1_1thread_a0810859caec8320fbbfe9f69f15e1166}{start}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classsst_1_1threading_1_1thread_ac7e5cf6a3c369f72d17357513cfdf672}{setup}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1threading_1_1thread_a53ce8e1af23ea2bde652184ea9de234c}{run}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1threading_1_1thread_afd148d865e14de0bc80ba2eba08dfb93}{cleanup}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1threading_1_1thread_a74d6a23a40b7b8d01a3db2d70140f2ec}\label{classsst_1_1threading_1_1thread_a74d6a23a40b7b8d01a3db2d70140f2ec}} 
+\index{sst::threading::thread@{sst::threading::thread}!thread@{thread}}
+\index{thread@{thread}!sst::threading::thread@{sst::threading::thread}}
+\doxysubsubsection{\texorpdfstring{thread()}{thread()}}
+{\footnotesize\ttfamily sst\+::threading\+::thread\+::thread (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{\mbox{\hyperlink{namespacesst_1_1threading_aefd5607ec65cc1077c67b5bb6c1fd040}{thread\+\_\+id\+\_\+t}}}]{thread\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classsst_1_1threading_1_1thread_a0c9e0199cffecbe18a2643f970ae37e9}\label{classsst_1_1threading_1_1thread_a0c9e0199cffecbe18a2643f970ae37e9}} 
+\index{sst::threading::thread@{sst::threading::thread}!````~thread@{$\sim$thread}}
+\index{````~thread@{$\sim$thread}!sst::threading::thread@{sst::threading::thread}}
+\doxysubsubsection{\texorpdfstring{$\sim$thread()}{~thread()}}
+{\footnotesize\ttfamily sst\+::threading\+::thread\+::$\sim$thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1threading_1_1thread_afd148d865e14de0bc80ba2eba08dfb93}\label{classsst_1_1threading_1_1thread_afd148d865e14de0bc80ba2eba08dfb93}} 
+\index{sst::threading::thread@{sst::threading::thread}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!sst::threading::thread@{sst::threading::thread}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily virtual void sst\+::threading\+::thread\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classio__thread_a38f24f96ad9c88de87b20b28bd7214be}{io\+\_\+thread}}, \mbox{\hyperlink{classsst_1_1engine_1_1database_1_1db__thread_a2f127400d0c0804325d4c95096fbb323}{sst\+::engine\+::database\+::db\+\_\+thread}}, and \mbox{\hyperlink{classio__thread_a38f24f96ad9c88de87b20b28bd7214be}{io\+\_\+thread}}.
+
+\mbox{\Hypertarget{classsst_1_1threading_1_1thread_a7c52fd1361d6aafc452a31c1c0f73090}\label{classsst_1_1threading_1_1thread_a7c52fd1361d6aafc452a31c1c0f73090}} 
+\index{sst::threading::thread@{sst::threading::thread}!get\_handle@{get\_handle}}
+\index{get\_handle@{get\_handle}!sst::threading::thread@{sst::threading::thread}}
+\doxysubsubsection{\texorpdfstring{get\_handle()}{get\_handle()}}
+{\footnotesize\ttfamily HANDLE sst\+::threading\+::thread\+::get\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1threading_1_1thread_af455a14558121b31ece0067ffcc49ad6}\label{classsst_1_1threading_1_1thread_af455a14558121b31ece0067ffcc49ad6}} 
+\index{sst::threading::thread@{sst::threading::thread}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!sst::threading::thread@{sst::threading::thread}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesst_1_1threading_aefd5607ec65cc1077c67b5bb6c1fd040}{thread\+\_\+id\+\_\+t}} sst\+::threading\+::thread\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1threading_1_1thread_a57d03f5e207b98aed350b4d04c435f56}\label{classsst_1_1threading_1_1thread_a57d03f5e207b98aed350b4d04c435f56}} 
+\index{sst::threading::thread@{sst::threading::thread}!get\_os\_id@{get\_os\_id}}
+\index{get\_os\_id@{get\_os\_id}!sst::threading::thread@{sst::threading::thread}}
+\doxysubsubsection{\texorpdfstring{get\_os\_id()}{get\_os\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_abd01e8e67e3d94cab04ecaaf4f85ac1b}{uint32}} sst\+::threading\+::thread\+::get\+\_\+os\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1threading_1_1thread_a53ce8e1af23ea2bde652184ea9de234c}\label{classsst_1_1threading_1_1thread_a53ce8e1af23ea2bde652184ea9de234c}} 
+\index{sst::threading::thread@{sst::threading::thread}!run@{run}}
+\index{run@{run}!sst::threading::thread@{sst::threading::thread}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual void sst\+::threading\+::thread\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classio__thread_a4873cd6bacf7318cef6cdb673f98640f}{io\+\_\+thread}}, \mbox{\hyperlink{classsst_1_1engine_1_1database_1_1db__thread_a2d0a0f3c6278aa58af980d75f77cf1a5}{sst\+::engine\+::database\+::db\+\_\+thread}}, and \mbox{\hyperlink{classio__thread_a4873cd6bacf7318cef6cdb673f98640f}{io\+\_\+thread}}.
+
+\mbox{\Hypertarget{classsst_1_1threading_1_1thread_ac7e5cf6a3c369f72d17357513cfdf672}\label{classsst_1_1threading_1_1thread_ac7e5cf6a3c369f72d17357513cfdf672}} 
+\index{sst::threading::thread@{sst::threading::thread}!setup@{setup}}
+\index{setup@{setup}!sst::threading::thread@{sst::threading::thread}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily virtual bool sst\+::threading\+::thread\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classio__thread_a27526d5b40be2b0a78271cec7fedc27a}{io\+\_\+thread}}, \mbox{\hyperlink{classsst_1_1engine_1_1database_1_1db__thread_a0fbc2ea4b1d77d823c346f2239772f86}{sst\+::engine\+::database\+::db\+\_\+thread}}, and \mbox{\hyperlink{classio__thread_a27526d5b40be2b0a78271cec7fedc27a}{io\+\_\+thread}}.
+
+\mbox{\Hypertarget{classsst_1_1threading_1_1thread_a0810859caec8320fbbfe9f69f15e1166}\label{classsst_1_1threading_1_1thread_a0810859caec8320fbbfe9f69f15e1166}} 
+\index{sst::threading::thread@{sst::threading::thread}!start@{start}}
+\index{start@{start}!sst::threading::thread@{sst::threading::thread}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void sst\+::threading\+::thread\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{thread_8h}{thread.\+h}}\item 
+core/\mbox{\hyperlink{thread_8cpp}{thread.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,117 @@
+\hypertarget{classsst_1_1fsm_1_1state}{}\doxysection{sst\+::fsm$<$ Max\+State $>$\+::state Class Reference}
+\label{classsst_1_1fsm_1_1state}\index{sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}}
+
+
+{\ttfamily \#include $<$fsm.\+h$>$}
+
+Inheritance diagram for sst\+::fsm$<$ Max\+State $>$\+::state\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsst_1_1fsm_1_1state}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsst_1_1fsm_1_1state_ad5ed4d34e9e8f45b09619de5571cca4e}{$\sim$state}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1fsm_1_1state_a8ea32df7bdc70b90dc7c5504d0f67a89}{state}} ()
+\item 
+\mbox{\hyperlink{common_8h_ab0e5976e1a4967e9b13e68b5f271bb44}{int64}} \mbox{\hyperlink{classsst_1_1fsm_1_1state_ae91b659dcb5fb9a2ddfbef1543006ce0}{Get\+State\+Tick\+Count}} () const
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1fsm_1_1state_ab9cbfee4ffad349a8b2b1b1cc09417ad}{On\+Enter}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1fsm_1_1state_a12b8ab0d91b6183a32a600fa4fbd752b}{On\+Tick}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1fsm_1_1state_a5f0b8750776c39510400bed94e1372f5}{On\+Exit}} ()=0
+\item 
+virtual \mbox{\hyperlink{common_8h_aae6ad039f09c0676db11bd114136a3fa}{int32}} \mbox{\hyperlink{classsst_1_1fsm_1_1state_aa2f97fc16f54095808a9102f53bfcb9e}{Evaluate\+State\+Transition}} ()=0
+\item 
+void \mbox{\hyperlink{classsst_1_1fsm_1_1state_a95005a08097c1971fd29ea93fc8084f7}{Initialize}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1fsm_1_1state_ad5ed4d34e9e8f45b09619de5571cca4e}\label{classsst_1_1fsm_1_1state_ad5ed4d34e9e8f45b09619de5571cca4e}} 
+\index{sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}!````~state@{$\sim$state}}
+\index{````~state@{$\sim$state}!sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}}
+\doxysubsubsection{\texorpdfstring{$\sim$state()}{~state()}}
+{\footnotesize\ttfamily template$<$int32 Max\+State$>$ \\
+virtual \mbox{\hyperlink{classsst_1_1fsm}{sst\+::fsm}}$<$ Max\+State $>$\+::state\+::$\sim$state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classsst_1_1fsm_1_1state_a8ea32df7bdc70b90dc7c5504d0f67a89}\label{classsst_1_1fsm_1_1state_a8ea32df7bdc70b90dc7c5504d0f67a89}} 
+\index{sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}!state@{state}}
+\index{state@{state}!sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily template$<$int32 Max\+State$>$ \\
+\mbox{\hyperlink{classsst_1_1fsm}{sst\+::fsm}}$<$ Max\+State $>$\+::state\+::state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1fsm_1_1state_aa2f97fc16f54095808a9102f53bfcb9e}\label{classsst_1_1fsm_1_1state_aa2f97fc16f54095808a9102f53bfcb9e}} 
+\index{sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}!EvaluateStateTransition@{EvaluateStateTransition}}
+\index{EvaluateStateTransition@{EvaluateStateTransition}!sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}}
+\doxysubsubsection{\texorpdfstring{EvaluateStateTransition()}{EvaluateStateTransition()}}
+{\footnotesize\ttfamily template$<$int32 Max\+State$>$ \\
+virtual \mbox{\hyperlink{common_8h_aae6ad039f09c0676db11bd114136a3fa}{int32}} \mbox{\hyperlink{classsst_1_1fsm}{sst\+::fsm}}$<$ Max\+State $>$\+::state\+::\+Evaluate\+State\+Transition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classuser__idle__state_ae35fadeb2fee803ad78aecc6bc2f4d8f}{user\+\_\+idle\+\_\+state}}.
+
+\mbox{\Hypertarget{classsst_1_1fsm_1_1state_ae91b659dcb5fb9a2ddfbef1543006ce0}\label{classsst_1_1fsm_1_1state_ae91b659dcb5fb9a2ddfbef1543006ce0}} 
+\index{sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}!GetStateTickCount@{GetStateTickCount}}
+\index{GetStateTickCount@{GetStateTickCount}!sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}}
+\doxysubsubsection{\texorpdfstring{GetStateTickCount()}{GetStateTickCount()}}
+{\footnotesize\ttfamily template$<$int32 Max\+State$>$ \\
+\mbox{\hyperlink{common_8h_ab0e5976e1a4967e9b13e68b5f271bb44}{int64}} \mbox{\hyperlink{classsst_1_1fsm}{sst\+::fsm}}$<$ Max\+State $>$\+::state\+::\+Get\+State\+Tick\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsst_1_1fsm_1_1state_a95005a08097c1971fd29ea93fc8084f7}\label{classsst_1_1fsm_1_1state_a95005a08097c1971fd29ea93fc8084f7}} 
+\index{sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily template$<$int32 Max\+State$>$ \\
+void \mbox{\hyperlink{classsst_1_1fsm}{sst\+::fsm}}$<$ Max\+State $>$\+::state\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsst_1_1fsm_1_1state_ab9cbfee4ffad349a8b2b1b1cc09417ad}\label{classsst_1_1fsm_1_1state_ab9cbfee4ffad349a8b2b1b1cc09417ad}} 
+\index{sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}!OnEnter@{OnEnter}}
+\index{OnEnter@{OnEnter}!sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}}
+\doxysubsubsection{\texorpdfstring{OnEnter()}{OnEnter()}}
+{\footnotesize\ttfamily template$<$int32 Max\+State$>$ \\
+virtual void \mbox{\hyperlink{classsst_1_1fsm}{sst\+::fsm}}$<$ Max\+State $>$\+::state\+::\+On\+Enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classuser__idle__state_a529701bdadccd44b0f2d64d474d9b39f}{user\+\_\+idle\+\_\+state}}.
+
+\mbox{\Hypertarget{classsst_1_1fsm_1_1state_a5f0b8750776c39510400bed94e1372f5}\label{classsst_1_1fsm_1_1state_a5f0b8750776c39510400bed94e1372f5}} 
+\index{sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}!OnExit@{OnExit}}
+\index{OnExit@{OnExit}!sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}}
+\doxysubsubsection{\texorpdfstring{OnExit()}{OnExit()}}
+{\footnotesize\ttfamily template$<$int32 Max\+State$>$ \\
+virtual void \mbox{\hyperlink{classsst_1_1fsm}{sst\+::fsm}}$<$ Max\+State $>$\+::state\+::\+On\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classuser__idle__state_a80d53ec8ef522b125a068d660a635d75}{user\+\_\+idle\+\_\+state}}.
+
+\mbox{\Hypertarget{classsst_1_1fsm_1_1state_a12b8ab0d91b6183a32a600fa4fbd752b}\label{classsst_1_1fsm_1_1state_a12b8ab0d91b6183a32a600fa4fbd752b}} 
+\index{sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}!OnTick@{OnTick}}
+\index{OnTick@{OnTick}!sst::fsm$<$ MaxState $>$::state@{sst::fsm$<$ MaxState $>$::state}}
+\doxysubsubsection{\texorpdfstring{OnTick()}{OnTick()}}
+{\footnotesize\ttfamily template$<$int32 Max\+State$>$ \\
+virtual void \mbox{\hyperlink{classsst_1_1fsm}{sst\+::fsm}}$<$ Max\+State $>$\+::state\+::\+On\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classuser__idle__state_a2c96a2e5914c5de59ff019007db2b01f}{user\+\_\+idle\+\_\+state}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{fsm_8h}{fsm.\+h}}\end{DoxyCompactItemize}

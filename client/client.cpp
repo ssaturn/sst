@@ -5,6 +5,7 @@
 #include "client_session.h"
 
 #include "../core/connector.h"
+#include <core/vector3d.h>
 #include <functional>
 #include <chrono>
 #include <thread>

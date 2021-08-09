@@ -1,0 +1,79 @@
+\hypertarget{_crash_handler_8cpp}{}\doxysection{core/\+Crash\+Handler.cpp File Reference}
+\label{_crash_handler_8cpp}\index{core/CrashHandler.cpp@{core/CrashHandler.cpp}}
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Crash\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$Dbg\+Help.\+h$>$}\newline
+{\ttfamily \#include $<$Psapi.\+h$>$}\newline
+{\ttfamily \#include $<$Tl\+Help32.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_crash_handler_8cpp_a69f6b8ebdbf43b5ac36cd8c4575f25da}{Create\+Mini\+Dump}} (EXCEPTION\+\_\+\+POINTERS $\ast$exception\+Info, const wchar\+\_\+t $\ast$dump\+File\+Name, MINIDUMP\+\_\+\+TYPE dump\+Type)
+\item 
+LONG WINAPI \mbox{\hyperlink{_crash_handler_8cpp_a2665fa8b9251d607177f9d28ef97c8f4}{Exception\+Filter\+Function}} (EXCEPTION\+\_\+\+POINTERS $\ast$exception)
+\item 
+void \mbox{\hyperlink{_crash_handler_8cpp_ade028b6d5f3a531f05f08b72f8daf046}{Pure\+Call\+Handler}} ()
+\item 
+void \mbox{\hyperlink{_crash_handler_8cpp_aae25456b42231d4e793834d8c7a19faf}{Invalid\+Parameter\+Handler}} (const wchar\+\_\+t $\ast$expression, const wchar\+\_\+t $\ast$function, const wchar\+\_\+t $\ast$file, unsigned int line, uintptr\+\_\+t reserved)
+\item 
+void \mbox{\hyperlink{_crash_handler_8cpp_ada74d681ddd967a0ce403f099ebde2ff}{Signal\+Handler}} (int signum)
+\item 
+void \mbox{\hyperlink{_crash_handler_8cpp_ae360cd4999b6277c0b657a048957ac83}{Set\+Signal\+Hanlders}} ()
+\item 
+void \mbox{\hyperlink{_crash_handler_8cpp_a9491d0ffad5617c9cdb165f8ffe95ca9}{Std\+Terminate\+Handler\+Of\+This\+Thread}} ()
+\item 
+void \mbox{\hyperlink{_crash_handler_8cpp_a0acd39206e21d152830bf55be41261f5}{Std\+Unexpected\+Handler\+Of\+This\+Thread}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_crash_handler_8cpp_a69f6b8ebdbf43b5ac36cd8c4575f25da}\label{_crash_handler_8cpp_a69f6b8ebdbf43b5ac36cd8c4575f25da}} 
+\index{CrashHandler.cpp@{CrashHandler.cpp}!CreateMiniDump@{CreateMiniDump}}
+\index{CreateMiniDump@{CreateMiniDump}!CrashHandler.cpp@{CrashHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateMiniDump()}{CreateMiniDump()}}
+{\footnotesize\ttfamily void Create\+Mini\+Dump (\begin{DoxyParamCaption}\item[{EXCEPTION\+\_\+\+POINTERS $\ast$}]{exception\+Info,  }\item[{const wchar\+\_\+t $\ast$}]{dump\+File\+Name,  }\item[{MINIDUMP\+\_\+\+TYPE}]{dump\+Type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_crash_handler_8cpp_a2665fa8b9251d607177f9d28ef97c8f4}\label{_crash_handler_8cpp_a2665fa8b9251d607177f9d28ef97c8f4}} 
+\index{CrashHandler.cpp@{CrashHandler.cpp}!ExceptionFilterFunction@{ExceptionFilterFunction}}
+\index{ExceptionFilterFunction@{ExceptionFilterFunction}!CrashHandler.cpp@{CrashHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{ExceptionFilterFunction()}{ExceptionFilterFunction()}}
+{\footnotesize\ttfamily LONG WINAPI Exception\+Filter\+Function (\begin{DoxyParamCaption}\item[{EXCEPTION\+\_\+\+POINTERS $\ast$}]{exception }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_crash_handler_8cpp_aae25456b42231d4e793834d8c7a19faf}\label{_crash_handler_8cpp_aae25456b42231d4e793834d8c7a19faf}} 
+\index{CrashHandler.cpp@{CrashHandler.cpp}!InvalidParameterHandler@{InvalidParameterHandler}}
+\index{InvalidParameterHandler@{InvalidParameterHandler}!CrashHandler.cpp@{CrashHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{InvalidParameterHandler()}{InvalidParameterHandler()}}
+{\footnotesize\ttfamily void Invalid\+Parameter\+Handler (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{expression,  }\item[{const wchar\+\_\+t $\ast$}]{function,  }\item[{const wchar\+\_\+t $\ast$}]{file,  }\item[{unsigned int}]{line,  }\item[{uintptr\+\_\+t}]{reserved }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_crash_handler_8cpp_ade028b6d5f3a531f05f08b72f8daf046}\label{_crash_handler_8cpp_ade028b6d5f3a531f05f08b72f8daf046}} 
+\index{CrashHandler.cpp@{CrashHandler.cpp}!PureCallHandler@{PureCallHandler}}
+\index{PureCallHandler@{PureCallHandler}!CrashHandler.cpp@{CrashHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{PureCallHandler()}{PureCallHandler()}}
+{\footnotesize\ttfamily void Pure\+Call\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_crash_handler_8cpp_ae360cd4999b6277c0b657a048957ac83}\label{_crash_handler_8cpp_ae360cd4999b6277c0b657a048957ac83}} 
+\index{CrashHandler.cpp@{CrashHandler.cpp}!SetSignalHanlders@{SetSignalHanlders}}
+\index{SetSignalHanlders@{SetSignalHanlders}!CrashHandler.cpp@{CrashHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{SetSignalHanlders()}{SetSignalHanlders()}}
+{\footnotesize\ttfamily void Set\+Signal\+Hanlders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_crash_handler_8cpp_ada74d681ddd967a0ce403f099ebde2ff}\label{_crash_handler_8cpp_ada74d681ddd967a0ce403f099ebde2ff}} 
+\index{CrashHandler.cpp@{CrashHandler.cpp}!SignalHandler@{SignalHandler}}
+\index{SignalHandler@{SignalHandler}!CrashHandler.cpp@{CrashHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{SignalHandler()}{SignalHandler()}}
+{\footnotesize\ttfamily void Signal\+Handler (\begin{DoxyParamCaption}\item[{int}]{signum }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_crash_handler_8cpp_a9491d0ffad5617c9cdb165f8ffe95ca9}\label{_crash_handler_8cpp_a9491d0ffad5617c9cdb165f8ffe95ca9}} 
+\index{CrashHandler.cpp@{CrashHandler.cpp}!StdTerminateHandlerOfThisThread@{StdTerminateHandlerOfThisThread}}
+\index{StdTerminateHandlerOfThisThread@{StdTerminateHandlerOfThisThread}!CrashHandler.cpp@{CrashHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{StdTerminateHandlerOfThisThread()}{StdTerminateHandlerOfThisThread()}}
+{\footnotesize\ttfamily void Std\+Terminate\+Handler\+Of\+This\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_crash_handler_8cpp_a0acd39206e21d152830bf55be41261f5}\label{_crash_handler_8cpp_a0acd39206e21d152830bf55be41261f5}} 
+\index{CrashHandler.cpp@{CrashHandler.cpp}!StdUnexpectedHandlerOfThisThread@{StdUnexpectedHandlerOfThisThread}}
+\index{StdUnexpectedHandlerOfThisThread@{StdUnexpectedHandlerOfThisThread}!CrashHandler.cpp@{CrashHandler.cpp}}
+\doxysubsubsection{\texorpdfstring{StdUnexpectedHandlerOfThisThread()}{StdUnexpectedHandlerOfThisThread()}}
+{\footnotesize\ttfamily void Std\+Unexpected\+Handler\+Of\+This\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

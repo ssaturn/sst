@@ -1,0 +1,98 @@
+\hypertarget{classsst_1_1network_1_1prereceiver}{}\doxysection{sst\+::network\+::prereceiver Class Reference}
+\label{classsst_1_1network_1_1prereceiver}\index{sst::network::prereceiver@{sst::network::prereceiver}}
+
+
+{\ttfamily \#include $<$prereceiver.\+h$>$}
+
+Inheritance diagram for sst\+::network\+::prereceiver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsst_1_1network_1_1prereceiver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1prereceiver_abd53fbdce0174711832761d8cf4758b2}{prereceiver}} (\mbox{\hyperlink{classsst_1_1network_1_1actor__owner}{actor\+\_\+owner}} $\ast$owner)
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1prereceiver_abf7ad12737315994537c543cf6010e2d}{prereceiver}} ()=delete
+\item 
+\mbox{\hyperlink{classsst_1_1network_1_1prereceiver_acb4c39eb4d646169a3e7292f47908839}{$\sim$prereceiver}} () override=default
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1prereceiver_a7f50990c44c61f7c6c9e973a793478c4}{prereceive}} ()
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1prereceiver_ae50db74c317cbb18ed41eaa2927c07c9}{complete}} (\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$token, DWORD bytes\+\_\+transferred) override
+\item 
+void \mbox{\hyperlink{classsst_1_1network_1_1prereceiver_af67f56ed48978ac9d677a5c01ae152c6}{error}} (\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$token, DWORD error) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1c}{type}} \mbox{\hyperlink{classsst_1_1network_1_1prereceiver_ab9e18eec4a8711f607cfea5b091e86da}{type\+\_\+value}} = \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1ca32aba5173e8ad4ff0117ccf5450465ba}{type\+::prereceiver}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1prereceiver_abd53fbdce0174711832761d8cf4758b2}\label{classsst_1_1network_1_1prereceiver_abd53fbdce0174711832761d8cf4758b2}} 
+\index{sst::network::prereceiver@{sst::network::prereceiver}!prereceiver@{prereceiver}}
+\index{prereceiver@{prereceiver}!sst::network::prereceiver@{sst::network::prereceiver}}
+\doxysubsubsection{\texorpdfstring{prereceiver()}{prereceiver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sst\+::network\+::prereceiver\+::prereceiver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsst_1_1network_1_1actor__owner}{actor\+\_\+owner}} $\ast$}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1prereceiver_abf7ad12737315994537c543cf6010e2d}\label{classsst_1_1network_1_1prereceiver_abf7ad12737315994537c543cf6010e2d}} 
+\index{sst::network::prereceiver@{sst::network::prereceiver}!prereceiver@{prereceiver}}
+\index{prereceiver@{prereceiver}!sst::network::prereceiver@{sst::network::prereceiver}}
+\doxysubsubsection{\texorpdfstring{prereceiver()}{prereceiver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sst\+::network\+::prereceiver\+::prereceiver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classsst_1_1network_1_1prereceiver_acb4c39eb4d646169a3e7292f47908839}\label{classsst_1_1network_1_1prereceiver_acb4c39eb4d646169a3e7292f47908839}} 
+\index{sst::network::prereceiver@{sst::network::prereceiver}!````~prereceiver@{$\sim$prereceiver}}
+\index{````~prereceiver@{$\sim$prereceiver}!sst::network::prereceiver@{sst::network::prereceiver}}
+\doxysubsubsection{\texorpdfstring{$\sim$prereceiver()}{~prereceiver()}}
+{\footnotesize\ttfamily sst\+::network\+::prereceiver\+::$\sim$prereceiver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1prereceiver_ae50db74c317cbb18ed41eaa2927c07c9}\label{classsst_1_1network_1_1prereceiver_ae50db74c317cbb18ed41eaa2927c07c9}} 
+\index{sst::network::prereceiver@{sst::network::prereceiver}!complete@{complete}}
+\index{complete@{complete}!sst::network::prereceiver@{sst::network::prereceiver}}
+\doxysubsubsection{\texorpdfstring{complete()}{complete()}}
+{\footnotesize\ttfamily void sst\+::network\+::prereceiver\+::complete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$}]{token,  }\item[{DWORD}]{bytes\+\_\+transferred }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsst_1_1network_1_1actor_ab90d967216ffd43a446124bd6b9fad03}{sst\+::network\+::actor}}.
+
+\mbox{\Hypertarget{classsst_1_1network_1_1prereceiver_af67f56ed48978ac9d677a5c01ae152c6}\label{classsst_1_1network_1_1prereceiver_af67f56ed48978ac9d677a5c01ae152c6}} 
+\index{sst::network::prereceiver@{sst::network::prereceiver}!error@{error}}
+\index{error@{error}!sst::network::prereceiver@{sst::network::prereceiver}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void sst\+::network\+::prereceiver\+::error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsst_1_1network_1_1async__completion__token}{async\+\_\+completion\+\_\+token}} $\ast$}]{token,  }\item[{DWORD}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsst_1_1network_1_1actor_a5af36d5aa713563f313aed8bc908adda}{sst\+::network\+::actor}}.
+
+\mbox{\Hypertarget{classsst_1_1network_1_1prereceiver_a7f50990c44c61f7c6c9e973a793478c4}\label{classsst_1_1network_1_1prereceiver_a7f50990c44c61f7c6c9e973a793478c4}} 
+\index{sst::network::prereceiver@{sst::network::prereceiver}!prereceive@{prereceive}}
+\index{prereceive@{prereceive}!sst::network::prereceiver@{sst::network::prereceiver}}
+\doxysubsubsection{\texorpdfstring{prereceive()}{prereceive()}}
+{\footnotesize\ttfamily void sst\+::network\+::prereceiver\+::prereceive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsst_1_1network_1_1prereceiver_ab9e18eec4a8711f607cfea5b091e86da}\label{classsst_1_1network_1_1prereceiver_ab9e18eec4a8711f607cfea5b091e86da}} 
+\index{sst::network::prereceiver@{sst::network::prereceiver}!type\_value@{type\_value}}
+\index{type\_value@{type\_value}!sst::network::prereceiver@{sst::network::prereceiver}}
+\doxysubsubsection{\texorpdfstring{type\_value}{type\_value}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1c}{type}} sst\+::network\+::prereceiver\+::type\+\_\+value = \mbox{\hyperlink{classsst_1_1network_1_1actor_a2f9075efc1a543b3326aa978e6df8f1ca32aba5173e8ad4ff0117ccf5450465ba}{type\+::prereceiver}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{prereceiver_8h}{prereceiver.\+h}}\item 
+core/\mbox{\hyperlink{prereceiver_8cpp}{prereceiver.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{classsst_1_1job__timer__queue}{}\doxysection{sst\+::job\+\_\+timer\+\_\+queue Class Reference}
+\label{classsst_1_1job__timer__queue}\index{sst::job\_timer\_queue@{sst::job\_timer\_queue}}
+
+
+{\ttfamily \#include $<$job\+\_\+timer.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classsst_1_1job__timer__queue_a15be10be357fe16343a9a398d5a37d74a9da902345994257f1400fee6df6cae56}{slot\+\_\+max}} = 4096
+, \mbox{\hyperlink{classsst_1_1job__timer__queue_a15be10be357fe16343a9a398d5a37d74a1474307182a232dafe341731150fa4b6}{slot\+\_\+tick\+\_\+interval}} = 15
+ \}
+\item 
+using \mbox{\hyperlink{classsst_1_1job__timer__queue_af45452e0f1d39acb3c16bf5e3d29f615}{time\+\_\+slot}} = std\+::vector$<$ \mbox{\hyperlink{classsst_1_1job__timer}{job\+\_\+timer}} $\ast$ $>$
+\item 
+using \mbox{\hyperlink{classsst_1_1job__timer__queue_a1f47f69281a422c6619e79823f4924d8}{timer\+\_\+queue}} = std\+::priority\+\_\+queue$<$ \mbox{\hyperlink{classsst_1_1job__timer}{job\+\_\+timer}}, std\+::vector$<$ \mbox{\hyperlink{classsst_1_1job__timer}{job\+\_\+timer}} $>$, \mbox{\hyperlink{structsst_1_1job__timer_1_1compare}{job\+\_\+timer\+::compare}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsst_1_1job__timer__queue_a5605dbcd920e7c82761cc985749457e9}{push}} (\mbox{\hyperlink{classsst_1_1job__timer}{job\+\_\+timer}} $\ast$job, const \mbox{\hyperlink{common_8h_ab0e5976e1a4967e9b13e68b5f271bb44}{int64}} after)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classsst_1_1job__timer__queue_af45452e0f1d39acb3c16bf5e3d29f615}\label{classsst_1_1job__timer__queue_af45452e0f1d39acb3c16bf5e3d29f615}} 
+\index{sst::job\_timer\_queue@{sst::job\_timer\_queue}!time\_slot@{time\_slot}}
+\index{time\_slot@{time\_slot}!sst::job\_timer\_queue@{sst::job\_timer\_queue}}
+\doxysubsubsection{\texorpdfstring{time\_slot}{time\_slot}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classsst_1_1job__timer__queue_af45452e0f1d39acb3c16bf5e3d29f615}{sst\+::job\+\_\+timer\+\_\+queue\+::time\+\_\+slot}} =  std\+::vector$<$\mbox{\hyperlink{classsst_1_1job__timer}{job\+\_\+timer}}$\ast$$>$}
+
+\mbox{\Hypertarget{classsst_1_1job__timer__queue_a1f47f69281a422c6619e79823f4924d8}\label{classsst_1_1job__timer__queue_a1f47f69281a422c6619e79823f4924d8}} 
+\index{sst::job\_timer\_queue@{sst::job\_timer\_queue}!timer\_queue@{timer\_queue}}
+\index{timer\_queue@{timer\_queue}!sst::job\_timer\_queue@{sst::job\_timer\_queue}}
+\doxysubsubsection{\texorpdfstring{timer\_queue}{timer\_queue}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classsst_1_1job__timer__queue_a1f47f69281a422c6619e79823f4924d8}{sst\+::job\+\_\+timer\+\_\+queue\+::timer\+\_\+queue}} =  std\+::priority\+\_\+queue$<$\mbox{\hyperlink{classsst_1_1job__timer}{job\+\_\+timer}}, std\+::vector$<$\mbox{\hyperlink{classsst_1_1job__timer}{job\+\_\+timer}}$>$, \mbox{\hyperlink{structsst_1_1job__timer_1_1compare}{job\+\_\+timer\+::compare}}$>$}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classsst_1_1job__timer__queue_a15be10be357fe16343a9a398d5a37d74}\label{classsst_1_1job__timer__queue_a15be10be357fe16343a9a398d5a37d74}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{slot\_max@{slot\_max}!sst::job\_timer\_queue@{sst::job\_timer\_queue}}\index{sst::job\_timer\_queue@{sst::job\_timer\_queue}!slot\_max@{slot\_max}}}\mbox{\Hypertarget{classsst_1_1job__timer__queue_a15be10be357fe16343a9a398d5a37d74a9da902345994257f1400fee6df6cae56}\label{classsst_1_1job__timer__queue_a15be10be357fe16343a9a398d5a37d74a9da902345994257f1400fee6df6cae56}} 
+slot\+\_\+max&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{slot\_tick\_interval@{slot\_tick\_interval}!sst::job\_timer\_queue@{sst::job\_timer\_queue}}\index{sst::job\_timer\_queue@{sst::job\_timer\_queue}!slot\_tick\_interval@{slot\_tick\_interval}}}\mbox{\Hypertarget{classsst_1_1job__timer__queue_a15be10be357fe16343a9a398d5a37d74a1474307182a232dafe341731150fa4b6}\label{classsst_1_1job__timer__queue_a15be10be357fe16343a9a398d5a37d74a1474307182a232dafe341731150fa4b6}} 
+slot\+\_\+tick\+\_\+interval&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1job__timer__queue_a5605dbcd920e7c82761cc985749457e9}\label{classsst_1_1job__timer__queue_a5605dbcd920e7c82761cc985749457e9}} 
+\index{sst::job\_timer\_queue@{sst::job\_timer\_queue}!push@{push}}
+\index{push@{push}!sst::job\_timer\_queue@{sst::job\_timer\_queue}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void sst\+::job\+\_\+timer\+\_\+queue\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsst_1_1job__timer}{job\+\_\+timer}} $\ast$}]{job,  }\item[{const \mbox{\hyperlink{common_8h_ab0e5976e1a4967e9b13e68b5f271bb44}{int64}}}]{after }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{job__timer_8h}{job\+\_\+timer.\+h}}\end{DoxyCompactItemize}

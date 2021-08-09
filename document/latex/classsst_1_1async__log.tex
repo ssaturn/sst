@@ -1,0 +1,103 @@
+\hypertarget{classsst_1_1async__log}{}\doxysection{sst\+::async\+\_\+log Class Reference}
+\label{classsst_1_1async__log}\index{sst::async\_log@{sst::async\_log}}
+
+
+{\ttfamily \#include $<$logging.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1async__log_af119bb9be1d871f620947c3a2b7cf17b}{async\+\_\+log}} (const wchar\+\_\+t $\ast$key, const \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}{log\+\_\+level\+\_\+t}} level, const time\+\_\+t time, const wchar\+\_\+t $\ast$file, const wchar\+\_\+t $\ast$function, const \mbox{\hyperlink{common_8h_aae6ad039f09c0676db11bd114136a3fa}{int32}} line, const std\+::wstring \&text, const bool finish)
+\item 
+\mbox{\hyperlink{classsst_1_1async__log_af13eb73a145c841bcb0de298ffe04638}{async\+\_\+log}} (const wchar\+\_\+t $\ast$key, const \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}{log\+\_\+level\+\_\+t}} level, const time\+\_\+t time, const wchar\+\_\+t $\ast$file, const wchar\+\_\+t $\ast$function, const \mbox{\hyperlink{common_8h_aae6ad039f09c0676db11bd114136a3fa}{int32}} line, const wchar\+\_\+t $\ast$text, const bool finish)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const wchar\+\_\+t $\ast$ \mbox{\hyperlink{classsst_1_1async__log_a02f7935f100a6317e82a92c5ca75d0f3}{log\+\_\+key}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}{log\+\_\+level\+\_\+t}} \mbox{\hyperlink{classsst_1_1async__log_ac68714f8df7c30d2b78b46b04f3d5f3d}{log\+\_\+level}} \{\}
+\item 
+time\+\_\+t \mbox{\hyperlink{classsst_1_1async__log_a363cd0d4c5d1488f7ed9240ed0364599}{log\+\_\+time}} \{\}
+\item 
+const wchar\+\_\+t $\ast$ \mbox{\hyperlink{classsst_1_1async__log_a5570294cc708810da886a6c3beb364a9}{log\+\_\+file}} \{ nullptr \}
+\item 
+const wchar\+\_\+t $\ast$ \mbox{\hyperlink{classsst_1_1async__log_a0987e5e8481d0b92e910d4bffa85d5ed}{log\+\_\+function}} \{ nullptr \}
+\item 
+int \mbox{\hyperlink{classsst_1_1async__log_a5b0202fe424e703428a6021e6f0ec3b9}{log\+\_\+line}} \{ 0 \}
+\item 
+std\+::wstring \mbox{\hyperlink{classsst_1_1async__log_a907b9cb5deae6d59ff4d4ffd078da050}{log\+\_\+text}} \{\}
+\item 
+bool \mbox{\hyperlink{classsst_1_1async__log_a0ee5b2cf132e5119481e75c13054b2a1}{need\+\_\+finish}} \{ false \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1async__log_af119bb9be1d871f620947c3a2b7cf17b}\label{classsst_1_1async__log_af119bb9be1d871f620947c3a2b7cf17b}} 
+\index{sst::async\_log@{sst::async\_log}!async\_log@{async\_log}}
+\index{async\_log@{async\_log}!sst::async\_log@{sst::async\_log}}
+\doxysubsubsection{\texorpdfstring{async\_log()}{async\_log()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sst\+::async\+\_\+log\+::async\+\_\+log (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{key,  }\item[{const \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}{log\+\_\+level\+\_\+t}}}]{level,  }\item[{const time\+\_\+t}]{time,  }\item[{const wchar\+\_\+t $\ast$}]{file,  }\item[{const wchar\+\_\+t $\ast$}]{function,  }\item[{const \mbox{\hyperlink{common_8h_aae6ad039f09c0676db11bd114136a3fa}{int32}}}]{line,  }\item[{const std\+::wstring \&}]{text,  }\item[{const bool}]{finish }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1async__log_af13eb73a145c841bcb0de298ffe04638}\label{classsst_1_1async__log_af13eb73a145c841bcb0de298ffe04638}} 
+\index{sst::async\_log@{sst::async\_log}!async\_log@{async\_log}}
+\index{async\_log@{async\_log}!sst::async\_log@{sst::async\_log}}
+\doxysubsubsection{\texorpdfstring{async\_log()}{async\_log()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sst\+::async\+\_\+log\+::async\+\_\+log (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{key,  }\item[{const \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}{log\+\_\+level\+\_\+t}}}]{level,  }\item[{const time\+\_\+t}]{time,  }\item[{const wchar\+\_\+t $\ast$}]{file,  }\item[{const wchar\+\_\+t $\ast$}]{function,  }\item[{const \mbox{\hyperlink{common_8h_aae6ad039f09c0676db11bd114136a3fa}{int32}}}]{line,  }\item[{const wchar\+\_\+t $\ast$}]{text,  }\item[{const bool}]{finish }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsst_1_1async__log_a5570294cc708810da886a6c3beb364a9}\label{classsst_1_1async__log_a5570294cc708810da886a6c3beb364a9}} 
+\index{sst::async\_log@{sst::async\_log}!log\_file@{log\_file}}
+\index{log\_file@{log\_file}!sst::async\_log@{sst::async\_log}}
+\doxysubsubsection{\texorpdfstring{log\_file}{log\_file}}
+{\footnotesize\ttfamily const wchar\+\_\+t$\ast$ sst\+::async\+\_\+log\+::log\+\_\+file \{ nullptr \}}
+
+\mbox{\Hypertarget{classsst_1_1async__log_a0987e5e8481d0b92e910d4bffa85d5ed}\label{classsst_1_1async__log_a0987e5e8481d0b92e910d4bffa85d5ed}} 
+\index{sst::async\_log@{sst::async\_log}!log\_function@{log\_function}}
+\index{log\_function@{log\_function}!sst::async\_log@{sst::async\_log}}
+\doxysubsubsection{\texorpdfstring{log\_function}{log\_function}}
+{\footnotesize\ttfamily const wchar\+\_\+t$\ast$ sst\+::async\+\_\+log\+::log\+\_\+function \{ nullptr \}}
+
+\mbox{\Hypertarget{classsst_1_1async__log_a02f7935f100a6317e82a92c5ca75d0f3}\label{classsst_1_1async__log_a02f7935f100a6317e82a92c5ca75d0f3}} 
+\index{sst::async\_log@{sst::async\_log}!log\_key@{log\_key}}
+\index{log\_key@{log\_key}!sst::async\_log@{sst::async\_log}}
+\doxysubsubsection{\texorpdfstring{log\_key}{log\_key}}
+{\footnotesize\ttfamily const wchar\+\_\+t$\ast$ sst\+::async\+\_\+log\+::log\+\_\+key \{ nullptr \}}
+
+\mbox{\Hypertarget{classsst_1_1async__log_ac68714f8df7c30d2b78b46b04f3d5f3d}\label{classsst_1_1async__log_ac68714f8df7c30d2b78b46b04f3d5f3d}} 
+\index{sst::async\_log@{sst::async\_log}!log\_level@{log\_level}}
+\index{log\_level@{log\_level}!sst::async\_log@{sst::async\_log}}
+\doxysubsubsection{\texorpdfstring{log\_level}{log\_level}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesst_a09ca25491fe3cc41514a98a9340eac0c}{log\+\_\+level\+\_\+t}} sst\+::async\+\_\+log\+::log\+\_\+level \{\}}
+
+\mbox{\Hypertarget{classsst_1_1async__log_a5b0202fe424e703428a6021e6f0ec3b9}\label{classsst_1_1async__log_a5b0202fe424e703428a6021e6f0ec3b9}} 
+\index{sst::async\_log@{sst::async\_log}!log\_line@{log\_line}}
+\index{log\_line@{log\_line}!sst::async\_log@{sst::async\_log}}
+\doxysubsubsection{\texorpdfstring{log\_line}{log\_line}}
+{\footnotesize\ttfamily int sst\+::async\+\_\+log\+::log\+\_\+line \{ 0 \}}
+
+\mbox{\Hypertarget{classsst_1_1async__log_a907b9cb5deae6d59ff4d4ffd078da050}\label{classsst_1_1async__log_a907b9cb5deae6d59ff4d4ffd078da050}} 
+\index{sst::async\_log@{sst::async\_log}!log\_text@{log\_text}}
+\index{log\_text@{log\_text}!sst::async\_log@{sst::async\_log}}
+\doxysubsubsection{\texorpdfstring{log\_text}{log\_text}}
+{\footnotesize\ttfamily std\+::wstring sst\+::async\+\_\+log\+::log\+\_\+text \{\}}
+
+\mbox{\Hypertarget{classsst_1_1async__log_a363cd0d4c5d1488f7ed9240ed0364599}\label{classsst_1_1async__log_a363cd0d4c5d1488f7ed9240ed0364599}} 
+\index{sst::async\_log@{sst::async\_log}!log\_time@{log\_time}}
+\index{log\_time@{log\_time}!sst::async\_log@{sst::async\_log}}
+\doxysubsubsection{\texorpdfstring{log\_time}{log\_time}}
+{\footnotesize\ttfamily time\+\_\+t sst\+::async\+\_\+log\+::log\+\_\+time \{\}}
+
+\mbox{\Hypertarget{classsst_1_1async__log_a0ee5b2cf132e5119481e75c13054b2a1}\label{classsst_1_1async__log_a0ee5b2cf132e5119481e75c13054b2a1}} 
+\index{sst::async\_log@{sst::async\_log}!need\_finish@{need\_finish}}
+\index{need\_finish@{need\_finish}!sst::async\_log@{sst::async\_log}}
+\doxysubsubsection{\texorpdfstring{need\_finish}{need\_finish}}
+{\footnotesize\ttfamily bool sst\+::async\+\_\+log\+::need\+\_\+finish \{ false \}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{logging_8h}{logging.\+h}}\end{DoxyCompactItemize}

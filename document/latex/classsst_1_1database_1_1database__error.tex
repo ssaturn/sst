@@ -1,0 +1,71 @@
+\hypertarget{classsst_1_1database_1_1database__error}{}\doxysection{sst\+::database\+::database\+\_\+error Class Reference}
+\label{classsst_1_1database_1_1database__error}\index{sst::database::database\_error@{sst::database::database\_error}}
+
+
+{\ttfamily \#include $<$error.\+h$>$}
+
+Inheritance diagram for sst\+::database\+::database\+\_\+error\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsst_1_1database_1_1database__error}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1database_1_1database__error_a6ab0258efcbe484d717d90431bf72aa8}{database\+\_\+error}} (void $\ast$handle, short handle\+\_\+type, const std\+::string \&info=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Creates runtime\+\_\+error with message about last ODBC error. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{classsst_1_1database_1_1database__error_a3de1bec87324e0cbe536aef9579260c9}{what}} () const noexcept
+\item 
+long \mbox{\hyperlink{classsst_1_1database_1_1database__error_a33c2b17e070ddbb1609049d8c40b26ec}{native}} () const noexcept
+\item 
+const std\+::string \mbox{\hyperlink{classsst_1_1database_1_1database__error_a0c980711199cbafed443bb3b732c1b17}{state}} () const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1database_1_1database__error_a6ab0258efcbe484d717d90431bf72aa8}\label{classsst_1_1database_1_1database__error_a6ab0258efcbe484d717d90431bf72aa8}} 
+\index{sst::database::database\_error@{sst::database::database\_error}!database\_error@{database\_error}}
+\index{database\_error@{database\_error}!sst::database::database\_error@{sst::database::database\_error}}
+\doxysubsubsection{\texorpdfstring{database\_error()}{database\_error()}}
+{\footnotesize\ttfamily sst\+::database\+::database\+\_\+error\+::database\+\_\+error (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{short}]{handle\+\_\+type,  }\item[{const std\+::string \&}]{info = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Creates runtime\+\_\+error with message about last ODBC error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & The native ODBC statement or connection handle. \\
+\hline
+{\em handle\+\_\+type} & The native ODBC handle type code for the given handle. \\
+\hline
+{\em info} & Additional info that will be appended to the beginning of the error message. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1database_1_1database__error_a33c2b17e070ddbb1609049d8c40b26ec}\label{classsst_1_1database_1_1database__error_a33c2b17e070ddbb1609049d8c40b26ec}} 
+\index{sst::database::database\_error@{sst::database::database\_error}!native@{native}}
+\index{native@{native}!sst::database::database\_error@{sst::database::database\_error}}
+\doxysubsubsection{\texorpdfstring{native()}{native()}}
+{\footnotesize\ttfamily long sst\+::database\+::database\+\_\+error\+::native (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1database__error_a0c980711199cbafed443bb3b732c1b17}\label{classsst_1_1database_1_1database__error_a0c980711199cbafed443bb3b732c1b17}} 
+\index{sst::database::database\_error@{sst::database::database\_error}!state@{state}}
+\index{state@{state}!sst::database::database\_error@{sst::database::database\_error}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily const std\+::string sst\+::database\+::database\+\_\+error\+::state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1database__error_a3de1bec87324e0cbe536aef9579260c9}\label{classsst_1_1database_1_1database__error_a3de1bec87324e0cbe536aef9579260c9}} 
+\index{sst::database::database\_error@{sst::database::database\_error}!what@{what}}
+\index{what@{what}!sst::database::database\_error@{sst::database::database\_error}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ sst\+::database\+::database\+\_\+error\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/database/\mbox{\hyperlink{error_8h}{error.\+h}}\end{DoxyCompactItemize}

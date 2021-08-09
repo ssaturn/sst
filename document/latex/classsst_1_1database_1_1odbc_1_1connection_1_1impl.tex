@@ -1,0 +1,233 @@
+\hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl}{}\doxysection{sst\+::database\+::odbc\+::connection\+::impl Class Reference}
+\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl}\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_aaf7c6890020361b8f519d4621826b9a7}{impl}} (const \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl}{impl}} \&)=delete
+\item 
+\mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl}{impl}} \& \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_af4b7f8a4614438c4d4fc4b81cbbb7177}{operator=}} (const \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl}{impl}} \&)=delete
+\item 
+\mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a48b2ccbc9ae66781cbee22c4bfade919}{impl}} ()
+\item 
+\mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a1e3658f6fe7a66ec34e8c2083d27c7c9}{impl}} (const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&dsn, const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&user, const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&pass, long timeout)
+\item 
+\mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a942b83ffd1444fff9aecfd8ee139c6e1}{impl}} (const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&connection\+\_\+string, const long timeout)
+\item 
+\mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_af93c52c43e2d4f1ef28c0e78ddc0f011}{$\sim$impl}} () noexcept
+\item 
+void \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_adb0c224a593013c07bc3ee95a2bbb327}{allocate}} ()
+\item 
+void \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a6d3542ed3a119e2e095ecc6d3da9d5df}{deallocate}} ()
+\item 
+void \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ab211d0c217128d760f88e3a663005ed3}{enable\+\_\+async}} (void $\ast$event\+\_\+handle)
+\item 
+void \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_abfe6d164a4e7c66979829be89b633197}{async\+\_\+complete}} ()
+\item 
+RETCODE \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ad8451fadbb71a0f9f8e553d77b62aef7}{connect}} (const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&dsn, const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&user, const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&pass, long timeout, void $\ast$event\+\_\+handle=nullptr)
+\item 
+RETCODE \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a1805cc24b8625e885acf4b53b1805684}{connect}} (const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&connection\+\_\+string, long timeout, void $\ast$event\+\_\+handle=nullptr)
+\item 
+bool \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ac363ddc75fa09526c5960ae63ead745c}{connected}} () const
+\item 
+void \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ab09e39f93050b488b7dc6704c41bbcb9}{disconnect}} ()
+\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a897c36cb06ce99beda850fb04ebe7434}{transactions}} () const
+\item 
+void $\ast$ \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ac67ad0e32988f574ec6e5124dd5e3e33}{native\+\_\+dbc\+\_\+handle}} () const
+\item 
+void $\ast$ \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_add8127be89b5e7e9ee52d08b6b23c6a1}{native\+\_\+env\+\_\+handle}} () const
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_abde69a713028570f3206b3254890d357}{get\+\_\+info}} (short info\+\_\+type) const
+\item 
+\mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_aae3dc28ad6691373d9528dda9aac17b5}{dbms\+\_\+name}} () const
+\item 
+\mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a4c68485629118969685a5d933b15d505}{dbms\+\_\+version}} () const
+\item 
+\mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a706af97f79e377a060c5e0fafac057f3}{driver\+\_\+name}} () const
+\item 
+\mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ade087dab056630742051ea7135b4342f}{database\+\_\+name}} () const
+\item 
+\mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a1a1b30bf7bf92859e00d134ba74448fb}{catalog\+\_\+name}} () const
+\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a71f48de4e3bfccca44c89083033db48c}{ref\+\_\+transaction}} ()
+\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_af660ac9c8a08e727de7216de31192a5d}{unref\+\_\+transaction}} ()
+\item 
+bool \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_afb4da94c8fb1b4aea5310ee268059728}{rollback}} () const
+\item 
+void \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a13619b0778bb5d7e1a0929a876e3919a}{rollback}} (bool onoff)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_aaf7c6890020361b8f519d4621826b9a7}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_aaf7c6890020361b8f519d4621826b9a7}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!impl@{impl}}
+\index{impl@{impl}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{impl()}{impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily sst\+::database\+::odbc\+::connection\+::impl\+::impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl}{impl}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a48b2ccbc9ae66781cbee22c4bfade919}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a48b2ccbc9ae66781cbee22c4bfade919}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!impl@{impl}}
+\index{impl@{impl}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{impl()}{impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily sst\+::database\+::odbc\+::connection\+::impl\+::impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a1e3658f6fe7a66ec34e8c2083d27c7c9}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a1e3658f6fe7a66ec34e8c2083d27c7c9}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!impl@{impl}}
+\index{impl@{impl}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{impl()}{impl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily sst\+::database\+::odbc\+::connection\+::impl\+::impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&}]{dsn,  }\item[{const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&}]{user,  }\item[{const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&}]{pass,  }\item[{long}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a942b83ffd1444fff9aecfd8ee139c6e1}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a942b83ffd1444fff9aecfd8ee139c6e1}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!impl@{impl}}
+\index{impl@{impl}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{impl()}{impl()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily sst\+::database\+::odbc\+::connection\+::impl\+::impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&}]{connection\+\_\+string,  }\item[{const long}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_af93c52c43e2d4f1ef28c0e78ddc0f011}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_af93c52c43e2d4f1ef28c0e78ddc0f011}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!````~impl@{$\sim$impl}}
+\index{````~impl@{$\sim$impl}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{$\sim$impl()}{~impl()}}
+{\footnotesize\ttfamily sst\+::database\+::odbc\+::connection\+::impl\+::$\sim$impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_adb0c224a593013c07bc3ee95a2bbb327}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_adb0c224a593013c07bc3ee95a2bbb327}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!allocate@{allocate}}
+\index{allocate@{allocate}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily void sst\+::database\+::odbc\+::connection\+::impl\+::allocate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_abfe6d164a4e7c66979829be89b633197}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_abfe6d164a4e7c66979829be89b633197}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!async\_complete@{async\_complete}}
+\index{async\_complete@{async\_complete}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{async\_complete()}{async\_complete()}}
+{\footnotesize\ttfamily void sst\+::database\+::odbc\+::connection\+::impl\+::async\+\_\+complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a1a1b30bf7bf92859e00d134ba74448fb}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a1a1b30bf7bf92859e00d134ba74448fb}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!catalog\_name@{catalog\_name}}
+\index{catalog\_name@{catalog\_name}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{catalog\_name()}{catalog\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} sst\+::database\+::odbc\+::connection\+::impl\+::catalog\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a1805cc24b8625e885acf4b53b1805684}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a1805cc24b8625e885acf4b53b1805684}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!connect@{connect}}
+\index{connect@{connect}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily RETCODE sst\+::database\+::odbc\+::connection\+::impl\+::connect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&}]{connection\+\_\+string,  }\item[{long}]{timeout,  }\item[{void $\ast$}]{event\+\_\+handle = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ad8451fadbb71a0f9f8e553d77b62aef7}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ad8451fadbb71a0f9f8e553d77b62aef7}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!connect@{connect}}
+\index{connect@{connect}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily RETCODE sst\+::database\+::odbc\+::connection\+::impl\+::connect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&}]{dsn,  }\item[{const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&}]{user,  }\item[{const \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} \&}]{pass,  }\item[{long}]{timeout,  }\item[{void $\ast$}]{event\+\_\+handle = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ac363ddc75fa09526c5960ae63ead745c}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ac363ddc75fa09526c5960ae63ead745c}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!connected@{connected}}
+\index{connected@{connected}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{connected()}{connected()}}
+{\footnotesize\ttfamily bool sst\+::database\+::odbc\+::connection\+::impl\+::connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ade087dab056630742051ea7135b4342f}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ade087dab056630742051ea7135b4342f}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!database\_name@{database\_name}}
+\index{database\_name@{database\_name}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{database\_name()}{database\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} sst\+::database\+::odbc\+::connection\+::impl\+::database\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_aae3dc28ad6691373d9528dda9aac17b5}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_aae3dc28ad6691373d9528dda9aac17b5}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!dbms\_name@{dbms\_name}}
+\index{dbms\_name@{dbms\_name}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{dbms\_name()}{dbms\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} sst\+::database\+::odbc\+::connection\+::impl\+::dbms\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a4c68485629118969685a5d933b15d505}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a4c68485629118969685a5d933b15d505}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!dbms\_version@{dbms\_version}}
+\index{dbms\_version@{dbms\_version}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{dbms\_version()}{dbms\_version()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} sst\+::database\+::odbc\+::connection\+::impl\+::dbms\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a6d3542ed3a119e2e095ecc6d3da9d5df}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a6d3542ed3a119e2e095ecc6d3da9d5df}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{deallocate()}{deallocate()}}
+{\footnotesize\ttfamily void sst\+::database\+::odbc\+::connection\+::impl\+::deallocate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ab09e39f93050b488b7dc6704c41bbcb9}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ab09e39f93050b488b7dc6704c41bbcb9}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily void sst\+::database\+::odbc\+::connection\+::impl\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a706af97f79e377a060c5e0fafac057f3}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a706af97f79e377a060c5e0fafac057f3}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!driver\_name@{driver\_name}}
+\index{driver\_name@{driver\_name}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{driver\_name()}{driver\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesst_1_1database_1_1odbc_a196ea5d4f480b03c7f5aed4e968a0291}{string}} sst\+::database\+::odbc\+::connection\+::impl\+::driver\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ab211d0c217128d760f88e3a663005ed3}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ab211d0c217128d760f88e3a663005ed3}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!enable\_async@{enable\_async}}
+\index{enable\_async@{enable\_async}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{enable\_async()}{enable\_async()}}
+{\footnotesize\ttfamily void sst\+::database\+::odbc\+::connection\+::impl\+::enable\+\_\+async (\begin{DoxyParamCaption}\item[{void $\ast$}]{event\+\_\+handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_abde69a713028570f3206b3254890d357}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_abde69a713028570f3206b3254890d357}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!get\_info@{get\_info}}
+\index{get\_info@{get\_info}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{get\_info()}{get\_info()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T sst\+::database\+::odbc\+::connection\+::impl\+::get\+\_\+info (\begin{DoxyParamCaption}\item[{short}]{info\+\_\+type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ac67ad0e32988f574ec6e5124dd5e3e33}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_ac67ad0e32988f574ec6e5124dd5e3e33}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!native\_dbc\_handle@{native\_dbc\_handle}}
+\index{native\_dbc\_handle@{native\_dbc\_handle}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{native\_dbc\_handle()}{native\_dbc\_handle()}}
+{\footnotesize\ttfamily void$\ast$ sst\+::database\+::odbc\+::connection\+::impl\+::native\+\_\+dbc\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_add8127be89b5e7e9ee52d08b6b23c6a1}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_add8127be89b5e7e9ee52d08b6b23c6a1}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!native\_env\_handle@{native\_env\_handle}}
+\index{native\_env\_handle@{native\_env\_handle}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{native\_env\_handle()}{native\_env\_handle()}}
+{\footnotesize\ttfamily void$\ast$ sst\+::database\+::odbc\+::connection\+::impl\+::native\+\_\+env\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_af4b7f8a4614438c4d4fc4b81cbbb7177}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_af4b7f8a4614438c4d4fc4b81cbbb7177}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!operator=@{operator=}}
+\index{operator=@{operator=}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl}{impl}}\& sst\+::database\+::odbc\+::connection\+::impl\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsst_1_1database_1_1odbc_1_1connection_1_1impl}{impl}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a71f48de4e3bfccca44c89083033db48c}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a71f48de4e3bfccca44c89083033db48c}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!ref\_transaction@{ref\_transaction}}
+\index{ref\_transaction@{ref\_transaction}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{ref\_transaction()}{ref\_transaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} sst\+::database\+::odbc\+::connection\+::impl\+::ref\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_afb4da94c8fb1b4aea5310ee268059728}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_afb4da94c8fb1b4aea5310ee268059728}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!rollback@{rollback}}
+\index{rollback@{rollback}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{rollback()}{rollback()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool sst\+::database\+::odbc\+::connection\+::impl\+::rollback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a13619b0778bb5d7e1a0929a876e3919a}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a13619b0778bb5d7e1a0929a876e3919a}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!rollback@{rollback}}
+\index{rollback@{rollback}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{rollback()}{rollback()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sst\+::database\+::odbc\+::connection\+::impl\+::rollback (\begin{DoxyParamCaption}\item[{bool}]{onoff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a897c36cb06ce99beda850fb04ebe7434}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_a897c36cb06ce99beda850fb04ebe7434}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!transactions@{transactions}}
+\index{transactions@{transactions}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{transactions()}{transactions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} sst\+::database\+::odbc\+::connection\+::impl\+::transactions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1database_1_1odbc_1_1connection_1_1impl_af660ac9c8a08e727de7216de31192a5d}\label{classsst_1_1database_1_1odbc_1_1connection_1_1impl_af660ac9c8a08e727de7216de31192a5d}} 
+\index{sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}!unref\_transaction@{unref\_transaction}}
+\index{unref\_transaction@{unref\_transaction}!sst::database::odbc::connection::impl@{sst::database::odbc::connection::impl}}
+\doxysubsubsection{\texorpdfstring{unref\_transaction()}{unref\_transaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{std\+::size\+\_\+t}} sst\+::database\+::odbc\+::connection\+::impl\+::unref\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/database/odbc/\mbox{\hyperlink{connection_8cpp}{connection.\+cpp}}\end{DoxyCompactItemize}

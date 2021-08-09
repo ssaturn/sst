@@ -1,24 +1,25 @@
 #include "stdafx.h"
-#include "Astar.h"
-#include "AstarNodeMaster.h"
+#include "astar.h"
+#include "astar_node_master.h"
 
-namespace sst::ai
+
+namespace sst::ai::path_finder
 {
-	Astar::Astar( const AstarMap* map )
-		: m_master( new AstarNodeMaster( map->MaxRow(), map->MaxCol() ) )
-		  , m_map( map )
+	astar::astar( const astar_map* map )
+		: master_( new astar_node_master( map->max_row(), map->max_col() ) )
+		  , map_( map )
 	{
 
 	}
 
-	Astar::~Astar()
+	astar::~astar()
 	{
-		delete m_master;
+		delete master_;
 	}
 
-	bool Astar::Search( const Node::Location& start, [[maybe_unused]] const Node::Location& goal )
+	bool astar::search( const node::location& start, [[maybe_unused]] const node::location& goal )
 	{
-		if ( m_map == nullptr )
+		if ( map_ == nullptr )
 		{
 			return false;
 		}
@@ -26,26 +27,26 @@ namespace sst::ai
 		// param check
 
 		// clear 
-		while ( !m_open.empty() )
+		while ( !open_.empty() )
 		{
-			//m_open.pop();
+			//open_.pop();
 		}
-		m_closed.clear();
+		closed_.clear();
 
-		m_open.push( m_master->GetNode( start ) );
+		open_.push( master_->get_node( start ) );
 
-		Node* startNode = new Node;
+		node* startNode = new node;
 		startNode->cost = 0;
 		startNode->loc.x = start.x;
 		startNode->loc.y = start.y;
 		startNode->total = 0;
 		startNode->parent = nullptr;
 
-		m_open.emplace( startNode );
+		open_.emplace( startNode );
 
-		while ( !m_open.empty() )
+		while ( !open_.empty() )
 		{
-			auto node = m_open.top();
+			auto node = open_.top();
 			node;
 
 

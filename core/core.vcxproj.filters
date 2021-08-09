@@ -31,9 +31,6 @@
     <Filter Include="ai">
       <UniqueIdentifier>{43d81d3f-89e5-47ee-9b1d-63e70db6dfb0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ai\Astar">
-      <UniqueIdentifier>{aa9ccb76-61b4-46d3-bc57-7cdbf4924412}</UniqueIdentifier>
-    </Filter>
     <Filter Include="string">
       <UniqueIdentifier>{ef1393ae-f1f6-42e8-bc70-e25c654330c5}</UniqueIdentifier>
     </Filter>
@@ -48,6 +45,15 @@
     </Filter>
     <Filter Include="utility">
       <UniqueIdentifier>{48f32c60-c41f-4945-a3e7-0add38cf4c53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{79f4eedd-38d9-40fe-817e-41ec02037c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="database\odbc">
+      <UniqueIdentifier>{76dc0a47-e221-4f73-9922-8fa3b8586ef9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai\astar">
+      <UniqueIdentifier>{aa9ccb76-61b4-46d3-bc57-7cdbf4924412}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -114,11 +120,11 @@
     <ClInclude Include="job_timer.h">
       <Filter>job</Filter>
     </ClInclude>
-    <ClInclude Include="Astar.h">
-      <Filter>ai\Astar</Filter>
+    <ClInclude Include="astar.h">
+      <Filter>ai\astar</Filter>
     </ClInclude>
-    <ClInclude Include="AstarNodeMaster.h">
-      <Filter>ai\Astar</Filter>
+    <ClInclude Include="astar_node_master.h">
+      <Filter>ai\astar</Filter>
     </ClInclude>
     <ClInclude Include="object_pool.h">
       <Filter>memory</Filter>
@@ -159,9 +165,6 @@
     <ClInclude Include="async_completion_token.h">
       <Filter>network</Filter>
     </ClInclude>
-    <ClInclude Include="database\connection.h">
-      <Filter>database</Filter>
-    </ClInclude>
     <ClInclude Include="io_socket.h">
       <Filter>network</Filter>
     </ClInclude>
@@ -201,6 +204,25 @@
     <ClInclude Include="serializer.h">
       <Filter>memory</Filter>
     </ClInclude>
+    <ClInclude Include="vector3d.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="db_param.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="db_common.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="db_query.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\odbc\connection.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\error.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory_manager.cpp">
@@ -248,11 +270,11 @@
     <ClCompile Include="Disconnector.cpp">
       <Filter>network\actor</Filter>
     </ClCompile>
-    <ClCompile Include="Astar.cpp">
-      <Filter>ai\Astar</Filter>
+    <ClCompile Include="astar.cpp">
+      <Filter>ai\astar</Filter>
     </ClCompile>
-    <ClCompile Include="AstarNodeMaster.cpp">
-      <Filter>ai\Astar</Filter>
+    <ClCompile Include="astar_node_master.cpp">
+      <Filter>ai\astar</Filter>
     </ClCompile>
     <ClCompile Include="server_service.cpp">
       <Filter>network\service</Filter>
@@ -271,9 +293,6 @@
     </ClCompile>
     <ClCompile Include="actor.cpp">
       <Filter>network\actor</Filter>
-    </ClCompile>
-    <ClCompile Include="database\connection.cpp">
-      <Filter>database</Filter>
     </ClCompile>
     <ClCompile Include="win_sock.ixx">
       <Filter>network</Filter>
@@ -311,6 +330,16 @@
     <ClCompile Include="sst.ixx">
       <Filter>utility</Filter>
     </ClCompile>
+    <ClCompile Include="vector3d.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="db_param.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\odbc\connection.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\error.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

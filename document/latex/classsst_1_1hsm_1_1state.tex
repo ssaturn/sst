@@ -1,0 +1,284 @@
+\hypertarget{classsst_1_1hsm_1_1state}{}\doxysection{sst\+::hsm\+::state Class Reference}
+\label{classsst_1_1hsm_1_1state}\index{sst::hsm::state@{sst::hsm::state}}
+
+
+{\ttfamily \#include $<$hsm.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsst_1_1hsm_1_1state_1_1node}{node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{structsst_1_1hsm_1_1state_1_1node}{node}} $>$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_a45e7d5ac1f64cdb8786bc2680acb53c2}{path}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1hsm_1_1state_a372fe647b858f7d91b6ae99bc991d959}{state}} ()
+\item 
+virtual \mbox{\hyperlink{classsst_1_1hsm_1_1state_a34eb899975d077a56581809dbae7f4e1}{$\sim$state}} ()
+\item 
+virtual \mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}} $\ast$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_ab41ec32e680cd58690013df7a1b65909}{create}} ()
+\item 
+bool \mbox{\hyperlink{classsst_1_1hsm_1_1state_ae81908667a3bf0da1025a72b0b365a20}{init}} (\mbox{\hyperlink{classsst_1_1hsm}{hsm}} $\ast$\mbox{\hyperlink{classsst_1_1hsm}{hsm}}, \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} id, \mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}} $\ast$parent)
+\item 
+void \mbox{\hyperlink{classsst_1_1hsm_1_1state_a6c30dd9ba24cea3cebd2aa24b1bfd3b8}{on\+\_\+enter}} ()
+\item 
+\mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}} $\ast$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_aad11a643d123cb6e93cd5d5e8b3784f9}{on\+\_\+tick}} (\mbox{\hyperlink{common_8h_abd01e8e67e3d94cab04ecaaf4f85ac1b}{uint32}} age)
+\item 
+void \mbox{\hyperlink{classsst_1_1hsm_1_1state_ab27f84d36701751b09f8fba1a7022f65}{on\+\_\+exit}} ()
+\item 
+void \mbox{\hyperlink{classsst_1_1hsm_1_1state_a90013ec92439ca6794e3cbfa0cc6fe6a}{finish}} ()
+\item 
+bool \mbox{\hyperlink{classsst_1_1hsm_1_1state_aafcc63d67d9f42e9c57a9f8f694729b8}{is\+\_\+transable}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} target\+\_\+state)
+\item 
+bool \mbox{\hyperlink{classsst_1_1hsm_1_1state_a448f5e871a67c93117f601921fc7ce2e}{has\+\_\+state}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} id) const
+\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} \mbox{\hyperlink{classsst_1_1hsm_1_1state_ae2a47125a21c8734fcefda9f16462a40}{get\+\_\+id}} () const
+\item 
+\mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}} $\ast$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_a4f94b38a42d2a6325d4812e154a8cb29}{get\+\_\+state}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} id)
+\item 
+\mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}} $\ast$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_ac56ed5c3f60f9316e4e79f11ff0c4fa6}{get\+\_\+parent}} () const
+\item 
+bool \mbox{\hyperlink{classsst_1_1hsm_1_1state_a1a3b56fbf1aafc20d25b2fe007f3e02b}{get\+\_\+transition\+\_\+path\+\_\+to}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} target, \mbox{\hyperlink{classsst_1_1hsm_1_1state_a45e7d5ac1f64cdb8786bc2680acb53c2}{path}} \&\mbox{\hyperlink{classsst_1_1hsm_1_1state_a45e7d5ac1f64cdb8786bc2680acb53c2}{path}})
+\item 
+\mbox{\hyperlink{classsst_1_1hsm__owner}{hsm\+\_\+owner}} $\ast$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_a1277406d08afa00d0661cf8ee5babda8}{get\+\_\+owner}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}} $\ast$ $>$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_af53f1c126dfe066b4e8fe6b60804b33a}{state\+\_\+list}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classsst_1_1hsm_1_1state_ab3a5ba0d58b25cbbfe36142d24bbaf54}{\+\_\+\+Init}} ()
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1hsm_1_1state_a477dad46dce09cd907f6b68d14428289}{\+\_\+\+Fini}} ()
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1hsm_1_1state_a046e33a765e44f0492a6bb027b0907f1}{\+\_\+\+On\+\_\+enter}} ()
+\item 
+virtual \mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}} $\ast$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_a9d1350011b6c47c7ae71bb67f25398a6}{\+\_\+\+On\+\_\+tick}} (\mbox{\hyperlink{common_8h_abd01e8e67e3d94cab04ecaaf4f85ac1b}{uint32}} age)
+\item 
+virtual void \mbox{\hyperlink{classsst_1_1hsm_1_1state_ac0ff1ed63f81e30cf1c2d93c6bd377ff}{\+\_\+\+On\+\_\+exit}} ()
+\item 
+virtual bool \mbox{\hyperlink{classsst_1_1hsm_1_1state_a5b92bf16d1c8ad58048381344a0a1c88}{\+\_\+\+Is\+\_\+transable}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} target\+\_\+state)
+\item 
+void \mbox{\hyperlink{classsst_1_1hsm_1_1state_a526d2066b1e119b827f283798bd0ba02}{\+\_\+\+Attach}} (\mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}} $\ast$\mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}})
+\item 
+bool \mbox{\hyperlink{classsst_1_1hsm_1_1state_a312e89ce49ee1fbcab9323e1b40e3df2}{\+\_\+\+Get\+\_\+child\+\_\+path\+\_\+to}} (\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} target, \mbox{\hyperlink{classsst_1_1hsm_1_1state_a45e7d5ac1f64cdb8786bc2680acb53c2}{path}} \&\mbox{\hyperlink{classsst_1_1hsm_1_1state_a45e7d5ac1f64cdb8786bc2680acb53c2}{path}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsst_1_1hsm}{hsm}} $\ast$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_add658eee2a7965631a410bdda2474570}{hsm\+\_\+}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} \mbox{\hyperlink{classsst_1_1hsm_1_1state_a30edf3384c036052fc5907dd2e89afb7}{id\+\_\+}} \{ 0 \}
+\item 
+\mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}} $\ast$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_ab6adcf43af65200e3b13f85e80f13e8b}{parent\+\_\+}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} \mbox{\hyperlink{classsst_1_1hsm_1_1state_a59ed36804b45f64d0a94beb6a50dfae8}{target\+\_\+id\+\_\+}} \{ 0 \}
+\item 
+\mbox{\hyperlink{classsst_1_1hsm_1_1state_af53f1c126dfe066b4e8fe6b60804b33a}{state\+\_\+list}} \mbox{\hyperlink{classsst_1_1hsm_1_1state_af0b034430237eb7c3d5ff7258d4281c1}{children\+\_\+}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a45e7d5ac1f64cdb8786bc2680acb53c2}\label{classsst_1_1hsm_1_1state_a45e7d5ac1f64cdb8786bc2680acb53c2}} 
+\index{sst::hsm::state@{sst::hsm::state}!path@{path}}
+\index{path@{path}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{structsst_1_1hsm_1_1state_1_1node}{node}}$>$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_a45e7d5ac1f64cdb8786bc2680acb53c2}{sst\+::hsm\+::state\+::path}}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_af53f1c126dfe066b4e8fe6b60804b33a}\label{classsst_1_1hsm_1_1state_af53f1c126dfe066b4e8fe6b60804b33a}} 
+\index{sst::hsm::state@{sst::hsm::state}!state\_list@{state\_list}}
+\index{state\_list@{state\_list}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{state\_list}{state\_list}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}}$\ast$$>$ \mbox{\hyperlink{classsst_1_1hsm_1_1state_af53f1c126dfe066b4e8fe6b60804b33a}{sst\+::hsm\+::state\+::state\+\_\+list}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a372fe647b858f7d91b6ae99bc991d959}\label{classsst_1_1hsm_1_1state_a372fe647b858f7d91b6ae99bc991d959}} 
+\index{sst::hsm::state@{sst::hsm::state}!state@{state}}
+\index{state@{state}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily sst\+::hsm\+::state\+::state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a34eb899975d077a56581809dbae7f4e1}\label{classsst_1_1hsm_1_1state_a34eb899975d077a56581809dbae7f4e1}} 
+\index{sst::hsm::state@{sst::hsm::state}!````~state@{$\sim$state}}
+\index{````~state@{$\sim$state}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{$\sim$state()}{~state()}}
+{\footnotesize\ttfamily sst\+::hsm\+::state\+::$\sim$state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a526d2066b1e119b827f283798bd0ba02}\label{classsst_1_1hsm_1_1state_a526d2066b1e119b827f283798bd0ba02}} 
+\index{sst::hsm::state@{sst::hsm::state}!\_Attach@{\_Attach}}
+\index{\_Attach@{\_Attach}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{\_Attach()}{\_Attach()}}
+{\footnotesize\ttfamily void sst\+::hsm\+::state\+::\+\_\+\+Attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}} $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a477dad46dce09cd907f6b68d14428289}\label{classsst_1_1hsm_1_1state_a477dad46dce09cd907f6b68d14428289}} 
+\index{sst::hsm::state@{sst::hsm::state}!\_Fini@{\_Fini}}
+\index{\_Fini@{\_Fini}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{\_Fini()}{\_Fini()}}
+{\footnotesize\ttfamily virtual void sst\+::hsm\+::state\+::\+\_\+\+Fini (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a312e89ce49ee1fbcab9323e1b40e3df2}\label{classsst_1_1hsm_1_1state_a312e89ce49ee1fbcab9323e1b40e3df2}} 
+\index{sst::hsm::state@{sst::hsm::state}!\_Get\_child\_path\_to@{\_Get\_child\_path\_to}}
+\index{\_Get\_child\_path\_to@{\_Get\_child\_path\_to}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{\_Get\_child\_path\_to()}{\_Get\_child\_path\_to()}}
+{\footnotesize\ttfamily bool sst\+::hsm\+::state\+::\+\_\+\+Get\+\_\+child\+\_\+path\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{target,  }\item[{\mbox{\hyperlink{classsst_1_1hsm_1_1state_a45e7d5ac1f64cdb8786bc2680acb53c2}{path}} \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_ab3a5ba0d58b25cbbfe36142d24bbaf54}\label{classsst_1_1hsm_1_1state_ab3a5ba0d58b25cbbfe36142d24bbaf54}} 
+\index{sst::hsm::state@{sst::hsm::state}!\_Init@{\_Init}}
+\index{\_Init@{\_Init}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{\_Init()}{\_Init()}}
+{\footnotesize\ttfamily bool sst\+::hsm\+::state\+::\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a5b92bf16d1c8ad58048381344a0a1c88}\label{classsst_1_1hsm_1_1state_a5b92bf16d1c8ad58048381344a0a1c88}} 
+\index{sst::hsm::state@{sst::hsm::state}!\_Is\_transable@{\_Is\_transable}}
+\index{\_Is\_transable@{\_Is\_transable}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{\_Is\_transable()}{\_Is\_transable()}}
+{\footnotesize\ttfamily virtual bool sst\+::hsm\+::state\+::\+\_\+\+Is\+\_\+transable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{target\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a046e33a765e44f0492a6bb027b0907f1}\label{classsst_1_1hsm_1_1state_a046e33a765e44f0492a6bb027b0907f1}} 
+\index{sst::hsm::state@{sst::hsm::state}!\_On\_enter@{\_On\_enter}}
+\index{\_On\_enter@{\_On\_enter}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{\_On\_enter()}{\_On\_enter()}}
+{\footnotesize\ttfamily void sst\+::hsm\+::state\+::\+\_\+\+On\+\_\+enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_ac0ff1ed63f81e30cf1c2d93c6bd377ff}\label{classsst_1_1hsm_1_1state_ac0ff1ed63f81e30cf1c2d93c6bd377ff}} 
+\index{sst::hsm::state@{sst::hsm::state}!\_On\_exit@{\_On\_exit}}
+\index{\_On\_exit@{\_On\_exit}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{\_On\_exit()}{\_On\_exit()}}
+{\footnotesize\ttfamily virtual void sst\+::hsm\+::state\+::\+\_\+\+On\+\_\+exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a9d1350011b6c47c7ae71bb67f25398a6}\label{classsst_1_1hsm_1_1state_a9d1350011b6c47c7ae71bb67f25398a6}} 
+\index{sst::hsm::state@{sst::hsm::state}!\_On\_tick@{\_On\_tick}}
+\index{\_On\_tick@{\_On\_tick}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{\_On\_tick()}{\_On\_tick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1hsm_1_1state}{hsm\+::state}} $\ast$ sst\+::hsm\+::state\+::\+\_\+\+On\+\_\+tick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_abd01e8e67e3d94cab04ecaaf4f85ac1b}{uint32}}}]{age }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_ab41ec32e680cd58690013df7a1b65909}\label{classsst_1_1hsm_1_1state_ab41ec32e680cd58690013df7a1b65909}} 
+\index{sst::hsm::state@{sst::hsm::state}!create@{create}}
+\index{create@{create}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}}$\ast$ sst\+::hsm\+::state\+::create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a90013ec92439ca6794e3cbfa0cc6fe6a}\label{classsst_1_1hsm_1_1state_a90013ec92439ca6794e3cbfa0cc6fe6a}} 
+\index{sst::hsm::state@{sst::hsm::state}!finish@{finish}}
+\index{finish@{finish}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{finish()}{finish()}}
+{\footnotesize\ttfamily void sst\+::hsm\+::state\+::finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_ae2a47125a21c8734fcefda9f16462a40}\label{classsst_1_1hsm_1_1state_ae2a47125a21c8734fcefda9f16462a40}} 
+\index{sst::hsm::state@{sst::hsm::state}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} sst\+::hsm\+::state\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a1277406d08afa00d0661cf8ee5babda8}\label{classsst_1_1hsm_1_1state_a1277406d08afa00d0661cf8ee5babda8}} 
+\index{sst::hsm::state@{sst::hsm::state}!get\_owner@{get\_owner}}
+\index{get\_owner@{get\_owner}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{get\_owner()}{get\_owner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1hsm__owner}{hsm\+\_\+owner}} $\ast$ sst\+::hsm\+::state\+::get\+\_\+owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_ac56ed5c3f60f9316e4e79f11ff0c4fa6}\label{classsst_1_1hsm_1_1state_ac56ed5c3f60f9316e4e79f11ff0c4fa6}} 
+\index{sst::hsm::state@{sst::hsm::state}!get\_parent@{get\_parent}}
+\index{get\_parent@{get\_parent}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{get\_parent()}{get\_parent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}}$\ast$ sst\+::hsm\+::state\+::get\+\_\+parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a4f94b38a42d2a6325d4812e154a8cb29}\label{classsst_1_1hsm_1_1state_a4f94b38a42d2a6325d4812e154a8cb29}} 
+\index{sst::hsm::state@{sst::hsm::state}!get\_state@{get\_state}}
+\index{get\_state@{get\_state}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{get\_state()}{get\_state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1hsm_1_1state}{hsm\+::state}} $\ast$ sst\+::hsm\+::state\+::get\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a1a3b56fbf1aafc20d25b2fe007f3e02b}\label{classsst_1_1hsm_1_1state_a1a3b56fbf1aafc20d25b2fe007f3e02b}} 
+\index{sst::hsm::state@{sst::hsm::state}!get\_transition\_path\_to@{get\_transition\_path\_to}}
+\index{get\_transition\_path\_to@{get\_transition\_path\_to}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{get\_transition\_path\_to()}{get\_transition\_path\_to()}}
+{\footnotesize\ttfamily bool sst\+::hsm\+::state\+::get\+\_\+transition\+\_\+path\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{target,  }\item[{\mbox{\hyperlink{classsst_1_1hsm_1_1state_a45e7d5ac1f64cdb8786bc2680acb53c2}{path}} \&}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a448f5e871a67c93117f601921fc7ce2e}\label{classsst_1_1hsm_1_1state_a448f5e871a67c93117f601921fc7ce2e}} 
+\index{sst::hsm::state@{sst::hsm::state}!has\_state@{has\_state}}
+\index{has\_state@{has\_state}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{has\_state()}{has\_state()}}
+{\footnotesize\ttfamily bool sst\+::hsm\+::state\+::has\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{id }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_ae81908667a3bf0da1025a72b0b365a20}\label{classsst_1_1hsm_1_1state_ae81908667a3bf0da1025a72b0b365a20}} 
+\index{sst::hsm::state@{sst::hsm::state}!init@{init}}
+\index{init@{init}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool sst\+::hsm\+::state\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsst_1_1hsm}{hsm}} $\ast$}]{hsm,  }\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{id,  }\item[{\mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}} $\ast$}]{parent }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_aafcc63d67d9f42e9c57a9f8f694729b8}\label{classsst_1_1hsm_1_1state_aafcc63d67d9f42e9c57a9f8f694729b8}} 
+\index{sst::hsm::state@{sst::hsm::state}!is\_transable@{is\_transable}}
+\index{is\_transable@{is\_transable}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{is\_transable()}{is\_transable()}}
+{\footnotesize\ttfamily bool sst\+::hsm\+::state\+::is\+\_\+transable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}}}]{target\+\_\+state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a6c30dd9ba24cea3cebd2aa24b1bfd3b8}\label{classsst_1_1hsm_1_1state_a6c30dd9ba24cea3cebd2aa24b1bfd3b8}} 
+\index{sst::hsm::state@{sst::hsm::state}!on\_enter@{on\_enter}}
+\index{on\_enter@{on\_enter}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{on\_enter()}{on\_enter()}}
+{\footnotesize\ttfamily void sst\+::hsm\+::state\+::on\+\_\+enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_ab27f84d36701751b09f8fba1a7022f65}\label{classsst_1_1hsm_1_1state_ab27f84d36701751b09f8fba1a7022f65}} 
+\index{sst::hsm::state@{sst::hsm::state}!on\_exit@{on\_exit}}
+\index{on\_exit@{on\_exit}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{on\_exit()}{on\_exit()}}
+{\footnotesize\ttfamily void sst\+::hsm\+::state\+::on\+\_\+exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_aad11a643d123cb6e93cd5d5e8b3784f9}\label{classsst_1_1hsm_1_1state_aad11a643d123cb6e93cd5d5e8b3784f9}} 
+\index{sst::hsm::state@{sst::hsm::state}!on\_tick@{on\_tick}}
+\index{on\_tick@{on\_tick}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{on\_tick()}{on\_tick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1hsm_1_1state}{hsm\+::state}} $\ast$ sst\+::hsm\+::state\+::on\+\_\+tick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_abd01e8e67e3d94cab04ecaaf4f85ac1b}{uint32}}}]{age }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_af0b034430237eb7c3d5ff7258d4281c1}\label{classsst_1_1hsm_1_1state_af0b034430237eb7c3d5ff7258d4281c1}} 
+\index{sst::hsm::state@{sst::hsm::state}!children\_@{children\_}}
+\index{children\_@{children\_}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{children\_}{children\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1hsm_1_1state_af53f1c126dfe066b4e8fe6b60804b33a}{state\+\_\+list}} sst\+::hsm\+::state\+::children\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_add658eee2a7965631a410bdda2474570}\label{classsst_1_1hsm_1_1state_add658eee2a7965631a410bdda2474570}} 
+\index{sst::hsm::state@{sst::hsm::state}!hsm\_@{hsm\_}}
+\index{hsm\_@{hsm\_}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{hsm\_}{hsm\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1hsm}{hsm}}$\ast$ sst\+::hsm\+::state\+::hsm\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a30edf3384c036052fc5907dd2e89afb7}\label{classsst_1_1hsm_1_1state_a30edf3384c036052fc5907dd2e89afb7}} 
+\index{sst::hsm::state@{sst::hsm::state}!id\_@{id\_}}
+\index{id\_@{id\_}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{id\_}{id\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} sst\+::hsm\+::state\+::id\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_ab6adcf43af65200e3b13f85e80f13e8b}\label{classsst_1_1hsm_1_1state_ab6adcf43af65200e3b13f85e80f13e8b}} 
+\index{sst::hsm::state@{sst::hsm::state}!parent\_@{parent\_}}
+\index{parent\_@{parent\_}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{parent\_}{parent\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1hsm_1_1state}{state}}$\ast$ sst\+::hsm\+::state\+::parent\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsst_1_1hsm_1_1state_a59ed36804b45f64d0a94beb6a50dfae8}\label{classsst_1_1hsm_1_1state_a59ed36804b45f64d0a94beb6a50dfae8}} 
+\index{sst::hsm::state@{sst::hsm::state}!target\_id\_@{target\_id\_}}
+\index{target\_id\_@{target\_id\_}!sst::hsm::state@{sst::hsm::state}}
+\doxysubsubsection{\texorpdfstring{target\_id\_}{target\_id\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common_8h_a801d6a451a01953ef8cbae6feb6a3638}{size\+\_\+t}} sst\+::hsm\+::state\+::target\+\_\+id\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{hsm_8h}{hsm.\+h}}\item 
+core/\mbox{\hyperlink{hsm_8cpp}{hsm.\+cpp}}\end{DoxyCompactItemize}

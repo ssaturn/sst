@@ -1,0 +1,203 @@
+\hypertarget{namespacesst_1_1math}{}\doxysection{sst\+::math Namespace Reference}
+\label{namespacesst_1_1math}\index{sst::math@{sst::math}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{namespacesst_1_1math_ad24adf5f1dd592350f2f24337b07d330}{sqrt}} (const float val)
+\item 
+float \mbox{\hyperlink{namespacesst_1_1math_a7ec704a91da5b61ac533086adf8c5671}{inv\+\_\+sqrt}} (const float val)
+\item 
+float \mbox{\hyperlink{namespacesst_1_1math_a9d9b13e2422975d22279ced7a562b6e5}{abs}} (const float f)
+\item 
+bool \mbox{\hyperlink{namespacesst_1_1math_a6df1d6e61c93ea1f83aa81f2a3ec0922}{is\+\_\+zero}} (const float a)
+\item 
+bool \mbox{\hyperlink{namespacesst_1_1math_adaa5fce6f792a2ae723d098542da3c20}{are\+\_\+equal}} (const float a, const float b)
+\item 
+float \mbox{\hyperlink{namespacesst_1_1math_abb3e559ec5dea0c93177f6015c94a56c}{sin}} (const float a)
+\item 
+float \mbox{\hyperlink{namespacesst_1_1math_aa3092ab3ac73c627e21f969f26af6592}{cos}} (const float a)
+\item 
+float \mbox{\hyperlink{namespacesst_1_1math_af608c1c7591e6be56a4a7dfbf9bcf393}{tan}} (const float a)
+\item 
+void \mbox{\hyperlink{namespacesst_1_1math_a7f9a83a053b8e5e227149ea32c6cd750}{sin\+\_\+cos}} (const float a, float \&sina, float \&cosa)
+\item 
+float \mbox{\hyperlink{namespacesst_1_1math_af44a9cb52255dce751fad307bba6721d}{degree\+\_\+to\+\_\+radian}} (const float a)
+\item 
+float \mbox{\hyperlink{namespacesst_1_1math_acac9f749e57b08f95065d78669cec3b0}{radian\+\_\+to\+\_\+degree}} (const float r)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacesst_1_1math_a453c8f8ef3872fcc6a8b1559d4927944}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&source)
+\item 
+float \mbox{\hyperlink{namespacesst_1_1math_a21ba10664694aa770e010858325de626}{distance}} (const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&p0, const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&p1)
+\item 
+float \mbox{\hyperlink{namespacesst_1_1math_a36e95e7b9fa389eeefe938d64d4e3b63}{distance\+\_\+seq}} (const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&p0, const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&p1)
+\item 
+\mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \& \mbox{\hyperlink{namespacesst_1_1math_a635aa55c6db543550de4cc2edae5bd86}{operator+=}} (\mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&vector, const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&other)
+\item 
+\mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \& \mbox{\hyperlink{namespacesst_1_1math_a79d0c22d53f3bcb2d98fd0457de002e9}{operator-\/=}} (\mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&vector, const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&other)
+\item 
+\mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \mbox{\hyperlink{namespacesst_1_1math_ab3030c6bb301aae91db81f7069092dd6}{operator$\ast$}} (const float scalar, const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&vector)
+\item 
+float \mbox{\hyperlink{namespacesst_1_1math_aafc63911d61775ce5726ae1d00f4f61a}{dot}} (const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&vector1, const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&vector2)
+\item 
+\mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \mbox{\hyperlink{namespacesst_1_1math_a87ed2344c1fb2176a2a1f0c306fb98ab}{cross}} (const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&vector1, const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&vector2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr float \mbox{\hyperlink{namespacesst_1_1math_a16ae86165de7866570793f46947e1440}{k\+\_\+epsilon}} = 1.\+0e-\/6f
+\item 
+constexpr float \mbox{\hyperlink{namespacesst_1_1math_a2dd0b01204018add665654c2f3088e18}{k\+\_\+pi}} = 3.\+1415926535897932384626433832795f
+\item 
+constexpr float \mbox{\hyperlink{namespacesst_1_1math_a140ea0b753cb3f4fcd9f8079288e4b5d}{k\+\_\+half\+\_\+pi}} = 1.\+5707963267948966192313216916398f
+\item 
+constexpr float \mbox{\hyperlink{namespacesst_1_1math_aafdd96bef29a40e76b25fc11956034a8}{k\+\_\+two\+\_\+pi}} = 2.\+0f $\ast$ \mbox{\hyperlink{namespacesst_1_1math_a2dd0b01204018add665654c2f3088e18}{k\+\_\+pi}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesst_1_1math_a9d9b13e2422975d22279ced7a562b6e5}\label{namespacesst_1_1math_a9d9b13e2422975d22279ced7a562b6e5}} 
+\index{sst::math@{sst::math}!abs@{abs}}
+\index{abs@{abs}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{abs()}{abs()}}
+{\footnotesize\ttfamily float sst\+::math\+::abs (\begin{DoxyParamCaption}\item[{const float}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_adaa5fce6f792a2ae723d098542da3c20}\label{namespacesst_1_1math_adaa5fce6f792a2ae723d098542da3c20}} 
+\index{sst::math@{sst::math}!are\_equal@{are\_equal}}
+\index{are\_equal@{are\_equal}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{are\_equal()}{are\_equal()}}
+{\footnotesize\ttfamily bool sst\+::math\+::are\+\_\+equal (\begin{DoxyParamCaption}\item[{const float}]{a,  }\item[{const float}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_aa3092ab3ac73c627e21f969f26af6592}\label{namespacesst_1_1math_aa3092ab3ac73c627e21f969f26af6592}} 
+\index{sst::math@{sst::math}!cos@{cos}}
+\index{cos@{cos}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{cos()}{cos()}}
+{\footnotesize\ttfamily float sst\+::math\+::cos (\begin{DoxyParamCaption}\item[{const float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_a87ed2344c1fb2176a2a1f0c306fb98ab}\label{namespacesst_1_1math_a87ed2344c1fb2176a2a1f0c306fb98ab}} 
+\index{sst::math@{sst::math}!cross@{cross}}
+\index{cross@{cross}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} sst\+::math\+::cross (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{vector1,  }\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{vector2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacesst_1_1math_af44a9cb52255dce751fad307bba6721d}\label{namespacesst_1_1math_af44a9cb52255dce751fad307bba6721d}} 
+\index{sst::math@{sst::math}!degree\_to\_radian@{degree\_to\_radian}}
+\index{degree\_to\_radian@{degree\_to\_radian}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{degree\_to\_radian()}{degree\_to\_radian()}}
+{\footnotesize\ttfamily float sst\+::math\+::degree\+\_\+to\+\_\+radian (\begin{DoxyParamCaption}\item[{const float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_a21ba10664694aa770e010858325de626}\label{namespacesst_1_1math_a21ba10664694aa770e010858325de626}} 
+\index{sst::math@{sst::math}!distance@{distance}}
+\index{distance@{distance}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily float sst\+::math\+::distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{p0,  }\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{p1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacesst_1_1math_a36e95e7b9fa389eeefe938d64d4e3b63}\label{namespacesst_1_1math_a36e95e7b9fa389eeefe938d64d4e3b63}} 
+\index{sst::math@{sst::math}!distance\_seq@{distance\_seq}}
+\index{distance\_seq@{distance\_seq}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{distance\_seq()}{distance\_seq()}}
+{\footnotesize\ttfamily float sst\+::math\+::distance\+\_\+seq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{p0,  }\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{p1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacesst_1_1math_aafc63911d61775ce5726ae1d00f4f61a}\label{namespacesst_1_1math_aafc63911d61775ce5726ae1d00f4f61a}} 
+\index{sst::math@{sst::math}!dot@{dot}}
+\index{dot@{dot}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily float sst\+::math\+::dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{vector1,  }\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{vector2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacesst_1_1math_a7ec704a91da5b61ac533086adf8c5671}\label{namespacesst_1_1math_a7ec704a91da5b61ac533086adf8c5671}} 
+\index{sst::math@{sst::math}!inv\_sqrt@{inv\_sqrt}}
+\index{inv\_sqrt@{inv\_sqrt}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{inv\_sqrt()}{inv\_sqrt()}}
+{\footnotesize\ttfamily float sst\+::math\+::inv\+\_\+sqrt (\begin{DoxyParamCaption}\item[{const float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_a6df1d6e61c93ea1f83aa81f2a3ec0922}\label{namespacesst_1_1math_a6df1d6e61c93ea1f83aa81f2a3ec0922}} 
+\index{sst::math@{sst::math}!is\_zero@{is\_zero}}
+\index{is\_zero@{is\_zero}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{is\_zero()}{is\_zero()}}
+{\footnotesize\ttfamily bool sst\+::math\+::is\+\_\+zero (\begin{DoxyParamCaption}\item[{const float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_ab3030c6bb301aae91db81f7069092dd6}\label{namespacesst_1_1math_ab3030c6bb301aae91db81f7069092dd6}} 
+\index{sst::math@{sst::math}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} sst\+::math\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const float}]{scalar,  }\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{vector }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacesst_1_1math_a635aa55c6db543550de4cc2edae5bd86}\label{namespacesst_1_1math_a635aa55c6db543550de4cc2edae5bd86}} 
+\index{sst::math@{sst::math}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}}\& sst\+::math\+::operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{vector,  }\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacesst_1_1math_a79d0c22d53f3bcb2d98fd0457de002e9}\label{namespacesst_1_1math_a79d0c22d53f3bcb2d98fd0457de002e9}} 
+\index{sst::math@{sst::math}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}}\& sst\+::math\+::operator-\/= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{vector,  }\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacesst_1_1math_a453c8f8ef3872fcc6a8b1559d4927944}\label{namespacesst_1_1math_a453c8f8ef3872fcc6a8b1559d4927944}} 
+\index{sst::math@{sst::math}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& sst\+::math\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classsst_1_1math_1_1vector3d}{vector3d}} \&}]{source }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacesst_1_1math_acac9f749e57b08f95065d78669cec3b0}\label{namespacesst_1_1math_acac9f749e57b08f95065d78669cec3b0}} 
+\index{sst::math@{sst::math}!radian\_to\_degree@{radian\_to\_degree}}
+\index{radian\_to\_degree@{radian\_to\_degree}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{radian\_to\_degree()}{radian\_to\_degree()}}
+{\footnotesize\ttfamily float sst\+::math\+::radian\+\_\+to\+\_\+degree (\begin{DoxyParamCaption}\item[{const float}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_abb3e559ec5dea0c93177f6015c94a56c}\label{namespacesst_1_1math_abb3e559ec5dea0c93177f6015c94a56c}} 
+\index{sst::math@{sst::math}!sin@{sin}}
+\index{sin@{sin}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{sin()}{sin()}}
+{\footnotesize\ttfamily float sst\+::math\+::sin (\begin{DoxyParamCaption}\item[{const float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_a7f9a83a053b8e5e227149ea32c6cd750}\label{namespacesst_1_1math_a7f9a83a053b8e5e227149ea32c6cd750}} 
+\index{sst::math@{sst::math}!sin\_cos@{sin\_cos}}
+\index{sin\_cos@{sin\_cos}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{sin\_cos()}{sin\_cos()}}
+{\footnotesize\ttfamily void sst\+::math\+::sin\+\_\+cos (\begin{DoxyParamCaption}\item[{const float}]{a,  }\item[{float \&}]{sina,  }\item[{float \&}]{cosa }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_ad24adf5f1dd592350f2f24337b07d330}\label{namespacesst_1_1math_ad24adf5f1dd592350f2f24337b07d330}} 
+\index{sst::math@{sst::math}!sqrt@{sqrt}}
+\index{sqrt@{sqrt}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{sqrt()}{sqrt()}}
+{\footnotesize\ttfamily float sst\+::math\+::sqrt (\begin{DoxyParamCaption}\item[{const float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_af608c1c7591e6be56a4a7dfbf9bcf393}\label{namespacesst_1_1math_af608c1c7591e6be56a4a7dfbf9bcf393}} 
+\index{sst::math@{sst::math}!tan@{tan}}
+\index{tan@{tan}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{tan()}{tan()}}
+{\footnotesize\ttfamily float sst\+::math\+::tan (\begin{DoxyParamCaption}\item[{const float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesst_1_1math_a16ae86165de7866570793f46947e1440}\label{namespacesst_1_1math_a16ae86165de7866570793f46947e1440}} 
+\index{sst::math@{sst::math}!k\_epsilon@{k\_epsilon}}
+\index{k\_epsilon@{k\_epsilon}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{k\_epsilon}{k\_epsilon}}
+{\footnotesize\ttfamily constexpr float sst\+::math\+::k\+\_\+epsilon = 1.\+0e-\/6f\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_a140ea0b753cb3f4fcd9f8079288e4b5d}\label{namespacesst_1_1math_a140ea0b753cb3f4fcd9f8079288e4b5d}} 
+\index{sst::math@{sst::math}!k\_half\_pi@{k\_half\_pi}}
+\index{k\_half\_pi@{k\_half\_pi}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{k\_half\_pi}{k\_half\_pi}}
+{\footnotesize\ttfamily constexpr float sst\+::math\+::k\+\_\+half\+\_\+pi = 1.\+5707963267948966192313216916398f\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_a2dd0b01204018add665654c2f3088e18}\label{namespacesst_1_1math_a2dd0b01204018add665654c2f3088e18}} 
+\index{sst::math@{sst::math}!k\_pi@{k\_pi}}
+\index{k\_pi@{k\_pi}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{k\_pi}{k\_pi}}
+{\footnotesize\ttfamily constexpr float sst\+::math\+::k\+\_\+pi = 3.\+1415926535897932384626433832795f\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacesst_1_1math_aafdd96bef29a40e76b25fc11956034a8}\label{namespacesst_1_1math_aafdd96bef29a40e76b25fc11956034a8}} 
+\index{sst::math@{sst::math}!k\_two\_pi@{k\_two\_pi}}
+\index{k\_two\_pi@{k\_two\_pi}!sst::math@{sst::math}}
+\doxysubsubsection{\texorpdfstring{k\_two\_pi}{k\_two\_pi}}
+{\footnotesize\ttfamily constexpr float sst\+::math\+::k\+\_\+two\+\_\+pi = 2.\+0f $\ast$ \mbox{\hyperlink{namespacesst_1_1math_a2dd0b01204018add665654c2f3088e18}{k\+\_\+pi}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+

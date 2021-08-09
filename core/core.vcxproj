@@ -80,8 +80,8 @@
   <ItemGroup>
     <ClInclude Include="acceptor.h" />
     <ClInclude Include="actor.h" />
-    <ClInclude Include="Astar.h" />
-    <ClInclude Include="AstarNodeMaster.h" />
+    <ClInclude Include="astar.h" />
+    <ClInclude Include="astar_node_master.h" />
     <ClInclude Include="async_completion_token.h" />
     <ClInclude Include="basic_service.h" />
     <ClInclude Include="behavior.h" />
@@ -91,13 +91,19 @@
     <ClInclude Include="common.h" />
     <ClInclude Include="connector.h" />
     <ClInclude Include="CrashHandler.h" />
-    <ClInclude Include="database\connection.h" />
+    <ClInclude Include="database\error.h" />
+    <ClInclude Include="database\odbc\connection.h" />
+    <ClInclude Include="db_common.h" />
+    <ClInclude Include="db_param.h" />
+    <ClInclude Include="db_query.h" />
     <ClInclude Include="disconnector.h" />
     <ClInclude Include="dispatcher.h" />
     <ClInclude Include="file_helper.h" />
     <ClInclude Include="fsm.h" />
     <ClInclude Include="hsm.h" />
     <ClInclude Include="io_object.h" />
+    <ClCompile Include="database\error.cpp" />
+    <ClCompile Include="db_param.cpp" />
     <ClCompile Include="ipv4_address.ixx" />
     <ClInclude Include="io_socket.h" />
     <ClInclude Include="listener.h" />
@@ -106,6 +112,7 @@
     <ClInclude Include="log_manager.h" />
     <ClInclude Include="log_publisher.h" />
     <ClInclude Include="macro.h" />
+    <ClInclude Include="math.h" />
     <ClInclude Include="memory.h" />
     <ClInclude Include="memory_manager.h" />
     <ClInclude Include="object_pool.h" />
@@ -135,18 +142,19 @@
       <FileType>Document</FileType>
     </ClCompile>
     <ClInclude Include="server_service.h" />
+    <ClInclude Include="vector3d.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="acceptor.cpp" />
     <ClCompile Include="actor.cpp" />
-    <ClCompile Include="Astar.cpp" />
-    <ClCompile Include="AstarNodeMaster.cpp" />
+    <ClCompile Include="astar.cpp" />
+    <ClCompile Include="astar_node_master.cpp" />
     <ClCompile Include="async_completion_token.cpp" />
     <ClCompile Include="behavior.cpp" />
     <ClCompile Include="behavior_executor.cpp" />
     <ClCompile Include="connector.cpp" />
     <ClCompile Include="CrashHandler.cpp" />
-    <ClCompile Include="database\connection.cpp" />
+    <ClCompile Include="database\odbc\connection.cpp" />
     <ClCompile Include="disconnector.cpp" />
     <ClCompile Include="file_helper.cpp" />
     <ClCompile Include="hsm.cpp" />
@@ -158,6 +166,7 @@
     <ClCompile Include="sst.ixx" />
     <ClCompile Include="network.ixx" />
     <ClCompile Include="proactor.ixx" />
+    <ClCompile Include="vector3d.cpp" />
     <ClCompile Include="win_sock.ixx" />
     <ClCompile Include="prereceiver.cpp" />
     <ClCompile Include="receiver.cpp" />
