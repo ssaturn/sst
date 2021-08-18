@@ -8,7 +8,8 @@
 
 namespace sst::database
 {
-	bool success(const RETCODE rc)
+	// MASK : success
+	inline bool success(const RETCODE rc)
 	{
 #ifdef SST_ODBC_API_DEBUG
 		std::cerr << "<-- rc: " << return_code(rc) << " | " << std::endl;
@@ -41,7 +42,7 @@ namespace sst::database
 	{
 	public:
 		type_incompatible_error();
-		const char* what() const noexcept;
+		const char* what() const noexcept override;
 	};
 
 	/// \brief Accessed null data.
@@ -50,7 +51,7 @@ namespace sst::database
 	{
 	public:
 		null_access_error();
-		const char* what() const noexcept;
+		const char* what() const noexcept override;
 	};
 
 	/// \brief Index out of range.
@@ -59,7 +60,7 @@ namespace sst::database
 	{
 	public:
 		index_range_error();
-		const char* what() const noexcept;
+		const char* what() const noexcept override;
 	};
 
 	/// \brief Programming logic error.
@@ -68,7 +69,7 @@ namespace sst::database
 	{
 	public:
 		explicit programming_error(const std::string& info);
-		const char* what() const noexcept;
+		const char* what() const noexcept override;
 	};
 
 	

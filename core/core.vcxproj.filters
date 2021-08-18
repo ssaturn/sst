@@ -105,7 +105,7 @@
     <ClInclude Include="log_manager.h">
       <Filter>log</Filter>
     </ClInclude>
-    <ClInclude Include="CrashHandler.h">
+    <ClInclude Include="crash_handler.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="behavior.h">
@@ -252,7 +252,7 @@
     <ClCompile Include="logger.cpp">
       <Filter>log</Filter>
     </ClCompile>
-    <ClCompile Include="CrashHandler.cpp">
+    <ClCompile Include="crash_handler.cpp">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="behavior.cpp">

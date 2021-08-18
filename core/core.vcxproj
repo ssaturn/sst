@@ -90,7 +90,7 @@
     <ClInclude Include="client_service.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="connector.h" />
-    <ClInclude Include="CrashHandler.h" />
+    <ClInclude Include="crash_handler.h" />
     <ClInclude Include="database\error.h" />
     <ClInclude Include="database\odbc\connection.h" />
     <ClInclude Include="db_common.h" />
@@ -153,7 +153,7 @@
     <ClCompile Include="behavior.cpp" />
     <ClCompile Include="behavior_executor.cpp" />
     <ClCompile Include="connector.cpp" />
-    <ClCompile Include="CrashHandler.cpp" />
+    <ClCompile Include="crash_handler.cpp" />
     <ClCompile Include="database\odbc\connection.cpp" />
     <ClCompile Include="disconnector.cpp" />
     <ClCompile Include="file_helper.cpp" />

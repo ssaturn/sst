@@ -19,7 +19,7 @@ namespace sst
 
 	log_manager::~log_manager()
 	{
-		WaitFor();
+		wait_for();
 		cleanup();
 	}
 

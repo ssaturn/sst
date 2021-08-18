@@ -1,20 +1,13 @@
 #pragma once
 
-//#include <windows.h>
+
 #include <WinSock2.h>
-//#include <mstcpip.h>
-//#include <ws2tcpip.h>
-//#include <ws2ipdef.h>			// sockaddr_in6
-//#include <iphlpapi.h>
 #include <string>
-#include <cstdio>				// for va_arg...
-#include <cstdarg>				// for va_arg...
-#include <limits>				// for IsAssignable().
+#include <cstdio>	
+#include <cstdarg>	
+#include <limits>
 #include <array>
 #include <process.h>
-//#include <direct.h>
-//#include <pdh.h>
-//#include <sqltypes.h>
 
 // c++ header
 #include <iterator>
@@ -30,7 +23,6 @@
 #include <ctime>
 #include <cmath>
 #include <cassert>
-#include <wchar.h>
 #include <tchar.h>
 #include <crtdbg.h>
 

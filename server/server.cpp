@@ -1,7 +1,7 @@
 // SProject.cpp : Defines the entry point for the console application.
 //
 #include "stdafx.h"
-#include "../core/session.h"
+#include <core/session.h>
 #include "../core/sender.h"
 #include "../core/thread.h"
 #include "../core/listener.h"
@@ -94,9 +94,6 @@ int main()
 	thread_pool.run();
 	listener.listen();
 	std::cout << "server is ready....." << std::endl;
-
-
-	
 	
 	while (true)
 	{
