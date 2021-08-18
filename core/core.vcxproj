@@ -80,7 +80,7 @@
   <ItemGroup>
     <ClInclude Include="acceptor.h" />
     <ClInclude Include="actor.h" />
-    <ClInclude Include="a_star.h" />
+    <ClInclude Include="astar.h" />
     <ClInclude Include="astar_node_master.h" />
     <ClInclude Include="async_completion_token.h" />
     <ClInclude Include="basic_service.h" />
@@ -147,7 +147,7 @@
   <ItemGroup>
     <ClCompile Include="acceptor.cpp" />
     <ClCompile Include="actor.cpp" />
-    <ClCompile Include="a_star.cpp" />
+    <ClCompile Include="astar.cpp" />
     <ClCompile Include="astar_node_master.cpp" />
     <ClCompile Include="async_completion_token.cpp" />
     <ClCompile Include="behavior.cpp" />

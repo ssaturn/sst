@@ -120,7 +120,7 @@
     <ClInclude Include="job_timer.h">
       <Filter>job</Filter>
     </ClInclude>
-    <ClInclude Include="a_star.h">
+    <ClInclude Include="astar.h">
       <Filter>ai\astar</Filter>
     </ClInclude>
     <ClInclude Include="astar_node_master.h">
@@ -270,7 +270,7 @@
     <ClCompile Include="Disconnector.cpp">
       <Filter>network\actor</Filter>
     </ClCompile>
-    <ClCompile Include="a_star.cpp">
+    <ClCompile Include="astar.cpp">
       <Filter>ai\astar</Filter>
     </ClCompile>
     <ClCompile Include="astar_node_master.cpp">
