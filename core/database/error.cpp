@@ -32,7 +32,7 @@ namespace
 			rc = SQLGetDiagRec(handle_type, handle, i, sql_state, &native_error, sql_message.data(), (SQLSMALLINT)sql_message.size(), &total_bytes);
             if (!sst::database::success(rc))
             {
-                convert(std::move(result), rvalue);
+                //convert(std::move(result), rvalue);
                 return rvalue;
             }
 
@@ -50,7 +50,7 @@ namespace
 #endif
         } while (rc != SQL_NO_DATA);
 
-        convert(std::move(result), rvalue);
+        /*convert(std::move(result), rvalue);
         if (size(sql_state) > 0)
         {
             state.clear();
@@ -59,7 +59,7 @@ namespace
             {
                 state.push_back(static_cast<char>(sql_state[idx]));
             }
-        }
+        }*/
 
         native = native_error;
         std::string status = state;
@@ -76,7 +76,7 @@ namespace
 
 namespace sst::database
 {
-    error::error(SQLHANDLE handle, short handle_type, const std::string& info)
+    /*error::error(SQLHANDLE handle, short handle_type, const std::string& info)
         : std::runtime_error(info)
         , sql_state_("00000")
     {
@@ -96,6 +96,6 @@ namespace sst::database
     const std::string error::state() const noexcept
     {
         return sql_state_;
-    }
+    }*/
 
 }

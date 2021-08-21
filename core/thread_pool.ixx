@@ -1,3 +1,5 @@
+module;
+
 #include "thread.h"
 #include <memory>
 #include <type_traits>

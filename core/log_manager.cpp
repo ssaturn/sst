@@ -12,7 +12,7 @@ namespace sst
 		, app_name_(app_name)
 	{
 		// 덤프 중에도 로그 스레드는 계속 실행 되도록 하자.
-		crash_handler::AddExcludeSuspendThread(get_os_id());
+		crash_handler::add_exclude_suspend_thread(get_os_id());
 
 		start();
 	}
@@ -45,7 +45,7 @@ namespace sst
 		log_queue_.push(new async_log(log_key, log_level, log_time, log_file, log_function, log_line, log_text, false));
 	}
 
-	void log_manager::WaitFor()
+	void log_manager::wait_for()
 	{
 		if (get_handle() != nullptr)
 		{

@@ -27,7 +27,7 @@ namespace
         RETCODE rc = SQLFreeHandle(handle_type, handle);
         if (!success(rc))
         {
-            SST_THROW_DATABASE_ERROR(handle, handle_type);
+            //SST_THROW_DATABASE_ERROR(handle, handle_type);
         	
         }
             
@@ -42,7 +42,7 @@ namespace
         }
             
 
-        RETCODE rc;
+       /* RETCODE rc;
         NANODBC_CALL_RC(SQLAllocHandle, rc, SQL_HANDLE_ENV, SQL_NULL_HANDLE, &env);
         if (!success(rc))
             NANODBC_THROW_DATABASE_ERROR(env, SQL_HANDLE_ENV);
@@ -63,12 +63,12 @@ namespace
         {
             deallocate_handle(env, SQL_HANDLE_ENV);
             throw;
-        }
+        }*/
     }
 
-    inline void allocate_dbc_handle(SQLHDBC& conn, SQLHENV env)
+    void allocate_dbc_handle([[maybe_unused]] SQLHDBC& conn, [[maybe_unused]] SQLHENV env)
     {
-        NANODBC_ASSERT(env);
+        /*NANODBC_ASSERT(env);
         if (conn)
             return;
 
@@ -83,7 +83,7 @@ namespace
         {
             deallocate_handle(conn, SQL_HANDLE_DBC);
             throw;
-        }
+        }*/
     }
 	
 }
@@ -170,7 +170,7 @@ namespace sst::database::odbc
             deallocate_handle(env_, SQL_HANDLE_ENV);
         }
 
-        void enable_async(void* event_handle)
+        void enable_async([[maybe_unused]] void* event_handle)
         {
             assert(dbc_);
 
@@ -214,10 +214,10 @@ namespace sst::database::odbc
         }
 
         RETCODE connect(
-            const string& dsn,
-            const string& user,
-            const string& pass,
-            long timeout,
+            [[maybe_unused]] const string& dsn,
+            [[maybe_unused]] const string& user,
+            [[maybe_unused]] const string& pass,
+            [[maybe_unused]] long timeout,
             void* event_handle = nullptr)
         {
             allocate_env_handle(env_);
@@ -226,29 +226,29 @@ namespace sst::database::odbc
             deallocate_handle(dbc_, SQL_HANDLE_DBC);
             allocate_dbc_handle(dbc_, env_);
 
-            RETCODE rc;
-            if (timeout != 0)
-            {
-                // Avoid to set the timeout to 0 (no timeout).
-                // This is a workaround for the Oracle ODBC Driver (11.1), as this
-                // operation is not supported by the Driver.
-                NANODBC_CALL_RC(
-                    SQLSetConnectAttr,
-                    rc,
-                    dbc_,
-                    SQL_LOGIN_TIMEOUT,
-                    (SQLPOINTER)(std::intptr_t)timeout,
-                    0);
-                if (!success(rc))
-                    NANODBC_THROW_DATABASE_ERROR(dbc_, SQL_HANDLE_DBC);
-            }
+            //RETCODE rc;
+            //if (timeout != 0)
+            //{
+            //    // Avoid to set the timeout to 0 (no timeout).
+            //    // This is a workaround for the Oracle ODBC Driver (11.1), as this
+            //    // operation is not supported by the Driver.
+            //    NANODBC_CALL_RC(
+            //        SQLSetConnectAttr,
+            //        rc,
+            //        dbc_,
+            //        SQL_LOGIN_TIMEOUT,
+            //        (SQLPOINTER)(std::intptr_t)timeout,
+            //        0);
+            //    if (!success(rc))
+            //        NANODBC_THROW_DATABASE_ERROR(dbc_, SQL_HANDLE_DBC);
+            //}
 
 #if !defined(NANODBC_DISABLE_ASYNC) && defined(SQL_ATTR_ASYNC_DBC_EVENT)
             if (event_handle != nullptr)
                 enable_async(event_handle);
 #endif
 
-            NANODBC_CALL_RC(
+           /* NANODBC_CALL_RC(
                 NANODBC_FUNC(SQLConnect),
                 rc,
                 dbc_,
@@ -261,13 +261,13 @@ namespace sst::database::odbc
             if (!success(rc) && (event_handle == nullptr || rc != SQL_STILL_EXECUTING))
                 NANODBC_THROW_DATABASE_ERROR(dbc_, SQL_HANDLE_DBC);
 
-            connected_ = success(rc);
-
+            connected_ = success(rc);*/
+            RETCODE rc;
             return rc;
         }
 
         RETCODE
-            connect(const string& connection_string, long timeout, void* event_handle = nullptr)
+            connect([[maybe_unused]] const string& connection_string, long timeout, void* event_handle = nullptr)
         {
             allocate_env_handle(env_);
             disconnect();
@@ -281,7 +281,7 @@ namespace sst::database::odbc
                 // Avoid to set the timeout to 0 (no timeout).
                 // This is a workaround for the Oracle ODBC Driver (11.1), as this
                 // operation is not supported by the Driver.
-                NANODBC_CALL_RC(
+                /*NANODBC_CALL_RC(
                     SQLSetConnectAttr,
                     rc,
                     dbc_,
@@ -289,7 +289,7 @@ namespace sst::database::odbc
                     (SQLPOINTER)(std::intptr_t)timeout,
                     0);
                 if (!success(rc))
-                    NANODBC_THROW_DATABASE_ERROR(dbc_, SQL_HANDLE_DBC);
+                    NANODBC_THROW_DATABASE_ERROR(dbc_, SQL_HANDLE_DBC);*/
             }
 
 #if !defined(NANODBC_DISABLE_ASYNC) && defined(SQL_ATTR_ASYNC_DBC_EVENT)
@@ -297,7 +297,7 @@ namespace sst::database::odbc
                 enable_async(event_handle);
 #endif
 
-            NANODBC_CALL_RC(
+            /*NANODBC_CALL_RC(
                 NANODBC_FUNC(SQLDriverConnect),
                 rc,
                 dbc_,
@@ -309,7 +309,7 @@ namespace sst::database::odbc
                 nullptr,
                 SQL_DRIVER_NOPROMPT);
             if (!success(rc) && (event_handle == nullptr || rc != SQL_STILL_EXECUTING))
-                NANODBC_THROW_DATABASE_ERROR(dbc_, SQL_HANDLE_DBC);
+                NANODBC_THROW_DATABASE_ERROR(dbc_, SQL_HANDLE_DBC);*/
 
             connected_ = success(rc);
 
@@ -324,16 +324,18 @@ namespace sst::database::odbc
             {
 	            RETCODE rc = SQLDisconnect(dbc_);
                 if (!success(rc))
-                    NANODBC_THROW_DATABASE_ERROR(dbc_, SQL_HANDLE_DBC);
+                {
+                    //NANODBC_THROW_DATABASE_ERROR(dbc_, SQL_HANDLE_DBC);
+                }
+                    
             }
             connected_ = false;
         }
 
         std::size_t transactions() const { return transactions_; }
 
-        void* native_dbc_handle() const { return dbc_; }
-
-        void* native_env_handle() const { return env_; }
+        HDBC native_dbc_handle() const { return dbc_; }
+        HENV native_env_handle() const { return env_; }
 
         template <class T>
         T get_info(short info_type) const
@@ -341,13 +343,9 @@ namespace sst::database::odbc
             return get_info_impl<T>(info_type);
         }
         string dbms_name() const;
-
         string dbms_version() const;
-
         string driver_name() const;
-
         string database_name() const;
-
         string catalog_name() const
         {
             /*NANODBC_SQLCHAR name[SQL_MAX_OPTION_STRING_LENGTH] = { 0 };
@@ -379,12 +377,16 @@ namespace sst::database::odbc
 
         void rollback(bool onoff) { rollback_ = onoff; }
 
+    public:
+        HSTMT stmt{ nullptr };
+
     private:
         template <class T>
         T get_info_impl(short info_type) const;
 
         HENV env_;
         HDBC dbc_;
+        
         bool connected_;
         std::size_t transactions_;
         bool rollback_; // if true, this connection is marked for eventual transaction rollback
@@ -419,7 +421,7 @@ namespace sst::database::odbc
 
 	bool connection::connect(const SQLHENV henv, const wchar_t* connection_string)
 	{
-		if (::SQLAllocHandle(SQL_HANDLE_DBC, henv, &hdbc_) != SQL_SUCCESS)
+		if (::SQLAllocHandle(SQL_HANDLE_DBC, henv, &impl_->stmt) != SQL_SUCCESS)
 		{
 			return false;
 		}
@@ -430,7 +432,7 @@ namespace sst::database::odbc
 		SQLWCHAR out_connect_str[1024] = { 0, };
 		SQLSMALLINT out_connect_str_len = 0;
 
-		const SQLRETURN result = ::SQLDriverConnectW(hdbc_, nullptr,
+		const SQLRETURN result = ::SQLDriverConnectW(impl_->native_dbc_handle(), nullptr,
 		                                             in_connect_str, _countof(in_connect_str),
 		                                             out_connect_str, _countof(out_connect_str), &out_connect_str_len,
 		                                             SQL_DRIVER_NOPROMPT);
@@ -440,7 +442,7 @@ namespace sst::database::odbc
 			return false;
 		}
 
-		if (::SQLAllocHandle(SQL_HANDLE_STMT, hdbc_, &hstmt_) != SQL_SUCCESS)
+		if (::SQLAllocHandle(SQL_HANDLE_STMT, impl_->native_dbc_handle(), &impl_->stmt) != SQL_SUCCESS)
 		{
 			return false;
 		}
@@ -448,22 +450,22 @@ namespace sst::database::odbc
 		return true;
 	}
 
-	void :connection::close() const
+	void connection::close() const
 	{
-		if (hstmt_ != nullptr)
+		if (impl_->native_env_handle() != nullptr)
 		{
-			::SQLFreeHandle(SQL_HANDLE_STMT, hstmt_);
+			::SQLFreeHandle(SQL_HANDLE_STMT, impl_->native_env_handle());
 		}
 
-		if (hdbc_ != nullptr)
+		if (impl_->native_dbc_handle() != nullptr)
 		{
-			::SQLFreeHandle(SQL_HANDLE_DBC, hdbc_);
+			::SQLFreeHandle(SQL_HANDLE_DBC, impl_->native_dbc_handle());
 		}
 	}
 
     string connection::dbms_name() const
 	{
-		
+		return L"";
 	}
 
 	template <class T>

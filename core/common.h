@@ -26,7 +26,7 @@
 #include <tchar.h>
 #include <crtdbg.h>
 
-#include "CrashHandler.h"
+#include "crash_handler.h"
 #include "macro.h"
 
 // signed

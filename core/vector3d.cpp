@@ -101,7 +101,7 @@ namespace sst::math
 
 	void vector3d::normalize()
 	{
-		if (const float len_sq = length_seq(); is_zero(len_sq))
+		if (const float len_sq = length_seq(); math::is_zero(len_sq))
 		{
 			zero();
 		}
