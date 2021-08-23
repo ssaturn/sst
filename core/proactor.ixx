@@ -1,3 +1,5 @@
+module;
+
 #include "dispatcher.h"
 #include "io_object.h"
 #include "packet_callback.h"

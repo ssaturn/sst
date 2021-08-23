@@ -96,6 +96,7 @@
     <ClInclude Include="db_common.h" />
     <ClInclude Include="db_param.h" />
     <ClInclude Include="db_query.h" />
+    <ClInclude Include="defer.h" />
     <ClInclude Include="disconnector.h" />
     <ClInclude Include="dispatcher.h" />
     <ClInclude Include="file_helper.h" />

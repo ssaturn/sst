@@ -1,3 +1,5 @@
+module;
+
 export module sst.network;
 
 export import sst.network.proactor;

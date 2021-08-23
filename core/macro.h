@@ -12,5 +12,6 @@
 
 #define SST_STRINGIZE_I(text) #text
 #define SST_STRINGIZE(text) SST_STRINGIZE_I(text)
+#define SST_VSTR(text) (#text) << (text)
 
 #define SST_CODECVT_TYPE std::codecvt_utf8_utf16

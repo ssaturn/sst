@@ -2,10 +2,10 @@
 //
 #include "stdafx.h"
 #include <core/session.h>
-#include "../core/sender.h"
-#include "../core/thread.h"
-#include "../core/listener.h"
-#include "../core/fsm.h"
+#include <core/sender.h>
+#include <core/thread.h>
+#include <core/listener.h>
+#include <core/fsm.h>
 #include <chrono>
 #include <thread>
 
@@ -15,6 +15,8 @@ using namespace std::chrono_literals;
 import sst;
 import sst.network;
 import sst.threading;
+//#pragma warning(suppress:5050)
+//import std.threading;
 
 
 class user_session final : public sst::network::session
@@ -32,6 +34,9 @@ public:
 	{
 		const std::string str(reinterpret_cast<const char*>(buf), length);
 		std::cout << "recv data : " << str << std::endl;
+		
+		std::thread thread;
+		auto tid = std::this_thread::get_id();
 
 		return length;
 	}
