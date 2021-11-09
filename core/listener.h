@@ -3,20 +3,18 @@
 #include "acceptor.h"
 #include "io_socket.h"
 #include "session_pool.h"
+#include "proactor.h"
 
-
-import sst.network.proactor;
-//module sst.network.listener;
 
 namespace sst::network
 {
-	template<typename SessionTy>
+	template<typename IoModel, typename SessionTy>
 	class listener final : public io_socket
 	{
 		DISALLOW_SPECIAL_MEMBER_FUNCTIONS(listener)
 
 	public:
-		explicit listener(proactor* proactor, uint16 port, const uint32 backlog);
+		explicit listener(proactor<IoModel>* proactor, uint16 port, const uint32 backlog);
 		~listener() override = default;
 
 		void listen();
@@ -26,15 +24,15 @@ namespace sst::network
 		SOCKADDR_IN addr_{};
 		uint32 backlog_{ 0 };
 		session_pool<SessionTy, 100> session_pool_{};
-		proactor* proactor_{ nullptr };
+		proactor<IoModel>* proactor_{ nullptr };
 	};
 
 	
-	template <typename SessionTy>
-	listener<SessionTy>::listener(proactor* proactor, const uint16 port, const uint32 backlog)
+	template<typename IoModel, typename SessionTy>
+	listener<IoModel, SessionTy>::listener(proactor<IoModel>* proactor, const uint16 port, const uint32 backlog)
 		: proactor_(proactor)
 	{
-		socket_ = WSASocket(AF_INET, SOCK_STREAM, IPPROTO_TCP, nullptr, 0, WSA_FLAG_OVERLAPPED);
+		socket_ = IoModel::alloc_socket();
 
 		addr_.sin_family = AF_INET;
 		addr_.sin_addr.s_addr = htonl(INADDR_ANY);
@@ -43,8 +41,8 @@ namespace sst::network
 		backlog_ = backlog;
 	}
 
-	template<typename SessionTy>
-	void listener<SessionTy>::listen()
+	template<typename IoModel, typename SessionTy>
+	void listener<IoModel, SessionTy>::listen()
 	{
 		proactor_->register_object(this);
 		
@@ -62,6 +60,15 @@ namespace sst::network
 			return;
 		}
 
+		if constexpr (std::is_same_v<IoModel, class rio>)
+		{
+			//if (rio::register_function_table() == false)
+			//{
+			//	// error log
+			//	return;
+			//}
+		}
+
 		if (::listen(socket_, SOMAXCONN) == SOCKET_ERROR)
 		{
 			return;
@@ -77,8 +84,8 @@ namespace sst::network
 		}
 	}
 
-	template <typename SessionTy>
-	auto listener<SessionTy>::handle_completion(async_completion_token* token, const DWORD bytes) -> void
+	template<typename IoModel, typename SessionTy>
+	auto listener<IoModel, SessionTy>::handle_completion(async_completion_token* token, const DWORD bytes) -> void
 	{
 		proactor_->register_object(token->actor->get_owner<session>());
 		token->actor->complete(token, bytes);

@@ -226,6 +226,15 @@
     <ClInclude Include="defer.h">
       <Filter>utility</Filter>
     </ClInclude>
+    <ClInclude Include="iocp.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="rio.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="io_model.h">
+      <Filter>network</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory_manager.cpp">
@@ -303,7 +312,7 @@
     <ClCompile Include="network.ixx">
       <Filter>network</Filter>
     </ClCompile>
-    <ClCompile Include="proactor.ixx">
+    <ClCompile Include="proactor.h">
       <Filter>network</Filter>
     </ClCompile>
     <ClCompile Include="ipv4_address.ixx">

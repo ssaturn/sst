@@ -3,8 +3,7 @@
 #include "stdafx.h"
 #include "io_thread.h"
 #include "client_session.h"
-
-#include "../core/connector.h"
+#include <core/connector.h>
 #include <core/vector3d.h>
 #include <functional>
 #include <chrono>
@@ -15,8 +14,10 @@
 import sst;
 import sst.network;
 import sst.threading;
+//import sst.logger;
 
-
+using namespace sst::network;
+using namespace std::chrono_literals;
 
 int main()
 {
@@ -25,7 +26,7 @@ int main()
 	
 	sst::win_sock::start_up();
 	
-	sst::network::proactor proactor;
+	proactor<iocp> proactor;
 	auto thread_pool = std::make_shared<sst::threading::thread_pool>(2);
 	thread_pool->make_thread<io_thread>(&proactor);
 	thread_pool->run();
@@ -36,8 +37,6 @@ int main()
 	sst::ipv4_address addr("127.0.0.1", 7777);
 	session.get<sst::network::connector>()->connect(addr);
 
-
-	using namespace std::chrono_literals;
 	while (true)
 	{
 		if (const auto r = getchar(); r == 'q')

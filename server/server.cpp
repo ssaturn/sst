@@ -4,6 +4,7 @@
 #include <core/session.h>
 #include <core/sender.h>
 #include <core/thread.h>
+#include <core/iocp.h>
 #include <core/listener.h>
 #include <core/fsm.h>
 #include <chrono>
@@ -15,9 +16,9 @@ using namespace std::chrono_literals;
 import sst;
 import sst.network;
 import sst.threading;
-//#pragma warning(suppress:5050)
-//import std.threading;
 
+
+using namespace sst::network;
 
 class user_session final : public sst::network::session
 {
@@ -45,7 +46,7 @@ public:
 class io_thread final : public sst::threading::thread
 {
 public:
-	explicit io_thread(class sst::network::proactor* proactor)
+	explicit io_thread(class proactor<iocp>* proactor)
 		: thread("io_thread", 0)
 		, proactor_(proactor)
 	{
@@ -63,7 +64,7 @@ public:
 	void cleanup() override {}
 
 private:
-	sst::network::proactor* proactor_{ nullptr };
+	proactor<iocp>* proactor_{ nullptr };
 };
 
 class user_idle_state : public sst::fsm<5>::state
@@ -91,8 +92,9 @@ int main()
 {
 	sst::win_sock::start_up();
 
-	sst::network::proactor proactor;
-	sst::network::listener<user_session> listener(&proactor, 7777, 0);
+	using namespace sst::network;
+	proactor<iocp> proactor;
+	listener<iocp, user_session> listener(&proactor, 7777, 0);
 	sst::threading::thread_pool thread_pool(64);
 	
 	thread_pool.make_thread<io_thread>(&proactor);

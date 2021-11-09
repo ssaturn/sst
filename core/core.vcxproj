@@ -21,13 +21,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -54,6 +54,8 @@
       <SDLCheck>false</SDLCheck>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <FloatingPointModel>Precise</FloatingPointModel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -102,6 +104,8 @@
     <ClInclude Include="file_helper.h" />
     <ClInclude Include="fsm.h" />
     <ClInclude Include="hsm.h" />
+    <ClInclude Include="iocp.h" />
+    <ClInclude Include="io_model.h" />
     <ClInclude Include="io_object.h" />
     <ClCompile Include="database\error.cpp" />
     <ClCompile Include="db_param.cpp" />
@@ -124,6 +128,7 @@
     <ClInclude Include="prereceiver.h" />
     <ClInclude Include="receiver.h" />
     <ClInclude Include="recv_buffer.h" />
+    <ClInclude Include="rio.h" />
     <ClInclude Include="send_buffer.h" />
     <ClInclude Include="sender.h" />
     <ClInclude Include="session.h" />
@@ -166,7 +171,7 @@
     <ClCompile Include="memory_manager.cpp" />
     <ClCompile Include="sst.ixx" />
     <ClCompile Include="network.ixx" />
-    <ClCompile Include="proactor.ixx" />
+    <ClCompile Include="proactor.h" />
     <ClCompile Include="vector3d.cpp" />
     <ClCompile Include="win_sock.ixx" />
     <ClCompile Include="prereceiver.cpp" />

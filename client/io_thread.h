@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../core/thread.h"
+#include <core/thread.h>
+#include <core/proactor.h>
+#include <core/iocp.h>
 
-
-import sst.network;
+using namespace sst::network;
 
 class io_thread final : public sst::threading::thread
 {
 public:
-	explicit io_thread(class sst::network::proactor* proactor)
+	explicit io_thread(class proactor<iocp>* proactor)
 		: thread("io_thread", 0)
 		, proactor_(proactor)
 	{
@@ -26,5 +27,5 @@ public:
 	void cleanup() override {}
 
 private:
-	sst::network::proactor* proactor_{ nullptr };
+	proactor<iocp>* proactor_{ nullptr };
 };
