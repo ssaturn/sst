@@ -11,7 +11,7 @@ namespace sst::network
 		return actor::get_owner<session>();
 	}
 
-	void sender::send(const byte* buffer, const size_t size)
+	void sender::proc(const byte* buffer, const size_t size)
 	{
 		if (buffer == nullptr)
 		{
@@ -51,7 +51,7 @@ namespace sst::network
 		{
 			if (const auto error_code = ::WSAGetLastError(); error_code != WSA_IO_PENDING)
 			{
-				get_owner()->get<disconnector>()->disconnect();
+				get_owner()->get<disconnector>()->proc();
 				delete token;
 				return false;
 			}

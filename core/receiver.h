@@ -16,7 +16,7 @@ namespace sst::network
 		explicit receiver(actor_owner* owner);
 		~receiver() override = default;
 
-		void receive();
+		void proc();
 		void complete(async_completion_token* token, DWORD bytes_transferred) override;
 		void error(async_completion_token* token, DWORD error) override;
 

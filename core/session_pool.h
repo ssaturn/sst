@@ -11,6 +11,8 @@ namespace sst::network
 	template<typename SessionTy, std::size_t MaxCount>
 	class session_pool
 	{
+		DISALLOW_SPECIAL_MEMBER_FUNCTIONS(session_pool)
+
 	public:
 		session_pool();
 		~session_pool();

@@ -2,8 +2,8 @@
 #include "receiver.h"
 #include "disconnector.h"
 #include "prereceiver.h"
-#include "session.h"
 #include "sender.h"
+#include "session.h"
 
 
 namespace sst::network
@@ -14,7 +14,7 @@ namespace sst::network
 	{
 	}
 
-	void receiver::receive()
+	void receiver::proc()
 	{
 		const auto token = new async_completion_token(this);
 		std::tie(token->wsabuf.buf, token->wsabuf.len) = buffer_.get_buffer();
@@ -37,7 +37,8 @@ namespace sst::network
 		if (bytes_transferred == 0)
 		{
 			//GConsolePrinter->OutStdErr(LBLUE, L"disconnected: recv 0 bytes\n");
-			get<disconnector>()->disconnect();
+			
+			get<disconnector>()->proc();
 			return;
 		}
 
@@ -46,13 +47,13 @@ namespace sst::network
 		if (process_length > buf_length)
 		{
 			// wtf
-			get<disconnector>()->disconnect();
+			get<disconnector>()->proc();
 			return;
 		}
 
 		buffer_.set_processed(process_length);
 
-		get<prereceiver>()->prereceive();
+		get<prereceiver>()->proc();
 	}
 
 	void receiver::error([[maybe_unused]] async_completion_token* token, [[maybe_unused]] DWORD error)

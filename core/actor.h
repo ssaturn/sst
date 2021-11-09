@@ -47,7 +47,7 @@ namespace sst::network
 			return owner_;
 		}
 
-		template<typename ActorTy>// requires std::is_base_of_v<class actor, ActorTy>
+		template<typename ActorTy> requires std::derived_from<ActorTy, actor>
 		ActorTy* get();
 
 	private:
@@ -83,10 +83,10 @@ namespace sst::network
 	};
 
 	// implement
-	template <typename ActorTy>// requires std::is_base_of_v<actor, ActorTy>
-		ActorTy* actor::get()
-		{
-			return owner_->get<ActorTy>();
-		}
+	template <typename ActorTy> requires std::derived_from<ActorTy, actor>
+	ActorTy* actor::get()
+	{
+		return owner_->get<ActorTy>();
+	}
 	
 }

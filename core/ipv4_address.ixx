@@ -6,7 +6,7 @@ module;
 
 export module sst.ipv4_address;
 
-export namespace sst
+namespace sst
 {
 	export class ipv4_address
 	{

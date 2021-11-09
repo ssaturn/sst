@@ -14,7 +14,7 @@ namespace sst::network
 	{
 	}
 
-	void prereceiver::prereceive()
+	void prereceiver::proc()
 	{
 		const auto token = new async_completion_token(this);
 
@@ -38,7 +38,7 @@ namespace sst::network
 
 	void prereceiver::complete([[maybe_unused]] async_completion_token* token, [[maybe_unused]] DWORD bytes_transferred)
 	{
-		get_owner<session>()->get<receiver>()->receive();
+		get_owner<session>()->get<receiver>()->proc();
 		std::cout << "prereceiver::complete" << std::endl;
 	}
 

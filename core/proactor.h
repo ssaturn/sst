@@ -10,7 +10,7 @@ namespace sst::network
 	template<typename IoModel> 
 	class proactor
 	{
-		//DISALLOW_SPECIAL_MEMBER_FUNCTIONS(proactor)
+		DISALLOW_SPECIAL_MEMBER_FUNCTIONS(proactor)
 
 	public:
 		proactor();
@@ -26,6 +26,8 @@ namespace sst::network
 	private:
 		HANDLE completion_port_{ INVALID_HANDLE_VALUE };
 		uint32 time_out_{ 0 };
+
+		std::shared_ptr<IoModel> io_;
 	};
 
 	template<typename IoModel>

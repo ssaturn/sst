@@ -12,7 +12,7 @@ namespace sst::network
 		
 	}
 
-	void disconnector::disconnect()
+	void disconnector::proc()
 	{
 	}
 

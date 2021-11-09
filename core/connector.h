@@ -3,7 +3,8 @@
 #include "actor.h"
 
 
-import sst;
+import sst.ipv4_address;
+import sst.win_sock;
 
 namespace sst::network
 {
@@ -17,7 +18,7 @@ namespace sst::network
 		explicit connector(actor_owner* owner);
 		~connector() override = default;
 
-		void connect(const ipv4_address& addr);
+		void proc(const ipv4_address& addr);
 		void complete(async_completion_token* token, DWORD bytes_transferred) override;
 		void error(async_completion_token* token, DWORD error) override;
 	};

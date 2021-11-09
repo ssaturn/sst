@@ -16,7 +16,7 @@ namespace sst::network
 		prereceiver() = delete;
 		~prereceiver() override = default;
 
-		void prereceive();
+		void proc();
 		void complete(async_completion_token* token, DWORD bytes_transferred) override;
 		void error(async_completion_token* token, DWORD error) override;
 	};

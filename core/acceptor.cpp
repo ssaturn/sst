@@ -28,7 +28,7 @@ namespace sst::network
 		owner->set_connect(true);
 		if (auto actor = owner->get<prereceiver>(); actor)
 		{
-			actor->prereceive();
+			actor->proc();
 		}
 
 		owner->on_connected();

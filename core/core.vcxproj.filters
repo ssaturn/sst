@@ -324,9 +324,6 @@
     <ClCompile Include="threading.ixx">
       <Filter>threading</Filter>
     </ClCompile>
-    <ClCompile Include="sender.ixx">
-      <Filter>network\actor</Filter>
-    </ClCompile>
     <ClCompile Include="recv_buffer.cpp">
       <Filter>network</Filter>
     </ClCompile>

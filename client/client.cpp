@@ -35,7 +35,7 @@ int main()
 	proactor.register_object(&session);
 
 	sst::ipv4_address addr("127.0.0.1", 7777);
-	session.get<sst::network::connector>()->connect(addr);
+	session.get<sst::network::connector>()->proc(addr);
 
 	while (true)
 	{

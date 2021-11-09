@@ -15,7 +15,7 @@ namespace sst::network
 		explicit disconnector(actor_owner* owner);
 		~disconnector() override = default;
 
-		void disconnect();
+		void proc();
 		void complete(async_completion_token* act, DWORD bytes_transferred) override;
 		void error(async_completion_token* act, DWORD error) override;
 	};

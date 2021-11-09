@@ -9,6 +9,8 @@ namespace sst::network
 	template <class Callback, int MaxSize>
 	class dispatcher
 	{
+		DISALLOW_SPECIAL_MEMBER_FUNCTIONS(dispatcher)
+
 	public:
 		dispatcher()
 			: callbacks_()
@@ -30,10 +32,17 @@ namespace sst::network
 			return callbacks_[type];
 		}
 
-		// Packet Dispatch에서 사용
+		
+		/**
+		 * \brief for use packet dispatcher
+		 * \param session 
+		 * \param pTr 
+		 * \param pTrSz 
+		 * \return 
+		 */
 		bool process(class session* session, const char* pTr, const uint16 pTrSz)
 		{
-			auto header = reinterpret_cast<const packet_header*>(pTr);
+			const auto header = reinterpret_cast<const packet_header*>(pTr);
 			if (header->type >= callbacks_.size() || callbacks_[header->type] == nullptr)
 			{
 				return false;
@@ -45,6 +54,6 @@ namespace sst::network
 		}
 
 	private:
-		std::array<Callback*, MaxSize> callbacks_;
+		std::array<Callback*, MaxSize> callbacks_{};
 	};
 }

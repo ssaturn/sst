@@ -1,14 +1,9 @@
 #include "stdafx.h"
 #include "connector.h"
-
-#include <MSWSock.h>
-
 #include "async_completion_token.h"
 #include "prereceiver.h"
 #include "session.h"
-
-
-import sst.win_sock;
+#include <MSWSock.h>
 
 
 namespace sst::network
@@ -18,7 +13,7 @@ namespace sst::network
 	{
 	}
 
-	void connector::connect(const ipv4_address& addr)
+	void connector::proc(const ipv4_address& addr)
 	{
 		const auto socket = get_owner<session>()->get_socket();
 		BOOL opt_val = TRUE;
@@ -58,7 +53,7 @@ namespace sst::network
 			return;
 		}
 		
-		get_owner<session>()->get<prereceiver>()->prereceive();
+		get_owner<session>()->get<prereceiver>()->proc();
 		get_owner<session>()->on_connected();
 	}
 

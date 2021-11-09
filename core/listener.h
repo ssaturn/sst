@@ -32,7 +32,7 @@ namespace sst::network
 	listener<IoModel, SessionTy>::listener(proactor<IoModel>* proactor, const uint16 port, const uint32 backlog)
 		: proactor_(proactor)
 	{
-		socket_ = IoModel::alloc_socket();
+		socket_ = IoModel::alloc_wsa_socket();
 
 		addr_.sin_family = AF_INET;
 		addr_.sin_addr.s_addr = htonl(INADDR_ANY);
@@ -47,7 +47,7 @@ namespace sst::network
 		proactor_->register_object(this);
 		
 		BOOL opt_val = TRUE;
-		const size_t opt_len = sizeof(BOOL);
+		constexpr size_t opt_len = sizeof(BOOL);
 		ipv4_address addr(addr_);
 
 		if (::setsockopt(socket_, SOL_SOCKET, SO_REUSEADDR, reinterpret_cast<char*>(&opt_val), opt_len) == SOCKET_ERROR)
@@ -74,12 +74,12 @@ namespace sst::network
 			return;
 		}
 
-		const auto pre_accept_count = 10;
+		constexpr auto pre_accept_count = 10;
 		for (size_t i = 0; i < pre_accept_count; ++i)
 		{
 			if (auto session = session_pool_.acquire(); session)
 			{
-				session->get<acceptor>()->accept(socket_);
+				session->template get<acceptor>()->accept(socket_);
 			}
 		}
 	}

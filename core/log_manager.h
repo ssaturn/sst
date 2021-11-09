@@ -32,8 +32,8 @@ namespace sst
 			FINISHED_TIMEOUT = 10 * 1000,
 		};
 
-		typedef std::vector<log_publisher*> publishers;
-		typedef std::map<const wchar_t*, publishers> publishers_map;
+		using publishers = std::vector<log_publisher*>;
+		using publishers_map = std::map<const wchar_t*, publishers>;
 
 		publishers* FindAndMake(const wchar_t* log_key);
 		log_file_publisher* MakeFilePublisher(const wchar_t* log_key);

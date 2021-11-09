@@ -14,7 +14,7 @@ namespace sst::network
 		static std::array<RIO_CQ, 10> rio_completion_queue_;
 		
 	public:
-		static SOCKET alloc_socket();
+		static SOCKET alloc_wsa_socket();
 		static bool register_function_table(const SOCKET socket)
 		{
 			GUID function_table_id = WSAID_MULTIPLE_RIO;
@@ -31,7 +31,7 @@ namespace sst::network
 		
 	};
 
-	inline SOCKET rio::alloc_socket()
+	inline SOCKET rio::alloc_wsa_socket()
 	{
 		const auto socket = WSASocket(AF_INET, SOCK_STREAM, IPPROTO_TCP, nullptr, 0, WSA_FLAG_REGISTERED_IO);
 		if (socket == INVALID_SOCKET)

@@ -28,7 +28,7 @@ public:
 		std::cout << "connect finish" << std::endl;
 		
 		const std::string message = "Hello Server!!";
-		get<sst::network::sender>()->send(reinterpret_cast<const byte*>(message.c_str()), message.size());
+		get<sst::network::sender>()->proc(reinterpret_cast<const byte*>(message.c_str()), message.size());
 	}
 	
 	size_t on_receive_data(const byte* buf, const size_t length) override

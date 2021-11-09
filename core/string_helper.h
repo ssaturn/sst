@@ -36,7 +36,7 @@ namespace sst::string
 			const auto need_len = ::MultiByteToWideChar(CP_UTF8, 0, utf8_string, -1, nullptr, 0);
 			if (need_len <= 0)
 			{
-				return std::wstring();
+				return {};
 			}
 
 			wchar_t wide_string[1024] = { 0, };
@@ -52,7 +52,7 @@ namespace sst::string
 			const auto need_len = ::WideCharToMultiByte(CP_UTF8, 0, wide_string, -1, nullptr, 0, nullptr, nullptr);
 			if (need_len <= 0)
 			{
-				return std::string();
+				return {};
 			}
 
 			char utf8_string[1024] = { 0, };
