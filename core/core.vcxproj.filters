@@ -349,8 +349,12 @@
       <Filter>database</Filter>
     </ClCompile>
     <ClCompile Include="database\error.cpp" />
+    <ClCompile Include="type_trait_util.ixx">
+      <Filter>utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

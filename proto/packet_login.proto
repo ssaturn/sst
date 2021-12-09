@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package login;
+
+message request_login {
+	string user_id = 1;
+	string user_pwd = 2;
+}
+
+message response_login {
+	uint32  error = 1;
+	uint32  user_id = 2;
+}

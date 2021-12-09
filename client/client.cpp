@@ -22,7 +22,7 @@ using namespace std::chrono_literals;
 int main()
 {
 	int value = 0;
-	sst::log_debug() << "log test" << SST_VSTR(value);
+	sst::log_debug() << "log test!!!!" << SST_VSTR(value);
 	
 	sst::win_sock::start_up();
 	
@@ -35,7 +35,7 @@ int main()
 	proactor.register_object(&session);
 
 	sst::ipv4_address addr("127.0.0.1", 7777);
-	session.get<sst::network::connector>()->proc(addr);
+	session.get<connector>()->proc(addr);
 
 	while (true)
 	{
