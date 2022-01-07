@@ -11,14 +11,13 @@ namespace sst::network
 	class packet_factory : public serialization::singleton<packet_factory>
 	{
 	public:
-		struct packet_creator_base
+		struct creator_base
 		{
-			virtual ~packet_creator_base() = default;
-			
+			virtual ~creator_base() = default;
 		};
 		
 		template<typename PacketTy>
-		struct packet_creator final : packet_creator_base
+		struct packet_creator final : creator_base
 		{
 			packet_creator() = default;
 			~packet_creator() override = default;
@@ -33,7 +32,7 @@ namespace sst::network
 		template<typename PacketTy>
 		bool register_packet(const packet_id_t id)
 		{
-			if (auto result = packet_trunk_.emplace(id, packet_creator<PacketTy>()); !result.second)
+			if (auto result = trunk_.emplace(id, packet_creator<PacketTy>()); !result.second)
 			{
 				// error log : duplicated register
 				return false;
@@ -45,7 +44,7 @@ namespace sst::network
 		template<typename PacketTy>
 		PacketTy* get_packet(const packet_id_t id)
 		{
-			if (auto iter = packet_trunk_.find(id); iter != packet_trunk_.end())
+			if (const auto iter = trunk_.find(id); iter != trunk_.end())
 			{
 				if (auto creator = static_cast<PacketTy*>(iter->second); creator != nullptr)
 				{
@@ -56,6 +55,6 @@ namespace sst::network
 		}
 
 	private:
-		std::unordered_map<packet_id_t, packet_creator_base*> packet_trunk_;
+		std::unordered_map<packet_id_t, creator_base*> trunk_;
 	};
 }

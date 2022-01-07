@@ -1,0 +1,13 @@
+namespace packet;
+
+table request_login
+{
+	user_no	: int;
+	user_name : string (required);
+    user_pwd : string(required);
+}
+
+table response_login
+{
+    error_code : int;
+}

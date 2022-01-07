@@ -55,6 +55,9 @@
     <Filter Include="ai\astar">
       <UniqueIdentifier>{aa9ccb76-61b4-46d3-bc57-7cdbf4924412}</UniqueIdentifier>
     </Filter>
+    <Filter Include="trait_util">
+      <UniqueIdentifier>{7074ea36-0956-4704-82d7-3e8e30432d3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="memory_manager.h">
@@ -234,6 +237,9 @@
     </ClInclude>
     <ClInclude Include="io_model.h">
       <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="trait_util\class_instance_counter.h">
+      <Filter>trait_util</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -147,6 +147,7 @@
       <FileType>Document</FileType>
     </ClCompile>
     <ClInclude Include="server_service.h" />
+    <ClInclude Include="trait_util\class_instance_counter.h" />
     <ClInclude Include="vector3d.h" />
   </ItemGroup>
   <ItemGroup>

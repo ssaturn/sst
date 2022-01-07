@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Logging.h"
+#include "logging.h"
 #include "log_publisher.h"
 #include <source_location>
 #include <iostream>
@@ -140,19 +140,30 @@ namespace sst
 		std::wstringstream wss_{};
 	};
 
-	inline logger<log_level_t::debug> log_debug(std::source_location location = std::source_location::current())
+	
+
+	template<log_level_t LLTy>
+	logger<LLTy> log(const std::source_location location = std::source_location::current())
 	{
-		logger<log_level_t::debug> logger;
+		logger<LLTy> logger;
 		logger << location;
 
 		return std::move(logger);
 	}
 
-	//extern logger<log_level_t::debug> log_debug;
-	extern logger<log_level_t::info> log_info;
+	/*extern logger<log_level_t::info> log_info;
 	extern logger<log_level_t::warning> log_warn;
 	extern logger<log_level_t::error> log_error;
-	extern logger<log_level_t::fatal> log_fatal;
+	extern logger<log_level_t::fatal> log_fatal;*/
+	//__PURE_APPDOMAIN_GLOBAL extern _CRTDATA2_IMPORT logger<log_level_t::info> log_debug;
+	
+#define log_debug sst::log<sst::log_level_t::debug>()
+#define log_info log<sst::log_level_t::info>()
+#define log_warning log<sst::log_level_t::warning>()
+#define log_error log<sst::log_level_t::error>()
+#define log_fatal log<sst::log_level_t::fatal>()
 }
+
+
 
 extern sst::log_initializer* g_log_initializer;

@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-package login;
+package share;
+
 
 message request_login {
 	string user_id = 1;

@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "sender.h"
 #include "disconnector.h"
+#include "logger.h"
 #include "session.h"
 
 
@@ -8,7 +9,7 @@ namespace sst::network
 {
 	session* sender::get_owner()
 	{
-		return actor::get_owner<session>();
+		return actor::get_owner<sst::network::session>();
 	}
 
 	void sender::proc(const byte* buffer, const size_t size)
@@ -34,7 +35,8 @@ namespace sst::network
 		}
 
 		is_sending_ = true;
-		std::cout << "sender::complete" << std::endl;
+		log_debug << "sender::complete";
+
 	}
 
 	void sender::error([[maybe_unused]] async_completion_token* token, [[maybe_unused]] DWORD error)

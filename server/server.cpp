@@ -10,12 +10,16 @@
 #include <chrono>
 #include <thread>
 
+#include "core/Logger.h"
+
+//#include <shared/packet/packet_login.pb.h>
+
 
 using namespace std::chrono_literals;
 
 import sst;
 import sst.network;
-import sst.threading;
+import sst.threading.thread_pool;
 
 
 using namespace sst::network;
@@ -27,17 +31,20 @@ public:
 	{
 		std::cout << "connect finish" << std::endl;
 		
-		const std::string message = "Hello Server!!";
-		get<sst::network::sender>()->proc(reinterpret_cast<const byte*>(message.c_str()), message.size());
+		
 	}
 	
 	size_t on_receive_data(const byte* buf, const size_t length) override
 	{
-		const std::string str(reinterpret_cast<const char*>(buf), length);
-		std::cout << "recv data : " << str << std::endl;
+		sst::packet_header header{};
+		memcpy_s(&header, sizeof(header), buf, sizeof(header));
+
+		//log_debug << "header : " << header.type << "size : " << header.size;
 		
-		std::thread thread;
-		auto tid = std::this_thread::get_id();
+		/*share::response_login res_login;
+		res_login.set_user_id(2323123);
+		res_login.set_error(0);
+		send<share::protocol::res_login>(&res_login);*/
 
 		return length;
 	}

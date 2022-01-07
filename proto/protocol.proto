@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package share;
+
+enum protocol {
+    req_login = 0;
+    res_login = 1;
+}

@@ -9,8 +9,9 @@
 #include <chrono>
 #include <thread>
 #include <source_location>
+
+#include <core/trait_util/class_instance_counter.h>
 #include <core/logger.h>
-#include <core/class_instance_counter.h>
 
 import sst;
 import sst.network;

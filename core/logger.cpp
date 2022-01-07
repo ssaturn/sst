@@ -16,10 +16,11 @@ namespace
 
 namespace sst
 {
-	logger<log_level_t::info> log_info{};
+	//logger<log_level_t::debug> log_debug{};
+	/*logger<log_level_t::info> log_info{};
 	logger<log_level_t::warning> log_warn{};
 	logger<log_level_t::error> log_error{};
-	logger<log_level_t::fatal> log_fatal{};
+	logger<log_level_t::fatal> log_fatal{};*/
 	
 	log_initializer::log_initializer()
 	{

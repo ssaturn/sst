@@ -1,5 +1,6 @@
 #pragma once
 
+#include <core/common.h>
 #include <string>
 
 
@@ -72,3 +73,6 @@ namespace sst
 	};
 
 }
+
+constexpr sst::log_level_t debug = sst::log_level_t::debug;
+constexpr sst::log_level_t info = sst::log_level_t::info;
