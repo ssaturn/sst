@@ -35,14 +35,13 @@ namespace sst
 
 	};
 
-	class log_file_publisher : public log_publisher
+	class log_file_publisher final : public log_publisher
 	{
-	private:
 		HANDLE log_file_;
 
 	public:
 		explicit log_file_publisher(HANDLE log_file);
-		~log_file_publisher();
+		~log_file_publisher() override;
 
 		void publish(async_log* log) override;
 		void close() override;

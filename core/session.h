@@ -3,14 +3,11 @@
 #include "logger.h"
 #include "io_socket.h"
 #include "packet_header.h"
-//#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
-
 #include "sender.h"
-//#include <shared/packet/protocol.pb.h>
-//#include <shared/packet/protocol_generated.h>
-//#include <shared/packet/packet_generated.h>
+#include <shared/packet/protocol_generated.h>
+#include <shared/packet/packet_generated.h>
 
-import sst;
+import sst.ipv4_address;
 
 namespace sst::network
 {
@@ -30,11 +27,31 @@ namespace sst::network
 		void set_peer_name();
 		void set_connect(const bool connect) { is_connected_ = connect; }
 
+		bool is_connected() const { return is_connected_; }
+
 		virtual void on_connected() = 0;
 		virtual size_t on_receive_data(const byte* buf, size_t length) = 0;
 
-		/*template<protocol::id ProtocolId, typename PacketTy>
-		bool send(PacketTy* packet);*/
+		template<protocol::id ProtocolId>
+		bool send(flatbuffers::FlatBufferBuilder& fbb)
+		{
+			if (!is_connected())
+			{
+				return false;
+			}
+
+			const packet_header header(static_cast<uint16>(fbb.GetSize()), static_cast<uint16>(ProtocolId));
+			
+			const auto packet_size = header.size + packet_header_size;
+			const auto output_buffer = new byte[packet_size];
+
+			memcpy_s(output_buffer, packet_header_size, &header, packet_header_size);
+			memcpy_s(output_buffer + packet_header_size, header.size, fbb.GetBufferPointer(), fbb.GetSize());
+
+			get<sender>()->proc(output_buffer, packet_size);
+
+			return true;
+		}
 
 
 	protected:
@@ -42,16 +59,8 @@ namespace sst::network
 		ipv4_address peer_addr_{};
 	};
 
-	//template <protocol::id ProtocolId, typename PacketTy>
-	//bool session::send(PacketTy* packet)
-	//{
-		//auto name = fbBuilder.get().CreateString(serverRegister->colonyName()->c_str());
-		//packet::Createrequest_login()
-		//auto response = CreateAgentServerRegisterResponse(fbBuilder.get(), ErrorCode::OK, serverId, name);
-		//fbBuilder.get().Finish(response);
-
-	//}
-
+	
+	// protobuf
 	/*template <share::protocol ProtocolId, typename PacketTy>
 	bool session::send(PacketTy* packet)
 	{

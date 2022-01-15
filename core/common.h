@@ -1,30 +1,28 @@
 #pragma once
 
-
 #include <WinSock2.h>
-#include <string>
-#include <cstdio>	
+#include <array>
 #include <cstdarg>	
 #include <limits>
-#include <array>
 #include <process.h>
+#include <string>
 
 // c++ header
-#include <iterator>
-#include <iostream>
-#include <fstream>
 #include <algorithm>
+#include <fstream>
 #include <functional>
+#include <iostream>
+#include <iterator>
 #include <utility>
 
 // c header
 #include <cstdio>
 #include <cstdlib>
-#include <ctime>
-#include <cmath>
 #include <cassert>
-#include <tchar.h>
+#include <cmath>
 #include <crtdbg.h>
+#include <ctime>
+#include <tchar.h>
 
 #include "crash_handler.h"
 #include "macro.h"

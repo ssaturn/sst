@@ -9,7 +9,7 @@
 #include <map>
 #include <thread>
 #include <shared_mutex>
-
+#include <memory>
 
 
 namespace sst
@@ -29,14 +29,14 @@ namespace sst
 	private:
 		enum
 		{
-			FINISHED_TIMEOUT = 10 * 1000,
+			finished_timeout = 10 * 1000,
 		};
 
 		using publishers = std::vector<log_publisher*>;
 		using publishers_map = std::map<const wchar_t*, publishers>;
 
 		publishers* FindAndMake(const wchar_t* log_key);
-		log_file_publisher* MakeFilePublisher(const wchar_t* log_key);
+		log_file_publisher* MakeFilePublisher(const wchar_t* log_key) const;
 
 		bool setup() override;	// thread
 		void run() override;		// thread
@@ -47,7 +47,7 @@ namespace sst
 		std::wstring app_name_{};
 		std::thread thread_{};
 		publishers_map logs_{};
-		Concurrency::concurrent_queue<async_log*> log_queue_{};
+		Concurrency::concurrent_queue<std::shared_ptr<async_log>> log_queue_{};
 	};
 }
 

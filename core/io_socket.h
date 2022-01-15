@@ -24,7 +24,7 @@ namespace sst::network
 	
 
 	inline io_socket::io_socket()
-		: socket_(WSASocket(AF_INET, SOCK_STREAM, IPPROTO_TCP, nullptr, 0, WSA_FLAG_OVERLAPPED))
+		: socket_(WSASocketW(AF_INET, SOCK_STREAM, IPPROTO_TCP, nullptr, 0, WSA_FLAG_OVERLAPPED))
 	{
 	}
 

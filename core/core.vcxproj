@@ -56,6 +56,7 @@
       <FloatingPointModel>Precise</FloatingPointModel>
       <TreatWarningAsError>true</TreatWarningAsError>
       <MinimalRebuild>false</MinimalRebuild>
+      <AdditionalIncludeDirectories>$(ProjectDir)gui\imgui\backend;$(ProjectDir)gui\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -103,12 +104,26 @@
     <ClInclude Include="dispatcher.h" />
     <ClInclude Include="file_helper.h" />
     <ClInclude Include="fsm.h" />
+    <ClInclude Include="gui\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="gui\imgui\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="gui\imgui\backends\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="gui\imgui\imconfig.h" />
+    <ClInclude Include="gui\imgui\imgui.h" />
+    <ClInclude Include="gui\imgui\imgui_internal.h" />
+    <ClInclude Include="windows.h" />
     <ClInclude Include="hsm.h" />
     <ClInclude Include="iocp.h" />
     <ClInclude Include="io_model.h" />
     <ClInclude Include="io_object.h" />
     <ClCompile Include="database\error.cpp" />
     <ClCompile Include="db_param.cpp" />
+    <ClCompile Include="gui\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="gui\imgui\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="gui\imgui\imgui.cpp" />
+    <ClCompile Include="gui\imgui\imgui_demo.cpp" />
+    <ClCompile Include="gui\imgui\imgui_draw.cpp" />
+    <ClCompile Include="gui\imgui\imgui_tables.cpp" />
+    <ClCompile Include="gui\imgui\imgui_widgets.cpp" />
     <ClCompile Include="ipv4_address.ixx" />
     <ClInclude Include="io_socket.h" />
     <ClInclude Include="listener.h" />
@@ -148,6 +163,7 @@
     </ClCompile>
     <ClInclude Include="server_service.h" />
     <ClInclude Include="trait_util\class_instance_counter.h" />
+    <ClInclude Include="type_trait_util.h" />
     <ClInclude Include="vector3d.h" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +190,7 @@
     <ClCompile Include="proactor.h" />
     <ClCompile Include="type_trait_util.ixx" />
     <ClCompile Include="vector3d.cpp" />
+    <ClCompile Include="windows.cpp" />
     <ClCompile Include="win_sock.ixx" />
     <ClCompile Include="prereceiver.cpp" />
     <ClCompile Include="receiver.cpp" />
@@ -191,6 +208,9 @@
   <ItemGroup>
     <None Include="cpp.hint" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="gui\imgui\misc\debuggers\imgui.natvis" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

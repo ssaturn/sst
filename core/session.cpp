@@ -8,8 +8,6 @@
 #include "sender.h"
 
 
-import sst;
-
 namespace sst::network
 {
 	session::session()

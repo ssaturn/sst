@@ -8,10 +8,9 @@ sst::log_manager* g_log_manager = nullptr;
 namespace sst
 {
 	log_manager::log_manager(const wchar_t* app_name)
-		: threading::thread("LogThread", 1)
-		, app_name_(app_name)
+		: thread("LogThread", 1)
+		  , app_name_(app_name)
 	{
-		// 덤프 중에도 로그 스레드는 계속 실행 되도록 하자.
 		crash_handler::add_exclude_suspend_thread(get_os_id());
 
 		start();
@@ -25,8 +24,7 @@ namespace sst
 
 	void log_manager::add_publisher(const wchar_t* log_key, log_publisher* publisher)
 	{
-		publishers* publishers = FindAndMake(log_key);
-		if (publishers != nullptr)
+		if (const auto publishers = FindAndMake(log_key))
 		{
 			publishers->push_back(publisher);
 		}
@@ -35,14 +33,14 @@ namespace sst
 	void log_manager::push(const wchar_t* log_key, const log_level_t log_level, const time_t log_time,
 	                       const wchar_t* log_file, const wchar_t* log_function, const int32 log_line, const wchar_t* log_text)
 	{
-		log_queue_.push(new async_log(log_key, log_level, log_time, log_file, log_function, log_line, log_text, false));
+		log_queue_.push(std::make_unique<async_log>(log_key, log_level, log_time, log_file, log_function, log_line, log_text, false));
 	}
 
 	void log_manager::push(const wchar_t* log_key, const log_level_t log_level, const time_t log_time,
 	                       const wchar_t* log_file, const wchar_t* log_function, const int32 log_line,
 	                       const std::wstring& log_text)
 	{
-		log_queue_.push(new async_log(log_key, log_level, log_time, log_file, log_function, log_line, log_text, false));
+		log_queue_.push(std::make_unique<async_log>(log_key, log_level, log_time, log_file, log_function, log_line, log_text, false));
 	}
 
 	void log_manager::wait_for()
@@ -50,11 +48,11 @@ namespace sst
 		if (get_handle() != nullptr)
 		{
 			wchar_t* null_key = nullptr;
-			const auto log = new async_log(null_key, log_level_t::info, ::time(nullptr), __FILEW__, __FUNCTIONW__,
+			const auto log = std::make_shared<async_log>(null_key, log_level_t::info, ::time(nullptr), __FILEW__, __FUNCTIONW__,
 			                               __LINE__, L"", true);
 			log_queue_.push(log);
 
-			::WaitForSingleObject(get_handle(), FINISHED_TIMEOUT);
+			::WaitForSingleObject(get_handle(), finished_timeout);
 			::CloseHandle(get_handle());
 		}
 	}
@@ -78,7 +76,7 @@ namespace sst
 			std::unique_lock lock(lock_);
 
 			// 더블 체크
-			auto pos = logs_.find(log_key);
+			const auto pos = logs_.find(log_key);
 			if (pos != logs_.end())
 			{
 				publishers = &pos->second;
@@ -94,7 +92,7 @@ namespace sst
 
 				logs_[log_key] = temp;
 
-				auto iter = logs_.find(log_key);
+				const auto iter = logs_.find(log_key);
 				if (iter != logs_.end())
 				{
 					publishers = &iter->second;
@@ -105,7 +103,7 @@ namespace sst
 		return publishers;
 	}
 
-	log_file_publisher* log_manager::MakeFilePublisher(const wchar_t* log_key)
+	log_file_publisher* log_manager::MakeFilePublisher(const wchar_t* log_key) const
 	{
 		const wchar_t* LoggingFolder = L"./Logging";
 
@@ -136,27 +134,23 @@ namespace sst
 
 	void log_manager::run()
 	{
-		async_log* log = nullptr;
+		std::shared_ptr<async_log> log{ nullptr };
 		while (log_queue_.try_pop(log))
 		{
 			publishers* publishers = FindAndMake(log->log_key);
 			if (publishers == nullptr)
 			{
-				// 제거 
-				delete log;
 				log = nullptr;
 				continue;
 			}
 
-			for (auto& pub : *publishers)
+			for (const auto& pub : *publishers)
 			{
 				if (pub)
 				{
-					pub->publish(log);
+					pub->publish(log.get());
 				}
 			}
-
-			delete log;
 			log = nullptr;
 		}
 	}

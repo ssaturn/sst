@@ -7,8 +7,8 @@
 
 #include "targetver.h"
 
-#include <stdio.h>
-#include <tchar.h>
+//#include <stdio.h>
+//#include <tchar.h>
 
 
 
@@ -16,5 +16,5 @@
 #pragma comment(lib, "Ws2_32.lib")
 #pragma comment(lib, "Mswsock.lib")
 //
-#include <WinSock2.h>
-#include <MSWSock.h>
+//#include <WinSock2.h>
+//#include <MSWSock.h>

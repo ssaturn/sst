@@ -58,6 +58,15 @@
     <Filter Include="trait_util">
       <UniqueIdentifier>{7074ea36-0956-4704-82d7-3e8e30432d3a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{4e6d1c24-43af-4f3a-aba6-d4ed8eddeb36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\imgui">
+      <UniqueIdentifier>{fdbdd170-53d2-4345-a6c2-7989294f3a2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\imgui\impl">
+      <UniqueIdentifier>{e8de65bd-23f6-4878-88ef-3117ac482a22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="memory_manager.h">
@@ -241,6 +250,30 @@
     <ClInclude Include="trait_util\class_instance_counter.h">
       <Filter>trait_util</Filter>
     </ClInclude>
+    <ClInclude Include="type_trait_util.h">
+      <Filter>trait_util</Filter>
+    </ClInclude>
+    <ClInclude Include="windows.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\imconfig.h">
+      <Filter>gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\imgui.h">
+      <Filter>gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\imgui_internal.h">
+      <Filter>gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\backends\imgui_impl_glfw.h">
+      <Filter>gui\imgui\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\backends\imgui_impl_opengl3.h">
+      <Filter>gui\imgui\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\backends\imgui_impl_opengl3_loader.h">
+      <Filter>gui\imgui\impl</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory_manager.cpp">
@@ -358,9 +391,38 @@
     <ClCompile Include="type_trait_util.ixx">
       <Filter>utility</Filter>
     </ClCompile>
+    <ClCompile Include="windows.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\imgui\imgui.cpp">
+      <Filter>gui\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\imgui\imgui_demo.cpp">
+      <Filter>gui\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\imgui\imgui_draw.cpp">
+      <Filter>gui\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\imgui\imgui_tables.cpp">
+      <Filter>gui\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\imgui\imgui_widgets.cpp">
+      <Filter>gui\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\imgui\backends\imgui_impl_glfw.cpp">
+      <Filter>gui\imgui\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\imgui\backends\imgui_impl_opengl3.cpp">
+      <Filter>gui\imgui\impl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="gui\imgui\misc\debuggers\imgui.natvis">
+      <Filter>gui\imgui\impl</Filter>
+    </Natvis>
   </ItemGroup>
 </Project>
