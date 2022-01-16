@@ -21,16 +21,18 @@ void glfw_error_callback(const int error, const char* description);
 
 namespace sst::gui
 {
-	class windows final : public threading::thread
+	class windows : public threading::thread
 	{
 	public:
 		using thread::thread;
 
+		virtual void run_custom() = 0;
+
+	private:
 		bool setup() override;
 		void run() override;
 		void cleanup() override;
 
-	private:
 		GLFWwindow* window_{ nullptr };
 		bool show_demo_window_{ true };
 		bool show_another_window_{ false };

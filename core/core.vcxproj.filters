@@ -415,6 +415,9 @@
     <ClCompile Include="gui\imgui\backends\imgui_impl_opengl3.cpp">
       <Filter>gui\imgui\impl</Filter>
     </ClCompile>
+    <ClCompile Include="trait_util\class_instance_counter.cpp">
+      <Filter>trait_util</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

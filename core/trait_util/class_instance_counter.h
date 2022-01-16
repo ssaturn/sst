@@ -1,4 +1,5 @@
 #pragma once
+
 #include <array>
 #include <atomic>
 #include <string_view>
@@ -21,15 +22,11 @@ namespace sst
 		static std::atomic<size_t>						indexer;
 	};
 
-	std::array<class_instance_counter::information, class_instance_counter::max_class_count>	class_instance_counter::infos{};
-	std::atomic<size_t>																			class_instance_counter::indexer{};
-
 	template<typename T>
 	struct class_indexer
 	{
 		static size_t index;
 	};
-
 
 	template<typename ClassTy>
 	size_t register_class()

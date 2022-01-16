@@ -115,6 +115,7 @@
     <ClInclude Include="iocp.h" />
     <ClInclude Include="io_model.h" />
     <ClInclude Include="io_object.h" />
+    <ClCompile Include="trait_util\class_instance_counter.cpp" />
     <ClCompile Include="database\error.cpp" />
     <ClCompile Include="db_param.cpp" />
     <ClCompile Include="gui\imgui\backends\imgui_impl_glfw.cpp" />

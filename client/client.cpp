@@ -3,6 +3,8 @@
 #include "stdafx.h"
 #include "io_thread.h"
 #include "client_session.h"
+#include "windows.h"
+
 #include <core/connector.h>
 #include <core/vector3d.h>
 #include <functional>
@@ -28,7 +30,7 @@ using namespace std::chrono_literals;
 class TestClass
 {
 public:
-	void* operator new(const std::size_t count)
+	void* operator new(std::size_t count)
 	{
 		sst::class_instance_counter::infos[sst::class_indexer<TestClass>::index].count.fetch_add(1);
 		return ::operator new(count);
@@ -63,32 +65,29 @@ public:
 
 int main()
 {
-	/*int value = 0;
+	int value = 0;
 	log_debug << "log test!!!! " << SST_VSTR(value);
 
-	[[maybe_unused]] auto p1 = new TestClass();
-	[[maybe_unused]] auto p2 = new TestClass();
-	[[maybe_unused]] auto p3 = new TestClass();
-	[[maybe_unused]] auto p4 = new TestClass();
-	[[maybe_unused]] auto p5 = new TestClass();
-	[[maybe_unused]] auto p7 = new TestClass2();
-	delete p1;
-	delete p2;
-	delete p3;
-	delete p4;
+	[[maybe_unused]] auto p1 = new TestClass;
+	[[maybe_unused]] auto p2 = new TestClass;
+	[[maybe_unused]] auto p3 = new TestClass;
+	[[maybe_unused]] auto p4 = new TestClass;
+	[[maybe_unused]] auto p5 = new TestClass;
+	[[maybe_unused]] auto p6 = new TestClass2;
+	[[maybe_unused]] auto p7 = new TestClass2;
+	[[maybe_unused]] auto p8 = new TestClass2;
+	[[maybe_unused]] auto p9 = new TestClass2;
+	
 	log_debug << sst::is_member_object_result_value<TestClass>;
 	static_assert(sst::is_member_object_result_value<TestClass>, "");
 	if constexpr(sst::is_member_object_result_value<TestClass>)
 	{
 		log_debug << "has member value result_value";
-	}*/
+	}
 
-
-	sst::gui::windows windows("gui_windows", 8000);
+	const client::windows windows("gui_windows", 8000);
 	windows.start();
-	/*glfwSetErrorCallback(glfw_error_callback);
-	if (!glfwInit())
-		return 1;*/
+
 
 	sst::win_sock::start_up();
 	
