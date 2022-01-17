@@ -1,5 +1,6 @@
 #pragma once
 
+#include "common.h"
 #include "io_object.h"
 #include "async_completion_token.h"
 #include "packet_header.h"

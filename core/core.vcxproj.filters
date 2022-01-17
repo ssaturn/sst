@@ -274,6 +274,7 @@
     <ClInclude Include="gui\imgui\backends\imgui_impl_opengl3_loader.h">
       <Filter>gui\imgui\impl</Filter>
     </ClInclude>
+    <ClInclude Include="program_option\program_options.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory_manager.cpp">

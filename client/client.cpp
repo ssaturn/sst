@@ -3,7 +3,8 @@
 #include "stdafx.h"
 #include "io_thread.h"
 #include "client_session.h"
-#include "windows.h"
+//#include "windows.h"
+#include <core/windows.h>
 
 #include <core/connector.h>
 #include <core/vector3d.h>
@@ -27,18 +28,33 @@ using namespace sst::network;
 using namespace std::chrono_literals;
 
 
-class TestClass
+template<typename T>
+class object_counter
+{
+protected:
+	object_counter()
+	{
+		sst::class_instance_counter::infos[sst::class_indexer<T>::index].count.fetch_add(1);
+	}
+
+	virtual ~object_counter()
+	{
+		sst::class_instance_counter::infos[sst::class_indexer<T>::index].count.fetch_sub(1);
+	}
+};
+
+class TestClass : object_counter<TestClass>
 {
 public:
 	void* operator new(std::size_t count)
 	{
-		sst::class_instance_counter::infos[sst::class_indexer<TestClass>::index].count.fetch_add(1);
+		//sst::class_instance_counter::infos[sst::class_indexer<TestClass>::index].count.fetch_add(1);
 		return ::operator new(count);
 	}
 	// custom placement delete
 	void operator delete(void* ptr)
 	{
-		sst::class_instance_counter::infos[sst::class_indexer<TestClass>::index].count.fetch_sub(1);
+		//sst::class_instance_counter::infos[sst::class_indexer<TestClass>::index].count.fetch_sub(1);
 		::operator delete(ptr);
 	}
 
@@ -46,29 +62,78 @@ public:
 };
 
 
-class TestClass2
+class TestClass2 : object_counter<TestClass2>
 {
 public:
 	void* operator new(const std::size_t count)
 	{
-		sst::class_instance_counter::infos[sst::class_indexer<TestClass2>::index].count.fetch_add(1);
 		return ::operator new(count);
 	}
-	// custom placement delete
+
 	void operator delete(void* ptr)
 	{
-		sst::class_instance_counter::infos[sst::class_indexer<TestClass2>::index].count.fetch_sub(1);
 		::operator delete(ptr);
 	}
 };
 
 
+class options_description;
+
+class options_description_easy_init
+{
+public:
+	explicit options_description_easy_init(options_description* owner)
+		: owner_(owner)
+	{
+		
+	}
+
+	options_description_easy_init&
+		operator()([[maybe_unused]] const char* name,
+			[[maybe_unused]] const char* description)
+	{
+		return *this;
+	}
+
+	options_description_easy_init&
+		operator()([[maybe_unused]] const char* name)
+	{
+		return *this;
+	}
+
+	options_description_easy_init&
+		operator()([[maybe_unused]] const char* name, [[maybe_unused]] int a, [[maybe_unused]] const char* description)
+	{
+		return *this;
+	}
+
+private:
+	options_description* owner_;
+};
+
+class options_description
+{
+public:
+	options_description_easy_init add_options()
+	{
+		return options_description_easy_init(this);
+	}
+};
+
+
+
 int main()
 {
+	options_description desc;
+	desc.add_options()
+		("name")
+		("name2")
+		("name3", "desc3");
+
 	int value = 0;
 	log_debug << "log test!!!! " << SST_VSTR(value);
 
-	[[maybe_unused]] auto p1 = new TestClass;
+	[[maybe_unused]] auto p1 = std::make_shared<TestClass>();
 	[[maybe_unused]] auto p2 = new TestClass;
 	[[maybe_unused]] auto p3 = new TestClass;
 	[[maybe_unused]] auto p4 = new TestClass;
@@ -85,9 +150,11 @@ int main()
 		log_debug << "has member value result_value";
 	}
 
-	const client::windows windows("gui_windows", 8000);
-	windows.start();
+	/*const client::windows windows("gui_windows", 8000);
+	windows.start();*/
 
+	const sst::gui::windows windows("gui_windows_thread", 8000);
+	windows.start();
 
 	sst::win_sock::start_up();
 	

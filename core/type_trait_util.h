@@ -16,15 +16,4 @@ namespace sst
 	};
 
 	IS_MEMBER_OBJECT(result_value);
-	/*template<typename ClassTy> \
-		concept is_member_object_result_value = requires (ClassTy t) {
-		{ t.result_value } -> std::same_as<int&>;
-	};*/
-
-	//template<typename ClassTy> \
-	//	concept is_member_object_result_value = requires (ClassTy t) {
-	//	\
-	//	{ t.result_value } -> std::same_as<int&>; \
-	//};
-
 }

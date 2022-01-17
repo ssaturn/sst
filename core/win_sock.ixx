@@ -1,8 +1,8 @@
 module;
 
-#include <WinSock2.h>
+#include "stdafx.h"
 #include <MSWSock.h>
-#include "common.h"
+
 
 export module sst.win_sock;
 

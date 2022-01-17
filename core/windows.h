@@ -26,13 +26,14 @@ namespace sst::gui
 	public:
 		using thread::thread;
 
-		virtual void run_custom() = 0;
+		virtual void run_custom() {};
 
-	private:
+	protected:
 		bool setup() override;
 		void run() override;
 		void cleanup() override;
 
+	private:
 		GLFWwindow* window_{ nullptr };
 		bool show_demo_window_{ true };
 		bool show_another_window_{ false };
