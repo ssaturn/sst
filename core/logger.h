@@ -2,10 +2,11 @@
 
 #include "logging.h"
 #include "log_publisher.h"
+#include "string_helper.h"
 #include <source_location>
 #include <iostream>
 #include <sstream>
-#include <core/string_helper.h>
+
 
 namespace sst
 {
