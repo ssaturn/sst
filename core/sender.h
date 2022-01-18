@@ -21,7 +21,7 @@ namespace sst::network
 		~sender() override = default;
 		class session* get_owner();
 
-		void proc(const byte* buffer, size_t size);
+		void proc(byte* buffer, size_t size);
 		void complete(async_completion_token* token, DWORD bytes_transferred) override;
 		void error(async_completion_token* token, DWORD error) override;
 

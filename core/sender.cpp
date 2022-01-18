@@ -12,7 +12,7 @@ namespace sst::network
 		return actor::get_owner<sst::network::session>();
 	}
 
-	void sender::proc(const byte* buffer, const size_t size)
+	void sender::proc(byte* buffer, const size_t size)
 	{
 		if (buffer == nullptr)
 		{

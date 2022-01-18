@@ -43,7 +43,9 @@ namespace sst::network
 			const packet_header header(static_cast<uint16>(fbb.GetSize()), static_cast<uint16>(ProtocolId));
 			
 			const auto packet_size = header.size + packet_header_size;
-			const auto output_buffer = new byte[packet_size];
+
+			// move to send buffer 
+			auto output_buffer = new byte[packet_size];
 
 			memcpy_s(output_buffer, packet_header_size, &header, packet_header_size);
 			memcpy_s(output_buffer + packet_header_size, header.size, fbb.GetBufferPointer(), fbb.GetSize());

@@ -17,7 +17,7 @@ namespace sst::network
 		wsabuf.buf = nullptr;
 	}
 
-	void send_buffer::push(const byte* data, const size_t length)
+	void send_buffer::push(byte* data, const size_t length)
 	{
 		push(std::make_shared<memory::buffer::buffer>(data, static_cast<ULONG>(length)));
 	}

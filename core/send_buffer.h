@@ -16,7 +16,7 @@ namespace sst::network
 		explicit send_buffer(size_t size);
 		~send_buffer();
 		
-		auto push(const byte* data, size_t length) -> void;
+		auto push(byte* data, size_t length) -> void;
 		auto push(std::shared_ptr<memory::buffer::buffer> buffer) -> void;
 		bool empty() const { return queue_.empty(); }
 		void write_wsabuf();

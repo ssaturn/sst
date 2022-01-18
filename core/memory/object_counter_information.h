@@ -6,9 +6,9 @@
 #include <vcruntime_typeinfo.h>
 
 
-namespace sst
+namespace sst::memory
 {
-	class class_instance_counter
+	class object_counter_information
 	{
 	public:
 		struct information
@@ -23,23 +23,23 @@ namespace sst
 	};
 
 	template<typename T>
-	struct class_indexer
+	struct object_indexer
 	{
 		static size_t index;
 	};
 
 	template<typename ClassTy>
-	size_t register_class()
+	size_t register_object()
 	{
 		const std::string_view sig = typeid(ClassTy).name();
-		const auto index = class_instance_counter::indexer.fetch_add(1);
+		const auto index = object_counter_information::indexer.fetch_add(1);
 
-		class_instance_counter::infos[index].name = sig;
-		class_instance_counter::infos[index].size = sizeof(ClassTy);
+		object_counter_information::infos[index].name = sig;
+		object_counter_information::infos[index].size = sizeof(ClassTy);
 
 		return index;
 	}
 
 	template<typename T>
-	size_t class_indexer<T>::index = register_class<T>();
+	size_t object_indexer<T>::index = register_object<T>();
 }

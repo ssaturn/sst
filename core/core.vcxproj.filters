@@ -247,7 +247,7 @@
     <ClInclude Include="io_model.h">
       <Filter>network</Filter>
     </ClInclude>
-    <ClInclude Include="trait_util\class_instance_counter.h">
+    <ClInclude Include="memory\object_counter_information.h">
       <Filter>trait_util</Filter>
     </ClInclude>
     <ClInclude Include="type_trait_util.h">
@@ -275,6 +275,7 @@
       <Filter>gui\imgui\impl</Filter>
     </ClInclude>
     <ClInclude Include="program_option\program_options.h" />
+    <ClInclude Include="memory\object_counter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory_manager.cpp">
@@ -416,7 +417,7 @@
     <ClCompile Include="gui\imgui\backends\imgui_impl_opengl3.cpp">
       <Filter>gui\imgui\impl</Filter>
     </ClCompile>
-    <ClCompile Include="trait_util\class_instance_counter.cpp">
+    <ClCompile Include="memory\object_counter_information.cpp">
       <Filter>trait_util</Filter>
     </ClCompile>
   </ItemGroup>

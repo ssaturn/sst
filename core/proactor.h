@@ -1,15 +1,16 @@
 #pragma once
 
+#include "async_completion_token.h"
 #include "common.h"
 #include "io_object.h"
-#include "async_completion_token.h"
 #include "packet_header.h"
+#include "memory/object_counter.h"
 
 
 namespace sst::network
 {
 	template<typename IoModel> 
-	class proactor
+	class proactor : memory::object_counter<proactor<IoModel>>
 	{
 		DISALLOW_SPECIAL_MEMBER_FUNCTIONS(proactor)
 

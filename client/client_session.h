@@ -5,10 +5,11 @@
 #include <core/session.h>
 #include <core/sender.h>
 #include <core/packet_header.h>
+#include <core/memory/object_counter.h>
 #include <shared/packet/packet_generated.h>
 
 
-class client_session final : public sst::network::session
+class client_session final : public sst::network::session, sst::memory::object_counter<client_session>
 {
 public:
 	void on_connected() override

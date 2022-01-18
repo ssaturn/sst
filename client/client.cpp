@@ -13,8 +13,8 @@
 #include <thread>
 #include <source_location>
 
+#include "core/memory/object_counter.h"
 #include <core/windows.h>
-#include <core/trait_util/class_instance_counter.h>
 #include <core/logger.h>
 #include <core/type_trait_util.h>
 
@@ -28,52 +28,18 @@ using namespace sst::network;
 using namespace std::chrono_literals;
 
 
-template<typename T>
-class object_counter
-{
-protected:
-	object_counter()
-	{
-		sst::class_instance_counter::infos[sst::class_indexer<T>::index].count.fetch_add(1);
-	}
 
-	virtual ~object_counter()
-	{
-		sst::class_instance_counter::infos[sst::class_indexer<T>::index].count.fetch_sub(1);
-	}
-};
 
-class TestClass : object_counter<TestClass>
+class TestClass : sst::memory::object_counter<TestClass>
 {
 public:
-	void* operator new(std::size_t count)
-	{
-		//sst::class_instance_counter::infos[sst::class_indexer<TestClass>::index].count.fetch_add(1);
-		return ::operator new(count);
-	}
-	// custom placement delete
-	void operator delete(void* ptr)
-	{
-		//sst::class_instance_counter::infos[sst::class_indexer<TestClass>::index].count.fetch_sub(1);
-		::operator delete(ptr);
-	}
-
 	int result_value;
 };
 
 
-class TestClass2 : object_counter<TestClass2>
+class TestClass2 : sst::memory::object_counter<TestClass2>
 {
 public:
-	void* operator new(const std::size_t count)
-	{
-		return ::operator new(count);
-	}
-
-	void operator delete(void* ptr)
-	{
-		::operator delete(ptr);
-	}
 };
 
 

@@ -7,7 +7,7 @@
 #include "gui/imgui/backends/imgui_impl_opengl3.h"
 #include <GLFW/glfw3.h> // Will drag system OpenGL headers
 
-#include "trait_util/class_instance_counter.h"
+#include "memory/object_counter_information.h"
 
 
 void glfw_error_callback(const int error, const char* description)
@@ -124,15 +124,17 @@ namespace sst::gui
                     {
                     }
 
-                    for (const auto& [name, count, size] : sst::class_instance_counter::infos)
+                    int i = 0;
+                    for (const auto& [name, count, size] : sst::memory::object_counter_information::infos)
                     {
+                        i++;
                         if (name.empty())
                         {
                             continue;
                         }
 
                         std::ostringstream ss;
-                        ss << "class name : " << name.data() << " | " << std::to_string(count.load()) << " | " << "size : " << std::to_string(size);
+                        ss << "[" << i <<  "] : " << name.data() << " | " << std::to_string(count.load()) << " | " << "size : " << std::to_string(size);
                         ImGui::Text(ss.str().c_str());
                     }
                 }

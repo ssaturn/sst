@@ -8,13 +8,20 @@ namespace sst::memory::buffer
 	class buffer
 	{
 	public:
-		buffer(const byte* data, const ULONG length)
-			: size(length)
+		buffer(byte* data, const ULONG length)
+			: buf(data)
+			, size(length)
 		{
-			buf = new byte[size + 1];
-			memmove_s(buf, size, data, length);
+			/*buf = new byte[size + 1];
+			memmove_s(buf, size, data, length);*/
 		}
-	
+
+		virtual ~buffer()
+		{
+			delete[] buf;
+			buf = nullptr;
+		}
+
 		byte* buf{ nullptr };
 		ULONG size{ 0 };
 	};
