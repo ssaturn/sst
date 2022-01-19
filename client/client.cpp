@@ -100,14 +100,14 @@ int main()
 	log_debug << "log test!!!! " << SST_VSTR(value);
 
 	[[maybe_unused]] auto p1 = std::make_shared<TestClass>();
-	[[maybe_unused]] auto p2 = new TestClass;
-	[[maybe_unused]] auto p3 = new TestClass;
-	[[maybe_unused]] auto p4 = new TestClass;
-	[[maybe_unused]] auto p5 = new TestClass;
-	[[maybe_unused]] auto p6 = new TestClass2;
-	[[maybe_unused]] auto p7 = new TestClass2;
-	[[maybe_unused]] auto p8 = new TestClass2;
-	[[maybe_unused]] auto p9 = new TestClass2;
+	[[maybe_unused]] auto p2 = std::make_shared<TestClass>();
+	[[maybe_unused]] auto p3 = std::make_shared<TestClass>();
+	[[maybe_unused]] auto p4 = std::make_shared<TestClass>();
+	[[maybe_unused]] auto p5 = std::make_shared<TestClass>();
+	[[maybe_unused]] auto p6 = std::make_shared<TestClass2>();
+	[[maybe_unused]] auto p7 = std::make_shared<TestClass2>();
+	[[maybe_unused]] auto p8 = std::make_shared<TestClass2>();
+	[[maybe_unused]] auto p9 = std::make_shared<TestClass2>();
 	
 	log_debug << sst::is_member_object_result_value<TestClass>;
 	static_assert(sst::is_member_object_result_value<TestClass>, "");

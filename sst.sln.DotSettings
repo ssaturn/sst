@@ -7,4 +7,5 @@
 	<s:Boolean x:Key="/Default/CodeStyle/CppSortIncludes/PreserveIncludeBlocks/@EntryValue">False</s:Boolean>
 	<s:Int64 x:Key="/Default/CodeStyle/CppSortIncludes/UnmatchedHeaderGroup/@EntryValue">0</s:Int64>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=glsl/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=proactor/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=protobuf/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
