@@ -28,6 +28,10 @@ namespace sst::gui
 
 		virtual void run_custom() {};
 
+		void set_show_demo_window(const bool show) { show_demo_window_ = show; }
+		bool get_show_demo_window() const { return show_demo_window_; }
+		__declspec(property(get = get_show_demo_window, put = set_show_demo_window)) bool show_demo_window;
+
 	protected:
 		bool setup() override;
 		void run() override;
