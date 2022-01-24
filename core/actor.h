@@ -1,7 +1,7 @@
 #pragma once
 
 #include "common.h"
-
+#include "trait_util/tuple_element_index.h"
 
 namespace sst::network
 {
@@ -55,21 +55,30 @@ namespace sst::network
 	};
 
 	
-
+	template<typename T, typename ... Args>
 	class actor_owner
 	{
 		DISALLOW_SPECIAL_MEMBER_FUNCTIONS(actor_owner)
 	
 	public:
-		actor_owner() = default;
+		static constexpr std::size_t size = sizeof...(Args);
+
+		actor_owner()
+		{
+			//std::make_unique<>()
+		}
 		~actor_owner() = default;
 
-		template<typename ActorTy, typename ... Args> requires std::is_base_of_v<class actor, ActorTy>
-		void register_actor(Args ... args)
+		template<typename ActorTy, typename ... ActorArgs> requires std::is_base_of_v<class actor, ActorTy>
+		void register_actor(ActorArgs&& ... args)
 		{
-			const auto index = static_cast<uint8>(ActorTy::type_value);
+			//const auto index = static_cast<uint8>(ActorTy::type_value);
+
+			constexpr auto index = trait_util::tuple_element_index<ActorTy, Args ...>::value;
+
 			actors_[index] = std::make_unique<ActorTy>(std::forward<decltype(args)>(args)...);
 		}
+
 		
 		template<typename ActorTy> requires std::is_base_of_v<class actor, ActorTy>
 		ActorTy* get()
@@ -79,7 +88,8 @@ namespace sst::network
 		}
 
 	private:
-		std::array<std::unique_ptr<actor>, actor::max_actor_type> actors_{};
+		std::array<std::unique_ptr<actor>, size> actors_{};
+		
 	};
 
 	// implement

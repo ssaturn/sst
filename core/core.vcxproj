@@ -109,6 +109,7 @@
     <ClInclude Include="gui\imgui\imgui_internal.h" />
     <ClInclude Include="memory\object_counter.h" />
     <ClInclude Include="program_option\program_options.h" />
+    <ClInclude Include="trait_util\tuple_element_index.h" />
     <ClInclude Include="windows.h" />
     <ClInclude Include="hsm.h" />
     <ClInclude Include="iocp.h" />

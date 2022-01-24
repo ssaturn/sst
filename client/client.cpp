@@ -116,10 +116,8 @@ int main()
 		log_debug << "has member value result_value";
 	}
 
-	/*const client::windows windows("gui_windows", 8000);
-	windows.start();*/
-
-	const sst::gui::windows windows("gui_windows_thread", 8000);
+	sst::gui::windows windows("gui_windows_thread", 8000);
+	windows.show_demo_window = true;
 	windows.start();
 
 	sst::win_sock::start_up();

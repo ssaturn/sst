@@ -10,16 +10,7 @@
 
 namespace sst::network
 {
-	session::session()
-		: io_socket()
-	{
-		register_actor<sender>(this);
-		register_actor<receiver>(this);
-		register_actor<prereceiver>(this);
-		register_actor<disconnector>(this);
-		register_actor<connector>(this);
-		register_actor<acceptor>(this);
-	}
+
 
 	void session::initialize()
 	{

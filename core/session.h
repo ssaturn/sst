@@ -11,12 +11,22 @@ import sst.ipv4_address;
 
 namespace sst::network
 {
-	class session : public io_socket, public actor_owner
+	template<typename ... Args>
+	class session : public io_socket, public actor_owner<session, Args ...>
 	{
 		DISALLOW_SPECIAL_MEMBER_FUNCTIONS(session)
 	
 	public:
-		session();
+		session()
+			: io_socket()
+		{
+			register_actor<class sender>(this);
+			register_actor<class receiver>(this);
+			register_actor<class prereceiver>(this);
+			register_actor<class disconnector>(this);
+			register_actor<class connector>(this);
+			register_actor<class acceptor>(this);
+		}
 		~session() override = default;
 
 		void initialize();

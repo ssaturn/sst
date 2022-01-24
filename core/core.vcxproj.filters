@@ -276,6 +276,7 @@
     </ClInclude>
     <ClInclude Include="program_option\program_options.h" />
     <ClInclude Include="memory\object_counter.h" />
+    <ClInclude Include="trait_util\tuple_element_index.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory_manager.cpp">
