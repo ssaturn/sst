@@ -4,6 +4,11 @@
 #include "io_socket.h"
 #include "packet_header.h"
 #include "sender.h"
+#include "receiver.h"
+#include "prereceiver.h"
+#include "disconnector.h"
+#include "connector.h"
+#include "acceptor.h"
 #include "pattern/static_component.h"
 #include <shared/packet/protocol_generated.h>
 #include <shared/packet/packet_generated.h>
@@ -13,29 +18,19 @@ import sst.ipv4_address;
 namespace sst::network
 {
 	class session : public io_socket,
-		public pattern::static_component_owner<
-		session, class sender, class receiver, class prereceiver, class disconnector, class connector,
-		class acceptor>
+	                public pattern::static_component_owner<
+		                session, sender, receiver, prereceiver, disconnector, connector, acceptor>
 	{
 		DISALLOW_SPECIAL_MEMBER_FUNCTIONS(session)
 
 	public:
-		session()
-			: io_socket()
-			, pattern::static_component_owner<session, class sender, class receiver, class prereceiver, class
-			disconnector, class connector,
-			class acceptor>()
-		{
-			/*register_actor<class sender>(this);
-			register_actor<class receiver>(this);
-			register_actor<class prereceiver>(this);
-			register_actor<class disconnector>(this);
-			register_actor<class connector>(this);
-			register_actor<class acceptor>(this);*/
-		}
+		session();
 		~session() override = default;
 
-		void initialize() {};
+		void initialize()
+		{
+			
+		}
 
 		/**
 		 * \brief when complete accept, call this method
@@ -89,6 +84,12 @@ namespace sst::network
 		bool is_connected_{ false };
 		ipv4_address peer_addr_{};
 	};
+
+	inline session::session(): io_socket(),
+	                           pattern::static_component_owner<
+		                           session, sender, receiver, prereceiver, disconnector, connector, acceptor>(this)
+	{
+	}
 
 
 	// protobuf

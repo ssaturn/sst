@@ -21,7 +21,7 @@ namespace sst::network
 			connector,
 			max
 		};
-		static constexpr size_t max_actor_type = static_cast<size_t>(type::max);
+		//static constexpr size_t max_actor_type = static_cast<size_t>(type::max);
 
 	protected:
 		explicit actor(session* session_ptr)

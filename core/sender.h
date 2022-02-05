@@ -11,8 +11,6 @@ namespace sst::network
 		DISALLOW_SPECIAL_MEMBER_FUNCTIONS(sender)
 	
 	public:
-		//static constexpr type type_value = type::sender;
-
 		explicit sender(session* owner)
 			: actor(owner)
 		{
@@ -28,7 +26,7 @@ namespace sst::network
 		bool SendData();
 		
 		std::atomic<bool> is_sending_{ false };
-		send_buffer buffer_{ 1024 * 1024 };
+		send_buffer buffer_{ 1'024 * 1'024 };
 	};
 
 	

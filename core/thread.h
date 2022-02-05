@@ -13,8 +13,8 @@ namespace sst::threading
 		virtual ~thread();
 
 		[[nodiscard]] HANDLE get_handle() const { return handle_; }
-		uint32 get_os_id() const { return os_id_; }
-		thread_id_t get_id() const { return id_; }
+		[[nodiscard]] uint32 get_os_id() const { return os_id_; }
+		[[nodiscard]] int32 get_id() const { return id_; }
 		void start() const;
 
 	protected:
