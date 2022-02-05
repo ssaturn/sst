@@ -1,6 +1,7 @@
 module;
 
-#include "stdafx.h"
+//#include "stdafx.h"
+#include "common.h"
 #include <MSWSock.h>
 
 

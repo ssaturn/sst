@@ -8,14 +8,14 @@
 
 namespace sst::network
 {
-	connector::connector(actor_owner* owner)
+	connector::connector(session* owner)
 		: actor(owner)
 	{
 	}
 
 	void connector::proc(const ipv4_address& addr)
 	{
-		const auto socket = get_owner<session>()->get_socket();
+		const auto socket = get_owner()->get_socket();
 		BOOL opt_val = TRUE;
 		if (setsockopt(socket, SOL_SOCKET, SO_REUSEADDR, reinterpret_cast<char*>(&opt_val), sizeof(BOOL)) == SOCKET_ERROR)
 		{
@@ -47,14 +47,14 @@ namespace sst::network
 
 	void connector::complete([[maybe_unused]] async_completion_token* token, [[maybe_unused]] DWORD bytes_transferred)
 	{
-		if (setsockopt(get_owner<session>()->get_socket(), SOL_SOCKET, SO_UPDATE_CONNECT_CONTEXT, NULL, 0) == SOCKET_ERROR)
+		if (setsockopt(get_owner()->get_socket(), SOL_SOCKET, SO_UPDATE_CONNECT_CONTEXT, NULL, 0) == SOCKET_ERROR)
 		{
 			[[maybe_unused]] DWORD err = WSAGetLastError();
 			return;
 		}
 		
-		get_owner<session>()->get<prereceiver>()->proc();
-		get_owner<session>()->on_connected();
+		get_owner()->get<prereceiver>()->proc();
+		get_owner()->on_connected();
 	}
 
 	void connector::error([[maybe_unused]] async_completion_token* token, [[maybe_unused]] DWORD error)

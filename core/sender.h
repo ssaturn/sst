@@ -11,15 +11,14 @@ namespace sst::network
 		DISALLOW_SPECIAL_MEMBER_FUNCTIONS(sender)
 	
 	public:
-		static constexpr type type_value = type::sender;
+		//static constexpr type type_value = type::sender;
 
-		explicit sender(actor_owner* owner)
+		explicit sender(session* owner)
 			: actor(owner)
 		{
 			
 		}
 		~sender() override = default;
-		class session* get_owner();
 
 		void proc(byte* buffer, size_t size);
 		void complete(async_completion_token* token, DWORD bytes_transferred) override;
@@ -29,7 +28,7 @@ namespace sst::network
 		bool SendData();
 		
 		std::atomic<bool> is_sending_{ false };
-		send_buffer buffer_{1024 * 1024};
+		send_buffer buffer_{ 1024 * 1024 };
 	};
 
 	

@@ -12,7 +12,7 @@ namespace sst::network
 	public:
 		static constexpr type type_value = type::acceptor;
 		
-		explicit acceptor(actor_owner* owner);
+		explicit acceptor(session* owner);
 		acceptor() = delete;
 		~acceptor() override = default;
 

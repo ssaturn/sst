@@ -15,7 +15,7 @@ namespace sst::network
 	public:
 		static constexpr type type_value = type::connector;
 
-		explicit connector(actor_owner* owner);
+		explicit connector(session* owner);
 		~connector() override = default;
 
 		void proc(const ipv4_address& addr);

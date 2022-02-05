@@ -28,26 +28,26 @@
 #include "macro.h"
 
 // signed
-using int8 = char;
-using int16 = short;
-using int32 = int;
-using int64 = long long;
+using int8 = std::int8_t;
+using int16 = std::int16_t;
+using int32 = std::int32_t;
+using int64 = std::int64_t;
 
 // unsigned
-using uint8 = unsigned char;
-using uint16 = unsigned short;
-using uint32 = unsigned int;
-using uint64 = unsigned long long;
+using uint8 = std::uint8_t;
+using uint16 = std::uint16_t;
+using uint32 = std::uint32_t;
+using uint64 = std::uint64_t;
 
 using size_t = std::size_t;
-using byte = unsigned char;
+using byte = std::uint8_t;
 using ushort = uint16;
 
 // string
 using wchar = WCHAR;
 
 #if(0x0600 <= WINVER)
-using tick_count_t = uint64;
+using tick_count_t = std::uint64_t;
 #else
-using tick_count_t = uint32;
+using tick_count_t = std::uint32_t;
 #endif

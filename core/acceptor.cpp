@@ -7,14 +7,14 @@
 
 namespace sst::network
 {
-	acceptor::acceptor(actor_owner* owner)
+	acceptor::acceptor(session* owner)
 		: actor(owner)
 	{
 	}
 
 	void acceptor::complete([[maybe_unused]] async_completion_token* token, [[maybe_unused]] DWORD bytes_transferred)
 	{
-		if (setsockopt(get_owner<session>()->get_socket(), SOL_SOCKET, SO_UPDATE_ACCEPT_CONTEXT, reinterpret_cast<char*>(&listen_socket_), sizeof(SOCKET)) == SOCKET_ERROR)
+		if (setsockopt(get_owner()->get_socket(), SOL_SOCKET, SO_UPDATE_ACCEPT_CONTEXT, reinterpret_cast<char*>(&listen_socket_), sizeof(SOCKET)) == SOCKET_ERROR)
 		{
 			[[maybe_unused]] DWORD err = WSAGetLastError();
 			accept(listen_socket_);
@@ -23,7 +23,7 @@ namespace sst::network
 		
 		std::cout << "accept complete!!" << std::endl;
 		
-		auto owner = get_owner<session>();
+		auto owner = get_owner();
 		owner->set_peer_name();
 		owner->set_connect(true);
 		if (auto actor = owner->get<prereceiver>(); actor)
@@ -42,7 +42,7 @@ namespace sst::network
 	void acceptor::accept(const SOCKET socket)
 	{
 		listen_socket_ = socket;
-		const auto owner = get_owner<session>();
+		const auto owner = get_owner();
 		DWORD bytes_received = 0;
 		const auto token = new async_completion_token(this);
 

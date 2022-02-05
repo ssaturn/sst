@@ -12,7 +12,7 @@ namespace sst::network
 	public:
 		static constexpr type type_value = type::prereceiver;
 		
-		explicit prereceiver(actor_owner* owner);
+		explicit prereceiver(session* owner);
 		prereceiver() = delete;
 		~prereceiver() override = default;
 

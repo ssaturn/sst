@@ -13,7 +13,7 @@ namespace sst::network
 	public:
 		static constexpr type type_value = type::receiver;
 		
-		explicit receiver(actor_owner* owner);
+		explicit receiver(session* owner);
 		~receiver() override = default;
 
 		void proc();

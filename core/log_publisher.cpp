@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "log_publisher.h"
 #include "logging.h"
-#include "string_helper.h"
+#include "string/string_helper.h"
 
 
 namespace sst

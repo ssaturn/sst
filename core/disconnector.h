@@ -12,7 +12,7 @@ namespace sst::network
 	public:
 		static constexpr type type_value = type::disconnector;
 		
-		explicit disconnector(actor_owner* owner);
+		explicit disconnector(session* owner);
 		~disconnector() override = default;
 
 		void proc();

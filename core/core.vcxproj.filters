@@ -93,7 +93,7 @@
     <ClInclude Include="Acceptor.h">
       <Filter>network\actor</Filter>
     </ClInclude>
-    <ClInclude Include="string_helper.h">
+    <ClInclude Include="string\string_helper.h">
       <Filter>string</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
@@ -277,6 +277,8 @@
     <ClInclude Include="program_option\program_options.h" />
     <ClInclude Include="memory\object_counter.h" />
     <ClInclude Include="trait_util\tuple_element_index.h" />
+    <ClInclude Include="trait_util\object_has_member.h" />
+    <ClInclude Include="pattern\static_component.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory_manager.cpp">
@@ -284,9 +286,6 @@
     </ClCompile>
     <ClCompile Include="Connector.cpp">
       <Filter>network\actor</Filter>
-    </ClCompile>
-    <ClCompile Include="Session.cpp">
-      <Filter>network</Filter>
     </ClCompile>
     <ClCompile Include="Receiver.cpp">
       <Filter>network\actor</Filter>
@@ -344,9 +343,6 @@
     </ClCompile>
     <ClCompile Include="async_completion_token.cpp">
       <Filter>network</Filter>
-    </ClCompile>
-    <ClCompile Include="actor.cpp">
-      <Filter>network\actor</Filter>
     </ClCompile>
     <ClCompile Include="win_sock.ixx">
       <Filter>network</Filter>

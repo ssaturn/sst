@@ -108,7 +108,9 @@
     <ClInclude Include="gui\imgui\imgui.h" />
     <ClInclude Include="gui\imgui\imgui_internal.h" />
     <ClInclude Include="memory\object_counter.h" />
+    <ClInclude Include="pattern\static_component.h" />
     <ClInclude Include="program_option\program_options.h" />
+    <ClInclude Include="trait_util\object_has_member.h" />
     <ClInclude Include="trait_util\tuple_element_index.h" />
     <ClInclude Include="windows.h" />
     <ClInclude Include="hsm.h" />
@@ -151,7 +153,7 @@
     <ClInclude Include="session_pool.h" />
     <ClInclude Include="singleton.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="string_helper.h" />
+    <ClInclude Include="string\string_helper.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="thread.h" />
     <ClInclude Include="thread_usage.h" />
@@ -169,7 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="acceptor.cpp" />
-    <ClCompile Include="actor.cpp" />
     <ClCompile Include="astar.cpp" />
     <ClCompile Include="astar_node_master.cpp" />
     <ClCompile Include="async_completion_token.cpp" />
@@ -198,7 +199,6 @@
     <ClCompile Include="send_buffer.cpp" />
     <ClCompile Include="sender.cpp" />
     <ClCompile Include="server_service.cpp" />
-    <ClCompile Include="session.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>

@@ -6,7 +6,7 @@
 
 namespace sst::network
 {
-	disconnector::disconnector(actor_owner* owner)
+	disconnector::disconnector(session* owner)
 		: actor(owner)
 	{
 		

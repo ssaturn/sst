@@ -14,9 +14,13 @@
 #include <source_location>
 
 #include "core/memory/object_counter.h"
+#include "core/trait_util/object_has_member.h"
+#include "core/trait_util/tuple_element_index.h"
 #include <core/windows.h>
 #include <core/logger.h>
 #include <core/type_trait_util.h>
+#include <vector>
+
 
 import sst;
 import sst.network;
@@ -96,8 +100,20 @@ int main()
 		("name2")
 		("name3", "desc3");
 
+	// [[no_unique_address]]
+	struct AAA
+	{
+		int result{0};
+	};
+
+	std::cout << sst::trait_util::object_has_member_result<AAA>::value << std::endl;
+	size_t size222 = sst::trait_util::tuple_element_index<int, std::tuple<int, double, int64_t>>::value;
+	std::cout << size222 << std::endl;
+
 	int value = 0;
 	log_debug << "log test!!!! " << SST_VSTR(value);
+
+	//std::static_vector<int> a;
 
 	[[maybe_unused]] auto p1 = std::make_shared<TestClass>();
 	[[maybe_unused]] auto p2 = std::make_shared<TestClass>();
@@ -115,6 +131,8 @@ int main()
 	{
 		log_debug << "has member value result_value";
 	}
+
+
 
 	sst::gui::windows windows("gui_windows_thread", 8000);
 	windows.show_demo_window = true;

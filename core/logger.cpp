@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Logger.h"
+#include "logger.h"
 #include "log_manager.h"
 #include <Windows.h>
 #include <string_view>

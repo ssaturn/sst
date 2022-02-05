@@ -2,7 +2,7 @@
 
 #include "logging.h"
 #include "log_publisher.h"
-#include "string_helper.h"
+#include "string/string_helper.h"
 #include <source_location>
 #include <iostream>
 #include <sstream>
@@ -126,7 +126,7 @@ namespace sst
 		logger<LogLevel>& operator<<(const char* str)
 		{
 			wchar_t wstr[1024]{ 0 };
-			string::helper::multi_to_wide(str, wstr, _countof(wstr));
+			sst::string::helper::multi_to_wide(str, wstr, _countof(wstr));
 			wss_ << wstr;
 			
 			return *this;

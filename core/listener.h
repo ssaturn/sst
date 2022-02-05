@@ -87,7 +87,7 @@ namespace sst::network
 	template<typename IoModel, typename SessionTy>
 	auto listener<IoModel, SessionTy>::handle_completion(async_completion_token* token, const DWORD bytes) -> void
 	{
-		proactor_->register_object(token->actor->get_owner<session>());
+		proactor_->register_object(token->actor->get_owner());
 		token->actor->complete(token, bytes);
 	}
 }

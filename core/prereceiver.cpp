@@ -9,7 +9,7 @@
 
 namespace sst::network
 {
-	prereceiver::prereceiver(actor_owner* owner)
+	prereceiver::prereceiver(session* owner)
 		: actor(owner)
 	{
 	}
@@ -22,7 +22,7 @@ namespace sst::network
 		DWORD flags = 0;
 		token->wsabuf.buf = new char[65535];
 		token->wsabuf.len = 0;
-		if (SOCKET_ERROR == WSARecv(get_owner<session>()->get_socket(), &(token->wsabuf), 1, &recv_bytes, &flags, token, nullptr))
+		if (SOCKET_ERROR == WSARecv(get_owner()->get_socket(), &(token->wsabuf), 1, &recv_bytes, &flags, token, nullptr))
 		{
 			if (const size_t error_code = WSAGetLastError(); error_code != WSA_IO_PENDING)
 			{
@@ -38,7 +38,7 @@ namespace sst::network
 
 	void prereceiver::complete([[maybe_unused]] async_completion_token* token, [[maybe_unused]] DWORD bytes_transferred)
 	{
-		get_owner<session>()->get<receiver>()->proc();
+		get_owner()->get<receiver>()->proc();
 		std::cout << "prereceiver::complete" << std::endl;
 	}
 
